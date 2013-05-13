@@ -5,7 +5,6 @@ build:
         - script:
             name: middleman build
             code: bundle exec middleman build
-        - copy output
 deploy:
     steps:
         - s3sync:
