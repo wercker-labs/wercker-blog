@@ -1,0 +1,91 @@
+@import "mixins/imageEffects";
+
+.name {
+	background-color: #1F1E1E;
+	height: 80px;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	text-align: center;
+
+
+}
+
+.page-content {
+
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.articles {
+		padding: $column-gutter;
+		margin-bottom: 3*$column-gutter;
+
+		h1 {
+			margin-bottom: .2*$column-gutter;
+			line-height: 1em;
+			color: $successColor;
+		}
+
+		.subheader {
+			color: $black;
+			font-size: 1.3em;
+		}
+
+		hr { margin-bottom: 3*$column-gutter;}
+	}
+
+	.recent__articles {
+		margin-top: .75*$column-gutter;
+		padding: $column-gutter;
+
+		ol {
+			list-style: none;
+			font-size: 0.9em;
+		}
+	}
+
+	h5 {
+		color: darken($body-font-color, 10%);
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: $baseFontSize;
+		margin: 0;
+	}
+
+	hr {
+		margin-top: .25*$column-gutter;
+		margin-bottom: .25*$column-gutter;
+	}
+
+	.authorCredits {
+
+		margin-bottom: .5*$column-gutter;
+		margin-top: .5*$column-gutter;
+
+
+		h5 {
+			margin-left: 60px;
+		    padding-top: .4*$column-gutter;
+		}
+
+		em {
+			margin-left: 60px;
+			color: mix($white, $txtColor, 35%);
+			font-size: 0.9em;
+		}
+
+		.profile-picture {
+			@include makeImageHolderRound(50px, 3px, true);
+			position: absolute;
+		}
+
+	}
+
+	.authorCredits + hr {margin-top: 0;}
+
+}

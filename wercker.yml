@@ -1,0 +1,15 @@
+box: wercker/ruby
+build:
+    steps:
+        - bundle install
+        - script:
+            name: middleman build
+            code: bundle exec middleman build
+        - copy output
+deploy:
+    steps:
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY_ID
+            key_secret: $AWS_SECRET_ACCESS_KEY
+            bucket_url: s3://blog.wercker.com
+            source_dir: build/

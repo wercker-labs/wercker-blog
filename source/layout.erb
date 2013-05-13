@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+
+  <meta charset="utf-8" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>wercker | blog</title>
+
+  <link rel="shortcut icon" href="/images/favicon.ico">
+
+  <!-- Standard iPhone -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/touch-icon-iphone-114.png" />
+  <!-- Retina iPhone -->
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/touch-icon-iphone-114.png" />
+  <!-- Standard iPad -->
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/touch-icon-ipad-144.png" />
+  <!-- Retina iPad -->
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/touch-icon-ipad-144.png" />
+
+  <!-- Included CSS Files -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/stylesheets/site.css" media="all">
+</head>
+
+<body>
+
+  <script src="/javascripts/lib/jquery.js"></script>
+  <script src="/javascripts/lib/custom.modernizr.js"></script>
+  <script src="/javascripts/lib/foundation/foundation.js"></script>
+  <script src="/javascripts/lib/foundation/foundation.topbar.js"></script>
+  <script src="/javascripts/lib/foundation/foundation.section.js"></script>
+
+  <script>
+    $(function(){
+      $(document).foundation();
+    })
+  </script>
+
+
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "00bacff4-9758-400f-b937-50cae880fa74", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+
+  <div id="root">
+
+    <div class="row">
+
+      <!-- NAVIGATION -->
+      <div class="navigation">
+        <div class="sticky">
+          <nav class="top-bar">
+            <ul class="title-area row hide-for-medium-up">
+              <li class="small-6 columns logo name">
+                  <a href="/#"><img src="/images/logo-x2.png" width="100px" alt="wercker"/></a>
+              </li>
+              <li class="small-6 columns toggle-topbar menu-icon"><a href="#" class="right">
+                <span></span></a>
+              </li>
+            </ul>
+            <section class="top-bar-section">
+              <div class="show-for-medium-up logo left">
+                <a href="/#"><img src="/images/logo_black.png" width="100px" alt="wercker"/></a>
+              </div>
+              <ul class="right">
+                <li><a href="http://blog.wercker.com" class="active" target="_blank">Blog</a></li>
+                <li class="divider hide-for-medium-up"></li>
+                <li><a href="http://devcenter.wercker.com" target="_blank">Dev Center</a></li>
+                <li class="divider hide-for-medium-up"></li>
+                <li><a href="https://app.wercker.com/users/new" target="_blank">Register</a></li>
+                <li class="divider hide-for-medium-up"></li>
+                <li><a href="https://app.wercker.com/sessions/new" class="signin" target="_blank"><i class="icon-sign-out"></i> Sign in</a></li>
+              </ul>
+            </section>
+          </nav>
+        </div>
+      </div>
+
+
+      <div class="page-content">
+        <div class="small-12 large-12 columns">
+        <!-- <h1>wercker blog</h1> -->
+          <div class="row">
+            <div class="small-12 large-7 columns">
+              <div id="main" role="main" class="articles">
+                <%= yield %>
+              </div>
+            </div>
+
+            <div class="small-12 large-4 columns">
+              <aside class="recent__articles">
+                <hr/>
+                <h5>Recent Articles</h5>
+                <hr/>
+
+                <ol>
+                  <% blog.articles[0...10].each do |article| %>
+                    <li><%= link_to article.title, article %></li>
+                  <% end %>
+                </ol>
+
+                <hr/>
+                <h5>Tags</h5>
+                <hr/>
+
+                <ol>
+                  <% blog.tags.each do |tag, articles| %>
+                    <li><%= link_to tag, tag_path(tag) %> (<%= articles.size %>)</a></li>
+                  <% end %>
+                </ol>
+
+                <hr/>
+                <h5>By Year</h5>
+                <hr/>
+
+                <ol>
+                  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+                    <li><%= link_to year, blog_year_path(year) %> (<%= articles.size %>)</a></li>
+                  <% end %>
+                </ol>
+              </aside>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div id="root_footer" class="hide-for-small"></div>
+
+      <div class="row footer__bar hide-for-medium-up">
+        <ul>
+          <li>copyright &copy;2013 wercker</li>
+          <li><a href="http://beta.wercker.com">home</a></li>
+          <li><a href="http://beta.wercker.com/about">about</a></li>
+          <li><a href="http://beta.wercker.com/jobs">jobs</a></li>
+          <li><a href="http://mailto:pleasemailus@wercker.com">contact&amp;support</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div id="footer" class="show-for-medium-up">
+      <div class="row">
+        <div class="large-4 columns footer__block">
+          <h5>Sign up now</h5>
+          <hr></hr>
+          <p>Signing up for wercker is free and easy. Create your account <a href="https://app.wercker.com/users/new">here</a></p>
+        </div>
+        <div class="large-6 columns footer__block">
+          <h5>Join the Conversation</h5>
+          <hr></hr>
+          <p>
+            Feel free to email us with any questions or feedback at <a href="mailto:pleasemailus@wercker.com">pleasemailus@wercker.com</a>.</br>
+            Subscribe to the wercker blog <a href="/feed.xml">feed</a>
+          </p>
+
+        </div>
+        <div class="large-2 columns">
+          <div class="badge">
+            <a href="https://app.wercker.com/project/bykey/743acedc5f3a5350a7dd1d1a1bf156c4"><img alt="Wercker status" src="https://app.wercker.com/status/743acedc5f3a5350a7dd1d1a1bf156c4/m"></a>
+          </div>
+        </div>
+        <div class="large-12 columns footer__bar">
+          <ul>
+            <li>copyright &copy;2013 wercker</li>
+            <li><a href="http://beta.wercker.com">home</a></li>
+            <li><a href="http://beta.wercker.com/about">about</a></li>
+            <li><a href="http://beta.wercker.com/jobs">jobs</a></li>
+            <li><a href="http://mailto:pleasemailus@wercker.com">contact &amp; support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</body>
+</html>

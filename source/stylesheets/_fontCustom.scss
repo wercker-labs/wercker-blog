@@ -1,0 +1,120 @@
+/*
+Font Custom - icon webfonts made simple
+*/
+
+// @font-face {
+//   font-family: "fontcustom";
+//   src: url("fontcustom-801b3fd21ed477e84983f6d3f4f9fcae.eot?#iefix") format("embedded-opentype"),
+//        url("fontcustom-801b3fd21ed477e84983f6d3f4f9fcae.woff") format("woff"),
+//        url("fontcustom-801b3fd21ed477e84983f6d3f4f9fcae.ttf") format("truetype"),
+//        url("fontcustom-801b3fd21ed477e84983f6d3f4f9fcae.svg#fontcustom") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@include simpleFontFace("fontcustom", "fontcustom-801b3fd21ed477e84983f6d3f4f9fcae", normal, normal);
+
+/*
+  Bootstrap Overrides
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontcustom";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+a [class^="icon-"], a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: top;
+  font-size: 1.333em;
+}
+
+/* keeps button heights with and without icons the same */
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+  line-height: 0.9em;
+}
+
+li [class^="icon-"], li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+
+/* 1.5 increased font size for icon-large * 1.25 width */
+li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {
+  width: 1.875em;
+}
+
+li[class^="icon-"], li[class*=" icon-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+li[class^="icon-"]:before, li[class*=" icon-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+
+li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
+  text-indent: -1.333em;
+}
+
+/*
+  Icon Classes
+*/
+
+.icon-account-created:before { content: "\f100"; }
+.icon-arrow:before { content: "\f101"; }
+.icon-bitbucket-icon:before { content: "\f102"; }
+.icon-branch:before { content: "\f103"; }
+.icon-build-created:before { content: "\f104"; }
+.icon-build-duration:before { content: "\f105"; }
+.icon-build-started:before { content: "\f106"; }
+.icon-buildstep-started:before { content: "\f107"; }
+.icon-code-line:before { content: "\f108"; }
+.icon-commit-message:before { content: "\f109"; }
+.icon-company:before { content: "\f10a"; }
+.icon-deploy-cloud-filled:before { content: "\f10b"; }
+.icon-deploy-cloud:before { content: "\f10c"; }
+.icon-deploy-created:before { content: "\f10d"; }
+.icon-deploy-failed:before { content: "\f10e"; }
+.icon-deploy-finished:before { content: "\f10f"; }
+.icon-deploy-warning:before { content: "\f110"; }
+.icon-down_arrows:before { content: "\f111"; }
+.icon-email:before { content: "\f112"; }
+.icon-exclamation-mark:before { content: "\f113"; }
+.icon-failed:before { content: "\f114"; }
+.icon-follower-added:before { content: "\f115"; }
+.icon-follower-removed:before { content: "\f116"; }
+.icon-forward-arrow:before { content: "\f117"; }
+.icon-git-icon:before { content: "\f118"; }
+.icon-github-icon:before { content: "\f119"; }
+.icon-guidance:before { content: "\f11a"; }
+.icon-labs_flask:before { content: "\f11b"; }
+.icon-linkedin:before { content: "\f11c"; }
+.icon-location:before { content: "\f11d"; }
+.icon-log:before { content: "\f11e"; }
+.icon-minus:before { content: "\f11f"; }
+.icon-multiple-languages:before { content: "\f120"; }
+.icon-passed:before { content: "\f121"; }
+.icon-password-lock:before { content: "\f122"; }
+.icon-pencil:before { content: "\f123"; }
+.icon-play-video:before { content: "\f124"; }
+.icon-progress-loop:before { content: "\f125"; }
+.icon-project-created:before { content: "\f126"; }
+.icon-project-icon:before { content: "\f127"; }
+.icon-project-removed:before { content: "\f128"; }
+.icon-settings:before { content: "\f129"; }
+.icon-sign-out:before { content: "\f12a"; }
+.icon-todo:before { content: "\f12b"; }
+.icon-twitter:before { content: "\f12c"; }
+.icon-user:before { content: "\f12d"; }
+.icon-websiteurl:before { content: "\f12e"; }

@@ -1,0 +1,48 @@
+@import "compass/layout/sticky-footer";
+
+@include sticky-footer(250px);
+
+
+.footer__bar {
+	text-align: center;
+	background: white;
+	border-top: 1px solid $contentBorderColor;
+	padding-top: 0.25*$column-gutter;
+
+	ul li {
+		display: inline;
+		margin-left: 10px;
+		font-size: .7*$base-font-size;
+		text-transform: uppercase;
+	}
+}
+
+.footer {
+	border-top: 1px solid $contentBorderColor;
+	background: white;
+	text-align: center;
+
+	@media #{$small} {
+		text-align: left;
+		width: 100%;
+	}
+
+	.footer__block {
+		h5 {text-transform: uppercase;}
+		p {font-size: .8*$base-font-size;}
+		padding: 20px;
+	}
+
+	.footer__block + .footer__block {
+		margin-left: -10px;
+	}
+
+	.badge img {
+		margin-top: 1.5*$column-gutter;
+	}
+	@extend .footer__bar;
+}
+
+#footer {
+	@extend .footer;
+}

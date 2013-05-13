@@ -1,0 +1,11 @@
+@mixin simpleFontFace($name, $baseFileName, $weight, $style) {
+	@include font-face($name,
+	 	font-files(
+			$baseFileName + ".woff", //woff,
+			$baseFileName + ".ttf", //truetype,
+			$baseFileName + ".svg" //svg,
+		),
+		$baseFileName + ".eot",
+		$weight,
+		$style);
+}

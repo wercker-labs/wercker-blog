@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <title>wercker blog</title>
+  <id>tag:wercker.com,2013:blog/</id>
+  <link href="http://blog.wercker.com/feed" rel="self" type="application/atom+xml"/>
+  <link href="http://blog.wercker.com/" rel="alternate" type="text/html"/>
+  <updated><%= Time.now.to_s %></updated>
+
+  <% blog.articles.each do |article| %>
+  <entry xml:base="http://blog.wercker.com">
+    <author><name><%= article.data.author %></name></author>
+    <id>tag:blog.wercker.com,2013:<%= article.title %></id>
+    <published><%= article.date.to_time.iso8601 %></published>
+    <updated><%= article.date.to_time.iso8601 %></updated>
+
+    <link href="<%= article.url %>" rel="alternate" type="text/html"/>
+    <title><%= article.title %></title>
+    <content type="html">
+      <%= article.body %>
+    </content>
+  </entry>
+  <% end %>
+</feed>

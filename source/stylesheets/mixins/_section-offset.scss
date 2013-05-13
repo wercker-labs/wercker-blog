@@ -1,0 +1,6 @@
+@mixin section-offset($offset, $darken) {
+	margin-left: $offset;
+	.title a {
+		background-color: lighten($black, $darken);
+	}
+}
