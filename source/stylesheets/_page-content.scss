@@ -37,6 +37,12 @@
 		}
 
 		hr { margin-bottom: 3*$column-gutter;}
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	.recent__articles {
