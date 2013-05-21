@@ -18,6 +18,13 @@ per_page: 10
     </span>
     <h5>By <%= article.data.author %></h5>
     <em><%= article.date.strftime('%A, %b %d %Y') %></em>
+    </br></br>
+        <div class="small-12 large-12 columns sharing-options">
+              <span class='st_twitter' displayText='Tweet'></span>
+              <span class='st_linkedin' displayText='LinkedIn'></span>
+              <span class='st_googleplus' displayText='Google +'></span>
+              <span class='st_email' displayText='Email'></span>
+        </div>
   </div>
 </br>
   <!-- use article.summary(250) if you have Nokogiri available to show just
