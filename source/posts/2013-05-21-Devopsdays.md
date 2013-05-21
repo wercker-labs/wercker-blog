@@ -1,6 +1,6 @@
 ---
 title: Devopsdays Amsterdam
-date: 2013-05-22
+date: 2013-05-21
 tags: devopsdays, conference
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
