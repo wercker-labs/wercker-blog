@@ -7,16 +7,20 @@
 	    </span>
 	    <h5>By <%= current_page.data.author %></h5>
 	    <em><%= current_page.data.date.strftime('%A, %b %d %Y') %></em>
-    </br></br>
+	</div>
+    </br>
+    <%= yield %>
+
         <div class="small-12 large-12 columns sharing-options">
               <span class='st_twitter' displayText='Tweet'></span>
               <span class='st_linkedin' displayText='LinkedIn'></span>
               <span class='st_googleplus' displayText='Google +'></span>
               <span class='st_email' displayText='Email'></span>
         </div>
-	</div>
-    </br>
-    <%= yield %>
+      </br>
+      </br>
+      <hr>
+
     <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
