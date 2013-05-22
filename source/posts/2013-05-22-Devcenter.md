@@ -1,5 +1,5 @@
 ---
-title: Relaunching our Devce
+title: Relaunching our Dev Center
 date: 2013-05-22
 tags: devcenter, wercker, documentation
 author: Micha Hernandez van Leuffen
