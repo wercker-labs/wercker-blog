@@ -26,6 +26,6 @@ You can check out the excellent [program](http://devopsdays.org/events/2013-amst
 
 Follow devopsdays on twitter as well: [@devopsdays](https://twitter.com/devopsdays)
 
-For those of you in Amsterdam, Team wercker will be presenting at the [Devops Cafe Meetup](http://www.meetup.com/DevOpsAmsterdam/events/113001842/) tomorrow (Wednesday, June 22nd, 6PM) at Marktplaats.
+For those of you in Amsterdam, Team wercker will be presenting at the [Devops Cafe Meetup](http://www.meetup.com/DevOpsAmsterdam/events/113001842/) tomorrow (Wednesday, May 22nd, 6PM) at Marktplaats.
 
 Looking forward to talking to you tomorrow or at the Devopsdays in Amsterdam!
