@@ -7,7 +7,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-At wercker we're firm believers in excellent documentation. As developers ourselves we want to be up and running with a new technolgy or system as fast as possible. As such, we've revamped our knowledge base and documentation site, the <a href="http://devcenter.wercker.com">wercker dev center</a>.
+At wercker we are firm believers in excellent documentation. As developers ourselves we want to be up and running with a new technolgy or system as fast as possible. As such, we've revamped our knowledge base and documentation site, the <a href="http://devcenter.wercker.com">wercker dev center</a>.
 </h4>
 
 We've made several improvements:
