@@ -12,7 +12,7 @@ At wercker we're firm believers in excellent documentation. As developers oursel
 
 We've made several improvements:
 
-* more examples and step by step guides (for [go](http://devcenter.wercker.com/articles/languages/go.html), [python](http://devcenter.wercker.com/articles/languages/python/flask.html), [node.js](http://devcenter.wercker.com/articles/languages/nodejs/getting-started-express-and-mocha.html) and [ruby](http://devcenter.wercker.com/articles/languages/ruby.html)
+* more examples and step by step guides (for [python](http://devcenter.wercker.com/articles/languages/python/flask.html), [node.js](http://devcenter.wercker.com/articles/languages/nodejs/getting-started-express-and-mocha.html) and [ruby](http://devcenter.wercker.com/articles/languages/ruby.html)
 * we've enabled commenting on every page, so we close the feedback loop with our users
 * we now allow community edits by way of forking; contribute your own articles by forking the devcenter on [GitHub](https://github.com/wercker/wercker-devcenter/)
 
