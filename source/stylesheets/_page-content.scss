@@ -43,6 +43,21 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+
+		ul {
+			list-style-position: inside;
+			li {
+				margin-left:0.5*$column-gutter;
+				margin-bottom: 5px;
+			}
+		}
+
+		ol {
+			li {
+				margin-left:0.5*$column-gutter;
+				margin-bottom: 5px;
+			}
+		}
 	}
 
 	.recent__articles {
