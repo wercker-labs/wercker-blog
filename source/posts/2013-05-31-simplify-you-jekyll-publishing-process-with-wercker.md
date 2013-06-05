@@ -54,10 +54,9 @@ Create a new file called `wercker.yml` in the root of your repository with the f
         # that actually builds the jekyll site
         - script:
             name: generate site
-            code: bundler exec jekyll build --trace
+            code: bundle exec jekyll build --trace
 ```
-  
-</br>
+
 Lets briefly go through the wercher.yml file. The first line contains `box: wercker/ruby` which defines that you want to run the build in a Ruby box (by default this is Ruby version 1.9.3p429).
 The second line describes the `build` section that consists of steps, in this case there are two steps. These steps are performed during the execution of the build process. The first step `bundle-install` is a smart version of the `bundle install` command that leverages caching so future builds will run faster. The second step `script` executes the script that is defined the `code` clause that consists of a single command `bundler exec jekyll build --trace`. This step actually builds your Jekyll site.
 
@@ -70,7 +69,6 @@ After you created the `wercker.yml` add it to your repository by executing the f
     git commit -m 'Add wercker.yml'
     git push origin master
 ```
-</br>
 
 Because you have created an application for this repository at wercker it should now start building. Open the application page at wercker to see the following result.
 
@@ -109,7 +107,6 @@ Add the following to the end of your current `wercker.yml` file:
             bucket_url: $BUCKET
             source: _site/
 ```
-</br>
 
 The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created. Only the `source` option is _hard coded_ (or should I say _hard configured_) to `_site/`. This is the directory where Jekyll stores the output.
 
@@ -122,7 +119,6 @@ Commit the changes of the `wercker.yml` file and push them to your repository.
     git commit -m 'Add deployment section'
     git push origin master
 ```
-</br>
 
 ## Deploy it!
 You have pushed changes to your repository, thus wercker created another build. Now the deployment information that you have added in the previous steps can be used to deploy the website. This can be done for every successful build in your application by clicking the blue deploy button.
