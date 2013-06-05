@@ -14,7 +14,7 @@ This week we've added a new feature to wercker that streamlines your deployment 
 
 You are now able to auto-deploy your build for specific [deploy targets](http://devcenter.wercker.com/articles/introduction/deployment.html) (dev, staging, production).
 
-However, [with great power comes great responsibility](http://en.wikiquote.org/wiki/Stan_Lee). Internally we use auto deploy for our [dev center](http://devcenter.wercker.com) but not for mission critical applications. We can imagine developers leveraging auto-deploy for staging environments, feature branch deploy targets or, for instance, their blogs.
+However, [with great power comes great responsibility](http://en.wikiquote.org/wiki/Stan_Lee). Internally we use auto deploy for our [dev center](http://devcenter.wercker.com) but not for mission critical services. We can imagine developers leveraging auto-deploy for staging environments, feature branch deploy targets or, for instance, their blogs.
 
 In a previous [post](http://blog.wercker.com/2013/05/31/simplify-you-jekyll-publishing-process-with-wercker.html) we've outlined how to build and deploy your Jekyll-based blog to S3 with wercker; an ideal candidate for auto-deployment.
 
