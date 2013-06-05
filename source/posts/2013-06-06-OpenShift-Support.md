@@ -1,6 +1,6 @@
 ---
 title: Wercker + OpenShift
-date: 2013-05-21
+date: 2013-06-06
 tags: openshift, paas, wercker, announcement
 author: Micha Hernandez van Leuffen
 published: false
