@@ -22,4 +22,4 @@ In a previous [post](http://blog.wercker.com/2013/05/31/simplify-you-jekyll-publ
 
 You are also able to specify which [git branch](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging) you want auto deployed, ideal for when you are working on a new feature.
 
-Let us know what you think!
+Let us know what you think, and deploy safely!
