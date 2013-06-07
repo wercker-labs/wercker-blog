@@ -27,17 +27,17 @@ In this post we will outline how you can streamline your Middleman deployment pi
 
 As said we'll be using the Middleman blogging extension, so make sure you *gem install* it.
 
-    middleman init --template blog
+```bash
+middleman init --template blog
 
-    git init
+git init
 
-    git add .
+git add .
 
-    git commit -am 'init'
+git commit -am 'init'
 
-    git push origin master
-
-</br>
+git push origin master
+```
 
 Congrats, you have just created your blog with Middleman; now lets add it to wercker! Log into wercker and add your repository to wercker by clicking the 'add application button'. Select your repository from either GitHub or Bitbucket. Follow the steps given and make sure you give the `werckerbot` user, read rights on your repository at either Github or Bitbucket.
 
@@ -48,7 +48,7 @@ We now need to specify a custom deploy target on wercker that we will use to set
 
 Here you can fill in the name for your deploy target (for instance 's3' or 'staging') and, if you prefer, select the [auto deploy option](http://blog.wercker.com/2013/06/05/Autodeployment.html) that allows you to automatically deploy specific branches (remember to auto deploy with care!).
 
-Next you want to add the following [environment variables](www.12factor.net/config) that the build pipeline must leverage to sync your middleman app with S3. 
+Next you want to add the following [environment variables](www.12factor.net/config) that the build pipeline must leverage to sync your middleman app with S3.
 
 ![image](http://f.cl.ly/items/1z3B0Y221P1i2M1u1f1q/Screen%20Shot%202013-06-07%20at%204.02.29%20PM.png)
 
@@ -61,27 +61,27 @@ Now it is time to define your build process. This is the pipeline that is run ea
 Create a new file called `wercker.yml` in the root of your repository with the following content:
 
 ```yaml
-	box: wercker/ruby
-	build:
-	    steps:
-	        # Execute the bundle install step, a step provided by wercker
-	        - bundle-install
-	        # Execute a custom script step.
-	        - script:
-	            name: middleman build
-	            code: bundle exec middleman build --verbose
-	deploy:
-	    steps:
-	        # Execute the heroku-deploy, heroku details can be edited
-	        # online at http://app.wercker.com/
-	        #- heroku-deploy
-	
-	        # Execute the s3sync deploy step, a step provided by wercker
-	        - s3sync:
-	            key_id: $AWS_ACCESS_KEY_ID
-	            key_secret: $AWS_SECRET_ACCESS_KEY
-	            bucket_url: $AWS_BUCKET_URL
-	            source_dir: build/
+box: wercker/ruby
+build:
+    steps:
+        # Execute the bundle install step, a step provided by wercker
+        - bundle-install
+        # Execute a custom script step.
+        - script:
+            name: middleman build
+            code: bundle exec middleman build --verbose
+deploy:
+    steps:
+        # Execute the heroku-deploy, heroku details can be edited
+        # online at http://app.wercker.com/
+        #- heroku-deploy
+
+        # Execute the s3sync deploy step, a step provided by wercker
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY_ID
+            key_secret: $AWS_SECRET_ACCESS_KEY
+            bucket_url: $AWS_BUCKET_URL
+            source_dir: build/
 ```
 
 The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created on wercker. Only the `source` option is _hard configured_  to `build`. This is the default folder with the output from the `middleman build` command, which was previously executed in the build phase.
@@ -89,9 +89,9 @@ The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The 
 After you created the `wercker.yml` add it to your repository by executing the following commands in your terminal.
 
 ```bash
-    git add wercker.yml
-    git commit -m 'Add wercker.yml'
-    git push origin master
+git add wercker.yml
+git commit -m 'Add wercker.yml'
+git push origin master
 ```
 
 This automatically triggers a new build on wercker as you can see below.
