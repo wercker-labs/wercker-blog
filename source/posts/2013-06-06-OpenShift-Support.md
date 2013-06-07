@@ -1,15 +1,16 @@
 ---
-title: Wercker + OpenShift
+title: Announcing OpenShift support for wercker
 date: 2013-06-06
-tags: openshift, paas, wercker, announcement
+tags: openshift, paas, wercker, redhat, announcement
 author: Micha Hernandez van Leuffen
-published: false
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
 We're very excited to announce deployment support for OpenShift, RedHat's platform-as-a-service solution.
 </h4>
+
+![image](http://f.cl.ly/items/1U0u181W3L2a1F1V3G0K/wercker%2Bopenshift.png)
 
 [OpenShift](https://www.openshift.com/) is RedHat's auto-scaling PaaS for web applications. Similar to wercker, OpenShift allows developers to focus on their code and not the management of your stack and infrastructure. You can sign up for OpenShift, for free, [here](https://openshift.redhat.com/app/account/new).
 
@@ -20,9 +21,9 @@ Alongside integrating with OpenShift, Wercker is now also a developer [partner](
 
 In this post we're outlining how to get started with wercker and OpenShift. For your convenience, we've created a [sample application in Ruby on GitHub](https://github.com/wercker/getting) that you can fork to get started with OpenShift and wercker. OpenShift offers several application quickstarts that you can view [here](https://openshift.redhat.com/app/console/application_types). Keep in mind, that wercker currently supports Node.js, Ruby and Python, but more stacks are coming soon!
 
-This guide is also available on our [dev center](http://devcenter.wercker.com/articles/deployment/openshift.html)
+This guide is also available in short form on our [dev center](http://devcenter.wercker.com/articles/deployment/openshift.html).
 
-### Requirements
+### Prerequisites
 
 * OpenShift credentials (sign up at [OpenShift registration page](https://openshift.redhat.com/app/account/new))
 * You have [created an application in OpenShift](https://openshift.redhat.com/app/console/application_types)
@@ -116,5 +117,5 @@ If you want to invite team members to your application, you can do so via the se
 
 Thanks for following along and view my final application on wercker [here](https://app.wercker.com/#project/51af33da742779251200246f)
 
-Feel free to contact us with any feedback or questions via [email](pleasemailus@wercker.com) or [twitter](http://twitter.com/wercker), and please tell us about the applications that you develop with wercker and [OpenShift](https://www.openshift.com/)!
+Feel free to contact us with any feedback or questions via [email](pleasemailus@wercker.com) or [twitter](http://twitter.com/wercker), and please tell us about the applications that you develop with [wercker](http://app.wercker.com/sessions/new) and [OpenShift](https://www.openshift.com/)!
 
