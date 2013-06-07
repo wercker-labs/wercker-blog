@@ -9,6 +9,8 @@ gravatarhash: dff7a3e4eadab56aa69a24569cb61e98
 In this tutorial we’re going to show you the recommended way to package and deploy Ruby applications with wercker, bundler and capistrano. This article assumes you have some knowledge of how <a href="http://beta.wercker.com">wercker</a> works. This article is also available on our <a href="http://devcenter.wercker.com/articles/deployment/capistrano.html">dev center</a>
 </h4>
 
+
+
 ### Prerequisites
 
 * Basic knowledge on Ruby and Capistrano
@@ -26,8 +28,6 @@ We’ll start by creating a `wercker.yml` in the root of your repository. For no
 box: wercker/ruby
 ```
 
-</br>
-
 ## Build
 
 Since we’re going to be using [bundler](http://gembundler.com/) for our dependency management we need to include a Gemfile and a Gemfile.lock. Although a Gemfile.lock is optional, it’s recommended that you do include it in your repository (see for more information why you want to include your Gemfile.lock: [Clarifying the Roles of the .gemspec and Gemfile](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/)).
@@ -41,8 +41,6 @@ build:
   steps:
     - bundle-install
 ```
-
-</br>
 
 If you want to do some custom action or run tests you can do so after the bundle-install step. For this tutorial we are focussing on packiging and deploying, so we haven’t included any other steps. See the [Ruby language guide](http://devcenter.wercker.com/articles/languages/ruby.html) on our dev center for more information on build steps such as `rake`.
 
@@ -58,8 +56,6 @@ build:
     - bundle-package
 ```
 
-</br>
-
 The last step that wercker executes is `tar` the output and save it. So next time you start a deploy in the future, you can be certain that you’ll have all your gem files available.
 
 ## Deploy
@@ -73,7 +69,7 @@ set :user, "ubuntu"
 set :group, "ubuntu"
 set :use_sudo, false
 ```
-</br>
+
 This deploy.rb simply contains one simple sinatra application and it sets some default values. For more information about these properties see the [capistrano documentation](https://github.com/capistrano/capistrano/wiki).
 
 First we’re going to specify the source of the code. In most examples and quickstarts of capistrano you’ll see that the git repository is going to be used. This however is not desirable when using wercker, because there is a possibilty that build steps haved added, changed or removed certain files in the build output. To deploy the current working directory we use the following settings:
@@ -84,7 +80,7 @@ set :repository, "."
 set :scm, :none
 set :deploy_via, :copy
 ```
-</br>
+
 This will make capistrano compress the specified directory, *sftp* it to the server and expand it there.
 
 Most ssh servers use a private key to do authentication. This key however is not available for wercker. So we need to make sure that wercker gets access to the key. We don’t want it to be included in our repository, so including it in our wercker.yml is out of the question. Wercker has the ability to add [environment variables](http://www.12factor.net/config) which are exposed to the deploy process.
@@ -110,14 +106,13 @@ deploy:
           export CAP_PRIVATE_KEY=`mktemp`
           echo -e $WERCKER_CAP_PRIVATE_KEY > $CAP_PRIVATE_KEY
 ```
-</br>
+
 In our capistrano script we need to make sure that our private key gets used.
 
 ```ruby
 # config/deploy.rb file
 ssh_options[:keys] = [ENV["CAP_PRIVATE_KEY"]]
 ```
-</br>
 
 Finally we have to start the capistrano step, this can be done by including the cap step. The default arguments are good enough for us.
 
@@ -141,7 +136,6 @@ deploy:
           echo -e $WERCKER_CAP_PRIVATE_KEY > $CAP_PRIVATE_KEY
     - cap
 ```
-</br>
 
 And we need to actually install the dependencies on our deployment server, this can simply be achieved by adding the bundler hooks to our capistrano script:
 
@@ -164,7 +158,6 @@ set :deploy_via, :copy
 
 ssh_options[:keys] = [ENV["CAP_PRIVATE_KEY"]]
 ```
-</br>
 Although we demonstrated a simple deployment project, capistrano can do some really complex deployments. Starting these deploys from wercker can be really easy though.
 
 We've setup a simple github repository were you can see all the code: [https://github.com/hatchan/sinatra-sample](https://github.com/hatchan/sinatra-sample).

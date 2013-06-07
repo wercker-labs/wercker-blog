@@ -77,3 +77,13 @@ img {
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+.highlight pre {
+  overflow: auto;
+  background: white;
+  font-size: 0.9em;
+  padding: 0.5*$column-gutter;
+  border: 1px solid $contentBorderColor;
+  font-family: "inconsolata", "ubuntu mono", "Courier New", Courier, monospace, sans-serif;
+  line-height: 1.4*$base-font-size;
+  margin-bottom: 1.25em;
+}
