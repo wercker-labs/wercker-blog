@@ -124,22 +124,22 @@ Finally we have to start the capistrano step, this can be done by including the 
 Below you can see the final `wercker.yml` file
 
 ```yaml
-	# wercker.yml file
-	box: wercker/ruby
-	build:
-	  steps:
-	    - bundle-install
-	    # test steps, minify step, etc
-	    - bundle-package
-	deploy:
-	  steps:
-	    - bundle-install
-	    - script:
-	        name: write env var
-	        code: |-
-	          export CAP_PRIVATE_KEY=`mktemp`
-	          echo -e $WERCKER_CAP_PRIVATE_KEY > $CAP_PRIVATE_KEY
-	    - cap
+# wercker.yml file
+box: wercker/ruby
+build:
+  steps:
+    - bundle-install
+    # test steps, minify step, etc
+    - bundle-package
+deploy:
+  steps:
+    - bundle-install
+    - script:
+        name: write env var
+        code: |-
+          export CAP_PRIVATE_KEY=`mktemp`
+          echo -e $WERCKER_CAP_PRIVATE_KEY > $CAP_PRIVATE_KEY
+    - cap
 ```
 </br>
 
@@ -149,20 +149,20 @@ The final `deploy.rb` file for capistrano:
 
 
 ```ruby
-	# config/deploy.rb file
-	require 'bundler/capistrano'
+# config/deploy.rb file
+require 'bundler/capistrano'
 
-	set :application, "sinatra-sample"
-	server "example.com", :app, :web
-	set :user, "ubuntu"
-	set :group, "ubuntu"
-	set :use_sudo, false
+set :application, "sinatra-sample"
+server "example.com", :app, :web
+set :user, "ubuntu"
+set :group, "ubuntu"
+set :use_sudo, false
 
-	set :repository, "."
-	set :scm, :none
-	set :deploy_via, :copy
+set :repository, "."
+set :scm, :none
+set :deploy_via, :copy
 
-	ssh_options[:keys] = [ENV["CAP_PRIVATE_KEY"]]
+ssh_options[:keys] = [ENV["CAP_PRIVATE_KEY"]]
 ```
 </br>
 Although we demonstrated a simple deployment project, capistrano can do some really complex deployments. Starting these deploys from wercker can be really easy though.
