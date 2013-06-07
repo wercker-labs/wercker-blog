@@ -17,7 +17,7 @@ In this tutorial we’re going to show you the recommended way to package and de
 
 ## The wercker.yml file
 
-The *wercker.yml* file is the mechanism that allows you to define your environment on wercker; encompassing the programming language, any services you need such as databases and queues and of cource the build and deploy steps that specify the delivery pipeline for your application. For more information see the article on *wercker.yml* on our [dev center](http://devcenter.wercker.com/articles/werckeryml/).
+The *wercker.yml* file is the mechanism that allows you to define your environment on wercker; encompassing the programming language, any services you need such as databases and queues and of cource the build and deploy steps that specify the delivery pipeline for your application. For more information see the article on *wercker.yml* on our [dev center](http://devcenter.wercker.com/articles/deployment/capistrano.html).
 
 We’ll start by creating a `wercker.yml` in the root of your repository. For now we’ll just specify the box. This will create a Ruby 1.9.3 environment (which is the default version) for us to work in. Make sure you indent your wercker.yml file correctly in the subsequent steps.
 
