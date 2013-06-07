@@ -1,10 +1,9 @@
 ---
-title: Packing and deploying Ruby apps with wercker
+title: Packing and deploying Ruby apps with wercker and Capistrano
 date: 2013-06-07
 tags: ruby, bundler, capistrano, deployment
 author: Benno van den Berg
 gravatarhash: dff7a3e4eadab56aa69a24569cb61e98
-published: false
 ---
 <h4 class="subheader">
 In this tutorial we’re going to show you the recommended way to package and deploy Ruby applications with wercker, bundler and capistrano. This article assumes you have some knowledge of how <a href="http://beta.wercker.com">wercker</a> works.
@@ -88,7 +87,7 @@ set :deploy_via, :copy
 </br>
 This will make capistrano compress the specified directory, *sftp* it to the server and expand it there.
 
-Most ssh servers use a private key to do authentication. This key however is not available for wercker. So we need to make sure that wercker gets access to the key. We don’t want it to be included in our repository, so including it in our wercker.yml is out of the question. Wercker has the ability to add [environment variables](http://www.12factor.net/config) which are exposed to the deploy process. 
+Most ssh servers use a private key to do authentication. This key however is not available for wercker. So we need to make sure that wercker gets access to the key. We don’t want it to be included in our repository, so including it in our wercker.yml is out of the question. Wercker has the ability to add [environment variables](http://www.12factor.net/config) which are exposed to the deploy process.
 
 ![image](http://f.cl.ly/items/2k2o2m2009343v2I3A0P/Screen%20Shot%202013-06-07%20at%2012.20.16%20PM.png)
 
@@ -152,17 +151,17 @@ The final `deploy.rb` file for capistrano:
 ```ruby
 	# config/deploy.rb file
 	require 'bundler/capistrano'
-	
+
 	set :application, "sinatra-sample"
 	server “example.com", :app, :web
 	set :user, "ubuntu"
 	set :group, "ubuntu"
 	set :use_sudo, false
-	
+
 	set :repository, "."
 	set :scm, :none
 	set :deploy_via, :copy
-	
+
 	ssh_options[:keys] = [ENV["CAP_PRIVATE_KEY"]]
 ```
 </br>
