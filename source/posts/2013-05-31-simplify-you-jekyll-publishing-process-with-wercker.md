@@ -43,20 +43,20 @@ Now it is time to define your build process. This is the pipeline that will get 
 Create a new file called `wercker.yml` in the root of your repository with the following content:
 
 ```yaml
-    # our build should run within a Ruby box
-    box: wercker/ruby
-    build:
-      steps:
-        # Run a smart version of bundle install
-        # which improves build execution time of
-        # future builds
-        - bundle-install
-
-        # A custom script step
-        # that actually builds the jekyll site
-        - script:
-            name: generate site
-            code: bundle exec jekyll build --trace
+# our build should run within a Ruby box
+box: wercker/ruby
+build:
+  steps:
+    # Run a smart version of bundle install
+    # which improves build execution time of
+    # future builds
+    - bundle-install
+    
+    # A custom script step
+    # that actually builds the jekyll site
+    - script:
+        name: generate site
+        code: bundle exec jekyll build --trace
 ```
 
 Lets briefly go through the wercher.yml file. The first line contains `box: wercker/ruby` which defines that you want to run the build in a Ruby box (by default this is Ruby version 1.9.3p429).
@@ -67,9 +67,9 @@ The second line describes the `build` section that consists of steps, in this ca
 After you created the `wercker.yml` add it to your repository by executing the following commands.
 
 ```bash
-    git add wercker.yml
-    git commit -m 'Add wercker.yml'
-    git push origin master
+git add wercker.yml
+git commit -m 'Add wercker.yml'
+git push origin master
 ```
 
 Because you have created an application for this repository at wercker it should now start building. Open the application page at wercker to see the following result.
@@ -101,13 +101,13 @@ The current `wercker.yml` file contains the steps that are executed when the app
 Add the following to the end of your current `wercker.yml` file:
 
 ```yaml
-    deploy:
-      steps:
-        - s3sync
-            key_id: $KEY
-            key_secret: $SECRET
-            bucket_url: $BUCKET
-            source: _site/
+deploy:
+  steps:
+    - s3sync:
+        key_id: $KEY
+        key_secret: $SECRET
+        bucket_url: $URL
+        source_dir: _site/
 ```
 
 The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created. Only the `source` option is _hard coded_ (or should I say _hard configured_) to `_site/`. This is the directory where Jekyll stores the output.
@@ -117,9 +117,9 @@ We could also _hard code_ the key and key secret in here, but that is not someth
 Commit the changes of the `wercker.yml` file and push them to your repository.
 
 ```bash
-    git add wercker.yml
-    git commit -m 'Add deployment section'
-    git push origin master
+git add wercker.yml
+git commit -m 'Add deployment section'
+git push origin master
 ```
 
 ## Deploy it!
