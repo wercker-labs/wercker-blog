@@ -77,7 +77,7 @@ Because you have created an application for this repository at wercker it should
 Congratulations, you first green build on wercker! If you [tweet me](http://twitter.com/pjvds) or e-mail [pj@wercker.com](mailto:pj@wercker.com) a screenshot I will make sure you receive a wercker sticker to celebrate.
 
 ## Add deployment target information
-Now you have automated your content generation process that will get executed every time you push your code to git. This is helpful to catch jekyll errors early, but without  deployment it doesn't help your actual live website. Let's add a deploy target to your application on wercker so we can close the loop!
+Now you have automated your content generation process that will get executed every time you push your code to git. This is helpful to catch jekyll errors early, but without deployment it doesn't help your actual live website. Let's add a deploy target to your application on wercker so we can close the loop!
 
 Go to your application at [app.wercker.com](https://app.wercker.com) and click on the settings tab.
 
