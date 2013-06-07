@@ -11,7 +11,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 We're very excited to announce deployment support for OpenShift, RedHat's platform-as-a-service solution.
 </h4>
 
-OpenShift is RedHat's auto-scaling PaaS for web applications. Similar to wercker, OpenShift allows developers to focus on their code and not the management of your stack and infrastructure. You can sign up for OpenShift, for free, [here](https://openshift.redhat.com/app/account/new).
+[OpenShift](https://www.openshift.com/) is RedHat's auto-scaling PaaS for web applications. Similar to wercker, OpenShift allows developers to focus on their code and not the management of your stack and infrastructure. You can sign up for OpenShift, for free, [here](https://openshift.redhat.com/app/account/new).
 
 Wercker helps you streamline your continuous delivery pipeline to OpenShift, thus reducing risk and eliminating waste in your workflow and increasing developer velocity. Signing up for wercker is easy and free, [so go ahead](https://app.wercker.com/users/new/).
 Alongside integrating with OpenShift, Wercker is now also a developer [partner](https://www.openshift.com/partners).
@@ -49,7 +49,7 @@ To start the process to add an OpenShift deployment target, do the following:
 * Click the `Add deploy target` dropdown
 * Click `OpenShift`
 
-![image](http://f.cl.ly/items/1R0J3g1v1b0Z2Q1n1V34/Screen%20Shot%202013-06-06%20at%2010.27.46%20AM.png)
+![image](http://f.cl.ly/items/3j2b2R2Y0t3e07422p3D/Screen%20Shot%202013-06-06%20at%2011.15.55%20AM.png)
 
 ### Create OpenShift authentication token
 _note: you can skip this step if you already have an OpenShift authentication token._
@@ -64,11 +64,9 @@ Enter the OpenShift authorization token and click `connect`.
 
 ![image](http://f.cl.ly/items/1N2s0C392U1F0W2R273i/Screen%20Shot%202013-06-06%20at%2010.32.11%20AM.png)
 
-
-
 ### Enter OpenShift deploy target details
 
-Enter a descriptive deploy target name, eq: staging or production.
+Enter a descriptive deploy target name, such as: staging or production.
 
 Select the OpenShift domain and application that you want to deploy to. Wercker automaticly selected the first available domain and application.
 
@@ -96,11 +94,27 @@ Login to OpenShift and add the key to your public key list.
 
 You are now ready to deploy to OpenShift. Wercker allows you to deploy all succesfull builds. Navigate to your application and select the succesfull build you like to deploy.
 
-![image](http://f.cl.ly/items/0937133624283Q1w1B3t/Screen%20Shot%202013-06-06%20at%2010.52.25%20AM.png)
+![image](http://f.cl.ly/items/0f1W0u1M391m2K2p1n2s/Screen%20Shot%202013-06-06%20at%2011.03.02%20AM.png)
 
 In the build via click the `deploy this build` button and choice the target that you have just create.
 
-![image](/assets/deployment-openshift/step9-queue-deploy.png)
+![image](http://f.cl.ly/items/090u37223b3h0X1s0Y11/Screen%20Shot%202013-06-07%20at%2010.08.39%20AM.png)
 
 Congratulations! You have succesfully deployed your application to OpenShift.
+
+### Next steps
+
+You can share the build status of your application via the wercker badge (for instance in the README.md of your application on GitHub), that you can add via the 'share button', just below the application header:
+
+![image](http://f.cl.ly/items/3c3q1D3b0T19120a2p2P/Screen%20Shot%202013-06-07%20at%2010.11.23%20AM.png)
+
+This is the build status of my application on wercker:
+
+[![Wercker status](https://app.wercker.com/status/15d64ab8845712f6aac2af3c29a85029/m)](https://app.wercker.com/project/bykey/15d64ab8845712f6aac2af3c29a85029)
+
+If you want to invite team members to your application, you can do so via the settings tab. Keep in mind that the team members you want to invite have to have a wercker account (sign up [here](https://app.wercker.com/users/new)).
+
+Thanks for following along and view my final application on wercker [here](https://app.wercker.com/#project/51af33da742779251200246f)
+
+Feel free to contact us with any feedback or questions via [email](pleasemailus@wercker.com) or [twitter](http://twitter.com/wercker), and please tell us about the applications that you develop with wercker and [OpenShift](https://www.openshift.com/)!
 
