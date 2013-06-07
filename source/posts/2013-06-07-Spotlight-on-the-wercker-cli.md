@@ -11,6 +11,8 @@ published: false
 In this post we will go into how the wercker command line interface works.
 </h4>
 
+READMORE
+
 # Introduction
 
 text

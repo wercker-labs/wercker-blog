@@ -6,7 +6,9 @@ author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 ---
 
-With many [bloggers moving to static site generators](https://www.google.nl/search?q=popular+bloggers+moving+to+jekyll) and success stories like [Obama's $250 million fundraising platform](http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/) people are accepting static site generators as a serious alternative, especially when security and performance is important. For instance this blog and the [wercker dev center](http://devcenter.wercker.com/) are powered by [middleman](http://middlemanapp.com/), another popular static site generator.
+<h4 class="subheader">With many <a href="https://www.google.nl/search?q=popular+bloggers+moving+to+jekyll">bloggers moving to static site generators</a> and success stories like <a href="http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/">Obama's $250 million fundraising platform</a> people are accepting static site generators as a serious alternative, especially when security and performance is important. For instance this blog and the <a href="http://devcenter.wercker.com/">wercker dev center</a> are powered by <a href="http://middlemanapp.com/">middleman</a>, another popular static site generator.</h4>
+
+READMORE
 
 _note: a short version of this tutorial is also available at our [dev center](http://devcenter.wercker.com/articles/deployment/jekylls3.html)_
 

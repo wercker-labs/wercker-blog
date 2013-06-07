@@ -11,6 +11,8 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 In a previous <a href="http://blog.wercker.com/2013/05/31/simplify-you-jekyll-publishing-process-with-wercker.html">post</a> we outlined how you can simplify the deployment process of your static Jekyll sites to Amazon S3 with wercker. This post goes into another static site generator called <a href="http://middlemanapp.com/">Middleman</a>.
 </h4>
 
+READMORE
+
 ### Middlemanapp
 We make heavy use of [Middleman](http://middlemanapp.com/) internally at wercker; our [dev center](http://devcenter.wercker.com) is built using Middleman and the [blog](http://blog.wercker.com) that you are currently reading as well, using the Middleman [blogging](http://middlemanapp.com/blogging/) [extension](https://github.com/middleman/middleman-blog).
 

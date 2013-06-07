@@ -12,6 +12,8 @@ We're very excited to announce deployment support for OpenShift, RedHat's platfo
 
 ![image](http://f.cl.ly/items/1U0u181W3L2a1F1V3G0K/wercker%2Bopenshift.png)
 
+READMORE
+
 [OpenShift](https://www.openshift.com/) is RedHat's auto-scaling PaaS for web applications. Similar to wercker, OpenShift allows developers to focus on their code and not the management of your stack and infrastructure. You can sign up for OpenShift, for free, [here](https://openshift.redhat.com/app/account/new).
 
 Wercker helps you streamline your continuous delivery pipeline to OpenShift, thus reducing risk and eliminating waste in your workflow and increasing developer velocity. Signing up for wercker is easy and free, [so go ahead](https://app.wercker.com/users/new/).

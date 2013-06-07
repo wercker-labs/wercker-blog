@@ -10,6 +10,8 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 At wercker we are firm believers in excellent documentation. As developers ourselves we want to be up and running with a new technolgy or system as fast as possible. As such, we have revamped our knowledge base and documentation site, the <a href="http://devcenter.wercker.com">wercker dev center</a>.
 </h4>
 
+READMORE
+
 We've made several improvements:
 
 * more examples and step by step guides (for [python](http://devcenter.wercker.com/articles/languages/python/flask.html), [node.js](http://devcenter.wercker.com/articles/languages/nodejs/getting-started-express-and-mocha.html) and [ruby](http://devcenter.wercker.com/articles/languages/ruby.html))

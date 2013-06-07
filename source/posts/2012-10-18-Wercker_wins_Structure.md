@@ -10,6 +10,8 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 We are very excited to announce that Wercker won best startup at the Structure:Europe Launchpad event.
 </h4>
 
+READMORE
+
 Wercker got both the People's Choice award as well as the Judges' Choice award.
 
 <h4>Coverage</h4>

@@ -6,10 +6,10 @@ author: Benno van den Berg
 gravatarhash: dff7a3e4eadab56aa69a24569cb61e98
 ---
 <h4 class="subheader">
-In this tutorial we’re going to show you the recommended way to package and deploy Ruby applications with wercker, bundler and capistrano. This article assumes you have some knowledge of how <a href="http://beta.wercker.com">wercker</a> works. This article is also available on our <a href="http://devcenter.wercker.com/articles/deployment/capistrano.html">dev center</a>
+In this tutorial we’re going to show you the recommended way to package and deploy Ruby applications with wercker, bundler and capistrano. This article assumes you have some knowledge of how <a href="http://beta.wercker.com">wercker</a> works. This article is also available on our <a href="http://devcenter.wercker.com/articles/deployment/capistrano.html">dev center</a>.
 </h4>
 
-
+READMORE
 
 ### Prerequisites
 

@@ -13,7 +13,7 @@ activate :blog do |blog|
   # blog.taglink = "tags/:tag.html"
   blog.layout = "article_layout"
   # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 100
+  blog.summary_length = 100
   # blog.year_link = ":year.html"
   # blog.month_link = ":year/:month.html"
   # blog.day_link = ":year/:month/:day.html"

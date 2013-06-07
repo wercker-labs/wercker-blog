@@ -7,8 +7,10 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-Auto-deploying your application with wercker
+Auto-deploying your application with wercker.
 </h4>
+
+READMORE
 
 This week we've added a new feature to wercker that streamlines your deployment process even more.
 
