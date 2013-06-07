@@ -7,7 +7,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-Auto-deploying your application with wercker.
+Auto-deploying your applications with wercker. Wercker's auto deploy feature enables you to automatically update your applications for selected git branches, increasing developer velocity even more.
 </h4>
 
 READMORE
