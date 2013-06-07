@@ -3,6 +3,7 @@ title: Announcing OpenShift support for wercker
 date: 2013-06-06
 tags: openshift, paas, wercker, redhat, announcement
 author: Micha Hernandez van Leuffen
+published: false
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
