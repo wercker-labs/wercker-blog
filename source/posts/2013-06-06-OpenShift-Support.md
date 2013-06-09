@@ -59,7 +59,7 @@ _note: you can skip this step if you already have an OpenShift authentication to
 
 OpenShift allows other services, like wercker, to access information via a secret token. OpenShift has three different scopes: `session`, `read` and `userinfo`. Wercker needs only read access. Although you can use an existing authentication token we strongly advice to create one per service. You can create a `read` authorization key at the [add authorization](https://openshift.redhat.com/app/console/authorizations/new) page at OpenShift. Give it a meaningful name like `wercker`.
 
-![image](/assets/deployment-openshift/step3-openshift-auth-token.png)
+![image](http://f.cl.ly/items/0U430Y3S1b2E2u411a1V/step3-openshift-auth-token.png)
 
 ### Authorize wercker
 
