@@ -36,7 +36,7 @@ This guide is also available in short form on our [dev center](http://devcenter.
 
 ### Deploy target
 
-Every succesful build on wercker can be deployed to a so called deploy target. This can be a custom deploy target, or one of the predefined targets like [Heroku](/articles/deployment/heroku.html) or [OpenShift](#). You can read more at the [deployment section](/articles/deployment/).
+Every succesful build on wercker can be deployed to a so called deploy target. This can be a custom deploy target, or one of the predefined targets like [Heroku](http://devcenter.wercker.com/articles/deployment/heroku.html) or [OpenShift](http://devcenter.wercker.com/articles/deployment/openshift.html). You can read more at the [deployment section](http://devcenter.wercker.com/articles/deployment/).
 
 In this article we will add one for OpenShift. Follow along with the steps below:
 
