@@ -3,7 +3,6 @@ title: Streamlining your Middleman deploys with wercker and S3
 date: 2013-06-10
 tags: middleman, wercker, s3, aws, deployment
 author: Micha Hernandez van Leuffen
-published: false
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
@@ -48,9 +47,9 @@ Congrats, you have just created your blog with Middleman; now lets add it to wer
 
 We now need to specify a custom deploy target on wercker that we will use to setup the details for Amazon S3. Go to the settings tab for your application and under the section 'Deploy Target' click add 'Add deploy target'.
 
-Here you can fill in the name for your deploy target (for instance 's3' or 'staging') and, if you prefer, select the [auto deploy option](http://blog.wercker.com/2013/06/05/Autodeployment.html) that allows you to automatically deploy specific branches (remember to auto deploy with care!).
+Here you can fill in the name for your deploy target (for instance 'S3' or 'staging') and, if you prefer, select the [auto deploy option](http://blog.wercker.com/2013/06/05/Autodeployment.html) that allows you to automatically deploy specific branches (remember to auto deploy with care!).
 
-Next you want to add the following [environment variables](www.12factor.net/config) that the build pipeline must leverage to sync your middleman app with S3.
+Next you want to add the following [environment variables](http://12factor.net/config) that the build pipeline must leverage to sync your middleman app with S3.
 
 ![image](http://f.cl.ly/items/1z3B0Y221P1i2M1u1f1q/Screen%20Shot%202013-06-07%20at%204.02.29%20PM.png)
 
@@ -60,7 +59,7 @@ Here you enter the details of your Amazon S3 bucket. The key and secret key can 
 
 Now it is time to define your build process. This is the pipeline that is run each time changes are pushed to the git repository.
 
-Create a new file called `wercker.yml` in the root of your repository with the following content:
+Create a new file called `wercker.yml` in the root of your repository with the following content (please make sure you indent the wercker.yml file correctly):
 
 ```yaml
 box: wercker/ruby
@@ -82,9 +81,9 @@ deploy:
             source_dir: build/
 ```
 
-The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created on wercker. Only the `source` option is _hard configured_  to `build`. This is the default folder with the output from the `middleman build` command, which was previously executed in the build phase.
+The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created on wercker. Only the `source` option is _hard configured_  to *build/* folder. This is the default folder with the output from the `middleman build` command, which was previously executed in the build phase.
 
-After you created the `wercker.yml` add it to your repository by executing the following commands in your terminal.
+After you've created the `wercker.yml` add it to your repository by executing the following commands in your terminal.
 
 ```bash
 git add wercker.yml
@@ -101,6 +100,6 @@ If everything went well you are now ready to deploy this green build (if you did
 
 ![image](http://f.cl.ly/items/3q2h0M333o0k2K3l2P2a/Screen%20Shot%202013-06-07%20at%204.35.06%20PM.png)
 
-Congratulations your blog built with middleman is now live on s3!
+Congratulations your blog built with middleman and deployed via wercker is now live on S3!
 
 Let us know if you have any feedback on creating and deploying your middleman apps with wercker.
