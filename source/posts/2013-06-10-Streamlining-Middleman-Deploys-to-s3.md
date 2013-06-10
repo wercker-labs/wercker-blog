@@ -102,4 +102,6 @@ If everything went well you are now ready to deploy this green build (if you did
 
 Congratulations your blog built with middleman and deployed via wercker is now live on S3!
 
+Tweet out your green build and we'll send you some wercker stickers! (don't forget to @reply us so we notice)
+
 Let us know if you have any feedback on creating and deploying your middleman apps with wercker.
