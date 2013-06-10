@@ -15,7 +15,7 @@ READMORE
 ### Middlemanapp
 We make heavy use of [Middleman](http://middlemanapp.com/) internally at wercker; our [dev center](http://devcenter.wercker.com) is built using Middleman and the [blog](http://blog.wercker.com) that you are currently reading as well, using the Middleman [blogging](http://middlemanapp.com/blogging/) [extension](https://github.com/middleman/middleman-blog).
 
-In this post we will outline how you can streamline your Middleman deployment pipeline to Amazon Web Services S3. This article is also available on our [dev center](http://devcenter.wercker.com/articles/deployment/)
+In this post we will outline how you can streamline your Middleman deployment pipeline to Amazon Web Services S3. This article is also available on our [dev center](http://devcenter.wercker.com/articles/deployment/middleman.html)
 
 ### Prerequisites
 
