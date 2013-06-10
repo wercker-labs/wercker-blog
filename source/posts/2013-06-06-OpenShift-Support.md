@@ -36,7 +36,7 @@ This guide is also available in short form on our [dev center](http://devcenter.
 
 ### Deploy target
 
-Every succesful build on wercker can be deployed to a so called deploy target. This can be a custom deploy target, or one of the predefined targets like [Heroku](/articles/deployment/heroku.html) or [OpenShift](#). You can read more at the [deployment section](/articles/deployment/).
+Every succesful build on wercker can be deployed to a so called deploy target. This can be a custom deploy target, or one of the predefined targets like [Heroku](http://devcenter.wercker.com/articles/deployment/heroku.html) or [OpenShift](http://devcenter.wercker.com/articles/deployment/openshift.html). You can read more at the [deployment section](http://devcenter.wercker.com/articles/deployment/).
 
 In this article we will add one for OpenShift. Follow along with the steps below:
 
@@ -59,7 +59,7 @@ _note: you can skip this step if you already have an OpenShift authentication to
 
 OpenShift allows other services, like wercker, to access information via a secret token. OpenShift has three different scopes: `session`, `read` and `userinfo`. Wercker needs only read access. Although you can use an existing authentication token we strongly advice to create one per service. You can create a `read` authorization key at the [add authorization](https://openshift.redhat.com/app/console/authorizations/new) page at OpenShift. Give it a meaningful name like `wercker`.
 
-![image](/assets/deployment-openshift/step3-openshift-auth-token.png)
+![image](http://f.cl.ly/items/0U430Y3S1b2E2u411a1V/step3-openshift-auth-token.png)
 
 ### Authorize wercker
 
