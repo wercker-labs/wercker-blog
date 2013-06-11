@@ -4,6 +4,7 @@ date: 2013-06-11
 tags: openshift, paas, wercker, redhat, announcement
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
+published: false
 ---
 
 <h4 class="subheader">
@@ -19,7 +20,7 @@ READMORE
 Wercker helps you streamline your continuous delivery pipeline to OpenShift, thus reducing risk and eliminating waste in your workflow and increasing developer velocity. Signing up for wercker is easy and free, [so go ahead](https://app.wercker.com/users/new/).
 Alongside integrating with OpenShift, Wercker is now also a developer [partner](https://www.openshift.com/partners).
 
-##Getting started with wercker and OpenShift
+## Getting started with wercker and OpenShift
 
 In this post we're outlining how to get started with wercker and OpenShift. For your convenience, we've created a [sample application in Ruby on GitHub](https://github.com/wercker/getting) that you can fork to get started with OpenShift and wercker. OpenShift offers several application quickstarts that you can view [here](https://openshift.redhat.com/app/console/application_types). Keep in mind, that wercker currently supports Node.js, Ruby and Python, but more stacks are coming soon!
 
