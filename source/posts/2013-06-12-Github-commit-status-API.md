@@ -29,4 +29,10 @@ If we view the branch of this commit on GitHub you can see that hovering over th
 
 ### Pull Requests
 
-The second scenario is the support for [pull requests](https://help.github.com/articles/using-pull-requests). Pull requests are an awesome way of collaborating on projects: you fork an existing repository, `git push` your improvements to your forked repo and do a pull request on the original repository to contribute back your code.
+The second scenario is the support for [pull
+requests](https://help.github.com/articles/using-pull-requests). Pull
+requests are an awesome way of collaborating on projects: you fork an
+existing repository, `git push` your improvements to your forked repo
+and do a pull request on the original repository to contribute back your
+code. When you do a pull requests, wercker again gets notified and
+starts building your latest commit.
