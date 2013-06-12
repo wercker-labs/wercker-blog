@@ -11,6 +11,7 @@ In this post we'll dive into how to get started with a simple <a href="http://fl
 </h4>
 
 Flask is a powerful microframework for Python web applications. It has a rich ecosystem of plugins and snippets and is of course open source! Flask is ideal for building lightweight applications or API's. It is also *very* easy to learn.
+Sign up for wercker for free [here](https://app.wercker.com/users/new/)
 
 READMORE
 
@@ -201,3 +202,6 @@ Congratulations, you've successfully created and tested a Flask application with
 The code for this example application can be found on [GitHub](https://github.com/mies/getting-started-flask-redis).
 
 You can see the final result of this application on my [wercker page](https://app.wercker.com/#project/51b6e0c4345a2a453d000bfa).
+
+Sign up for wercker for free [here](https://app.wercker.com/users/new/)
+
