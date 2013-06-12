@@ -48,7 +48,11 @@ forked repo gets built and the status is attached to the pull request.
 
 We now know for certain that we can safely merge this pull request!
 
+The badge
+
 Pull requests are a very powerful mechanism for working together on code
 and wercker makes them even better.
+
+
 
 Sign up for wercker here.
