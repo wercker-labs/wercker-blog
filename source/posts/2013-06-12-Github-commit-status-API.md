@@ -34,7 +34,9 @@ requests](https://help.github.com/articles/using-pull-requests). Pull
 requests are an awesome way of collaborating on projects: you fork an
 existing repository, `git push` your improvements to your forked repo
 and do a pull request on the original repository to contribute back your
-code. When you do a pull requests, wercker again gets notified and
-starts building your latest commit.
+code. 
+
+If the original repository is added to wercker any pull request from a
+forked repo gets built and the status is attached to the pull request.
 
 ![image](http://f.cl.ly/items/2p17330V153v163W3d3G/Screen%20Shot%202013-06-12%20at%202.11.28%20PM.png)
