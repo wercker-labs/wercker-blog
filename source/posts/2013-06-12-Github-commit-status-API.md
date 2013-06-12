@@ -14,6 +14,11 @@ At wercker we make heavy use of GitHub and are big fans of what Tom, Chris, PJ, 
 READMORE
 
 A while back GitHub announced [commit status api](https://github.com/blog/1227-commit-status-api) and wercker supports attaching the build status of your commit in two ways. In both cases [webhooks](https://help.github.com/articles/post-receive-hooks) are triggered each time you do a `git push` to your repository. These webhooks communicate with and tell us that a build should be started from your latest push.
+![image](http://f.cl.ly/items/261g3H47283U3t361k1P/IMG_0547.JPG)
+
+This article is also available on our [dev center](http://)
+
+Sign up for wercker here
 
 ### Scenario 1: Status on Commit
 
@@ -39,4 +44,11 @@ code.
 If the original repository is added to wercker any pull request from a
 forked repo gets built and the status is attached to the pull request.
 
-![image](http://f.cl.ly/items/2p17330V153v163W3d3G/Screen%20Shot%202013-06-12%20at%202.11.28%20PM.png)
+![image](http://f.cl.ly/items/2O1N280y0z1C1w3y1e43/Screen%20Shot%202013-06-12%20at%202.44.33%20PM.png)
+
+We now know for certain that we can safely merge this pull request!
+
+Pull requests are a very powerful mechanism for working together on code
+and wercker makes them even better.
+
+Sign up for wercker here.
