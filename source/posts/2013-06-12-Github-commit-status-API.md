@@ -16,9 +16,11 @@ READMORE
 A while back GitHub announced [commit status api](https://github.com/blog/1227-commit-status-api) and wercker supports attaching the build status of your commit in two ways. In both cases [webhooks](https://help.github.com/articles/post-receive-hooks) are triggered each time you do a `git push` to your repository. These webhooks communicate with and tell us that a build should be started from your latest push.
 ![image](http://f.cl.ly/items/261g3H47283U3t361k1P/IMG_0547.JPG)
 
-This article is also available on our [dev center](http://)
+This article is also available on our [dev
+center](http://devcenter.wercker.com/articles/bestpractices/pullrequests.html)
 
-Sign up for wercker here
+You can sign up for wercker for free
+[here](https://app.wercker.com/users/new/).
 
 ### Scenario 1: Status on Commit
 
@@ -46,13 +48,21 @@ forked repo gets built and the status is attached to the pull request.
 
 ![image](http://f.cl.ly/items/2O1N280y0z1C1w3y1e43/Screen%20Shot%202013-06-12%20at%202.44.33%20PM.png)
 
-We now know for certain that we can safely merge this pull request!
+We now know for certain that we can safely merge this pull request! When
+we hit the 'merge this pull request' button we still want to build the
+end result of the merge, which wercker does automatically.
 
-The badge
+Another way to showcase your latest build status is through the wercker
+badge which you can add via the 'share button' as shown below.
+
+![image](http://f.cl.ly/items/2Y1B35013h292B1A1Z3E/Screen%20Shot%202013-06-12%20at%203.06.11%20PM.png)
+
+The build status for this blog is for instance as follows:
+
+[![Wercker
+status](https://app.wercker.com/status/328166c4407cc4b934edabcf019f94cc/m)](https://app.wercker.com/project/bykey/328166c4407cc4b934edabcf019f94cc)
 
 Pull requests are a very powerful mechanism for working together on code
 and wercker makes them even better.
 
-
-
-Sign up for wercker here.
+Sign up for wercker for free [here](https://app.wercker.com/users/new/)
