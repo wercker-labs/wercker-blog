@@ -1,9 +1,8 @@
 ---
-title: Attaching build statuses to commits on Github
+title: Attaching build statuses to commits on GitHub
 date: 2013-06-12
 tags: wercker, github, git, pullrequests, api
 author: Micha Hernandez van Leuffen
-published: false
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
