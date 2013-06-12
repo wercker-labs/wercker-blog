@@ -15,13 +15,13 @@ READMORE
 
 A while back GitHub announced [commit status api](https://github.com/blog/1227-commit-status-api) and wercker supports attaching the build result to the commit. There are two scenario's where wercker sets the status. One is the result of every 'normal' build in wercker. These show up in the branch overview and inter-repository pull-requests. Another scenario is when a collaborator sends a pull request of a fork, this pull request will be build and the result will be set in your own repository.
 
-![image](http://f.cl.ly/items/261g3H47283U3t361k1P/IMG_0547.JPG)
-
 This article is also available on our [dev
 center](http://devcenter.wercker.com/articles/bestpractices/pullrequests.html)
 
 You can sign up for wercker for free
 [here](https://app.wercker.com/users/new/).
+
+![image](http://f.cl.ly/items/261g3H47283U3t361k1P/IMG_0547.JPG)
 
 ### Scenario 1: Status on Commit
 
@@ -31,9 +31,11 @@ Below you can see that the latest build for this blog has successfully completed
 
 ![image](http://f.cl.ly/items/1X3F270u1Y3H2c413j3Q/Screen%20Shot%202013-06-12%20at%201.34.13%20PM.png)
 
-If we view the branch of this commit on GitHub you can see that hovering over the &#10003; checkmark will showcase that the build finished with a success status. Clicking that &#10003; checkmark will take you to the [build page on wercker](https://app.wercker.com/#build/51b84324345a2a453d002cda) and give you more details on the various buildsteps, such as unittests, bundle install and [middleman processing](http://middlemanapp.com) the build went through.
+If we view the branch of this commit on GitHub you can see that hovering over the &#10003; checkmark will showcase that the build finished with a success status. 
 
-![image](http://f.cl.ly/items/012I2h3x0A1b2E0C0U2G/Screen%20Shot%202013-06-12%20at%201.41.28%20PM.png)
+![image](http://f.cl.ly/items/0F072b3E343T312k0i1I/Screen%20Shot%202013-06-12%20at%201.31.18%20PM.png)
+
+Clicking that &#10003; checkmark will take you to the [build page on wercker](https://app.wercker.com/#build/51b84324345a2a453d002cda) and give you more details on the various buildsteps, such as `unittests`, `bundle install` and `middleman processing` the build went through.
 
 ### Scenario 2: Pull Requests
 
