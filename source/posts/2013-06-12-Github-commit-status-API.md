@@ -13,7 +13,8 @@ At wercker we make heavy use of GitHub and are big fans of what Tom, Chris, PJ, 
 
 READMORE
 
-A while back GitHub announced [commit status api](https://github.com/blog/1227-commit-status-api) and wercker supports attaching the build status of your commit in two ways. In both cases [webhooks](https://help.github.com/articles/post-receive-hooks) are triggered each time you do a `git push` to your repository. These webhooks communicate with and tell us that a build should be started from your latest push.
+A while back GitHub announced [commit status api](https://github.com/blog/1227-commit-status-api) and wercker supports attaching the build result to the commit. There are two scenario's where wercker sets the status. One is the result of every 'normal' build in wercker. These show up in the branch overview and inter-repository pull-requests. Another scenario is when a collaborator sends a pull request of a fork, this pull request will be build and the result will be set in your own repository.
+
 ![image](http://f.cl.ly/items/261g3H47283U3t361k1P/IMG_0547.JPG)
 
 This article is also available on our [dev center](http://)
@@ -28,7 +29,7 @@ Below you can see that the latest build for this blog has successfully completed
 
 ![image](http://f.cl.ly/items/1X3F270u1Y3H2c413j3Q/Screen%20Shot%202013-06-12%20at%201.34.13%20PM.png)
 
-If we view the branch of this commit on GitHub you can see that hovering over the &#10003;checkmark will showcase that the build finished with a success status. Clicking that &#10003;checkmark will take you to the [build page on wercker](https://app.wercker.com/#build/51b84324345a2a453d002cda) and give you more details on the various buildsteps, such as unittests, bundle install and [middleman processing](http://middlemanapp.com) the build went through.
+If we view the branch of this commit on GitHub you can see that hovering over the &#10003; checkmark will showcase that the build finished with a success status. Clicking that &#10003; checkmark will take you to the [build page on wercker](https://app.wercker.com/#build/51b84324345a2a453d002cda) and give you more details on the various buildsteps, such as unittests, bundle install and [middleman processing](http://middlemanapp.com) the build went through.
 
 ![image](http://f.cl.ly/items/012I2h3x0A1b2E0C0U2G/Screen%20Shot%202013-06-12%20at%201.41.28%20PM.png)
 
@@ -39,7 +40,7 @@ requests](https://help.github.com/articles/using-pull-requests). Pull
 requests are an awesome way of collaborating on projects: you fork an
 existing repository, `git push` your improvements to your forked repo
 and do a pull request on the original repository to contribute back your
-code. 
+code.
 
 If the original repository is added to wercker any pull request from a
 forked repo gets built and the status is attached to the pull request.
