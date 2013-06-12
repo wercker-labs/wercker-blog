@@ -20,8 +20,18 @@ READMORE
 ## Introduction
 
 The [wercker command line
-interface](http://devcenter.wercker.com/articles/cli/) is written in Python and thus easily installable across various platforms, whether your running on Mac, Linux or Windows. You can
-install it as follows:
+interface](http://devcenter.wercker.com/articles/cli/) is written in Python and thus easily installable across various platforms, whether your running on Mac, Linux or Windows. 
+
+We've open [sourced it on
+GitHub](https://github.com/wercker/wercker-cli), so feel free to make contributions or
+even port it to another programming language. You can find the CLI [on
+wercker](https://app.wercker.com/#project/5162d11aa80dbabf410031e3) with
+its latest build status. We deploy the CLI to [PyPI](pypi.python.org), the Python package
+index and have written an indepth article on how we've structured our
+deployment pipeline to PyPI on our [dev
+center](http://devcenter.wercker.com/articles/deployment/pypi.html).
+
+You can install the command line interface as follows:
 
 ``` bash
 pip install python
