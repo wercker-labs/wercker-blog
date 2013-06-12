@@ -15,7 +15,7 @@ READMORE
 
 A while back GitHub announced [commit status api](https://github.com/blog/1227-commit-status-api) and wercker supports attaching the build status of your commit in two ways. In both cases [webhooks](https://help.github.com/articles/post-receive-hooks) are triggered each time you do a `git push` to your repository. These webhooks communicate with and tell us that a build should be started from your latest push.
 
-### Status on Commit
+### Scenario 1: Status on Commit
 
 Even when pushing to your own repositories and without utilizing pull requests, results of these builds are attached to your commit.
 
@@ -27,7 +27,7 @@ If we view the branch of this commit on GitHub you can see that hovering over th
 
 ![image](http://f.cl.ly/items/012I2h3x0A1b2E0C0U2G/Screen%20Shot%202013-06-12%20at%201.41.28%20PM.png)
 
-### Pull Requests
+### Scenario 2: Pull Requests
 
 The second scenario is the support for [pull
 requests](https://help.github.com/articles/using-pull-requests). Pull
@@ -36,3 +36,5 @@ existing repository, `git push` your improvements to your forked repo
 and do a pull request on the original repository to contribute back your
 code. When you do a pull requests, wercker again gets notified and
 starts building your latest commit.
+
+![image](http://f.cl.ly/items/2p17330V153v163W3d3G/Screen%20Shot%202013-06-12%20at%202.11.28%20PM.png)
