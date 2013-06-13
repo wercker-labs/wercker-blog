@@ -84,14 +84,31 @@ sinatra API that returns a collection of city names in JSON. It also has
 a unit test.
 
 The repository also contains a `Procfile` which we will use to deploy
-our application to Heroku
-
+our application to Heroku.
 
 ### Adding an application to wercker
 
-wercker login
+First thing you want to after installing the CLI is log into wercker
+with your username and password:
 
+``` bash
+wercker login
+```
+
+Adding your repository to wercker is done by running:
+
+``` bash
 wercker create
+```
+
+Wercker will automatically check the [git
+remotes](http://git-scm.com/book/en/Git-Basics-Working-with-Remotes) in your `.git`
+folder and use that information to add your project to wercker. (the CLI
+will also check if it can find an [Heroku
+remote](https://devcenter.heroku.com/articles/git)).
+
+Finally, the CLI will check if werckerbot is added as a collaborator to
+GitHub or Bitbucket
 
 wercker status
 

@@ -1,6 +1,6 @@
 ---
 title: Spotlight on the wercker CLI
-date: 2013-06-07
+date: 2013-06-15
 tags: wercker, cli
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
