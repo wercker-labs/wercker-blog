@@ -8,7 +8,7 @@ published: false
 ---
 
 <h4 class="subheader">
-Wercker is a big fan of what Heroku has accomplished in terms of increasing developer velocity with their amazing cloud platform. Heroku has also empowered developers to create other cloud services on top of their platform through the Heroku Marketplace. This article deals with the wercker Heroku add-on, now available in beta on their <a href="https://addons.heroku.com/wercker">Marketplace</a>.
+Wercker is a big fan of what Heroku has accomplished in terms of increasing developer velocity with their amazing cloud platform. Heroku has also empowered developers to create other cloud services on top of their platform through the Heroku Marketplace. This article deals with the wercker Heroku add-on, now available in <a href="https://addons.heroku.com/wercker">beta</a>.
 </h4>
 
 READMORE
