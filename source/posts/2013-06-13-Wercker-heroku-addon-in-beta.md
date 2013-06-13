@@ -131,15 +131,16 @@ It automatically adds your Heroku application as a [deploy target](http://devcen
 
 ## Your first build and deploy
 
-If all went well your first build is triggered after you've succesfully run `wercker create`. Upon any subsequent `git push` commands wercker gets triggered and will run your a build. You will also be able to add any teammembers you might have for this application.
+If all went well your first build is triggered after you've succesfully run `wercker create`. Upon any subsequent `git push` commands wercker gets triggered and will run a build. You will also be able to add any teammembers you might have for this application to wercker.
 
-You are now ready to deploy your build to Heroku, if it passed of course. You can deploy your build in two ways:
+You are now ready to deploy your build to Heroku (if it passed of course). You can deploy your build in two ways:
 
 - Through the command line interface via the `wercker deploy` command. The CLI will ask which build you want to deploy to which target (you could after all, have multiple Heroku applications)
 - Through the wercker wizard. As said, running `heroku addons:open wercker` will open the dashboard and you are now ready initiate your first deploy. See below:
 
 ![image](http://f.cl.ly/items/150j0P2L1x1Q2w1E3o3U/Screen%20Shot%202013-06-13%20at%203.01.46%20PM.png)
 
+Note that wercker also has autodeployment, we blogged about it [here](http://blog.wercker.com/2013/06/05/Autodeployment.html).
 
 ## Supported Languages and Services
 
