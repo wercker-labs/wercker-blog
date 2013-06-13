@@ -155,5 +155,5 @@ Again you can sign up for wercker [here](https://app.wercker.com/users/new/)
 
 ## Earn some stickers!
 
-Let us know about the applications you build with Heroku and wercker. Don't forget to tweet out a screenshot of your first green build to [@wercker](http://twitter.com/wercker) and we'll send you some wercker stickers.
+Let us know about the applications you build with Heroku and wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
