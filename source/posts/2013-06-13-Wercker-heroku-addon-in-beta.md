@@ -13,7 +13,7 @@ Wercker is a big fan of what Heroku has accomplished in terms of increasing deve
 
 READMORE
 
-# Signing up for the Heroku beta program
+### Signing up for the Heroku beta program
 As the wercker addon is in beta, it is only available to members of the Heroku beta program, for which you can register up [here](https://beta.heroku.com/). Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
 ##### note: you can also deploy to heroku by creating a [deploy target](http://devcenter.wercker.com/articles/introduction/deployment.html) and your Heroku api key
@@ -80,11 +80,13 @@ Next, open the wercker wizard by running the following command:
 
     $ heroku addons:open wercker
 
-This wizard will guide you through the steps needed to run your first build on wercker.
+This wizard will guide you through the steps needed to run your first build on wercker and looks as follows:
+
+![image](http://f.cl.ly/items/1s0r1b42003x2K1y2T3S/Screen%20Shot%202013-06-13%20at%202.39.01%20PM.png)
 
 ## Local Setup
 
-Wercker comes with a command line interface that you can install by running:
+As you can guess from the screenshot of the wizard, wercker comes with a command line interface that you can install by running:
 
     $ pip install wercker
 
@@ -113,25 +115,46 @@ As mentioned above, if you now run `heroku addons:open wercker` or go to the Her
 ##### NOTE: The CLI will also ask you to add the `werckerbot` user to your repo. In order to run your tests `werckerbot` needs read permisson on either GitHub or Bitbucket. Read more on werckerbot [here](http://devcenter.wercker.com/articles/gettingstarted/werckerbot.html)
 ****
 
+The CLI will also detect your Heroku remote and present the following feedback:
+
+
+``` bash
+Step 2.
+-------------
+
+1 automatic supported target(s) found.
+Heroku remote git@heroku.com:shrouded-wave-4805.git selected.
+Heroku deploy target shrouded-wave-4805 successfully added to the wercker application
+````
+
+It automatically adds your Heroku application as a [deploy target](http://devcenter.wercker.com/articles/introduction/deployment.html) to wercker.
+
 
 ## Your first build and deploy
 
-If all went well your first build is triggered after you've succesfully run `wercker create`. Upon any subsequent `git push` commands wercker gets triggered and will run your a build.
+If all went well your first build is triggered after you've succesfully run `wercker create`. Upon any subsequent `git push` commands wercker gets triggered and will run your a build. You will also be able to add any teammembers you might have for this application.
 
 You are now ready to deploy your build to Heroku, if it passed of course. You can deploy your build in two ways:
 
 - Through the command line interface via the `wercker deploy` command. The CLI will ask which build you want to deploy to which target (you could after all, have multiple Heroku applications)
 - Through the wercker wizard. As said, running `heroku addons:open wercker` will open the dashboard and you are now ready initiate your first deploy. See below:
 
-<p>
-<a href="https://app.wercker.com/public/images/heroku_dashboard.jpg" target="_blank">
-<img src="https://app.wercker.com/public/images/heroku_dashboard.jpg" width="100%">
-</a>
-</p>
+![image](http://f.cl.ly/items/150j0P2L1x1Q2w1E3o3U/Screen%20Shot%202013-06-13%20at%203.01.46%20PM.png)
 
 
 ## Supported Languages and Services
 
 Wercker currently supports Node.js, Python and Ruby. In terms of services like databases and queues, wercker has support for Postgres, MySQL, MongoDB, RabbitMQ, and Redis. See the [services section on our dev center](http://devcenter.wercker.com/articles/services/) on how to specify any of these.
 
+## Add a badge
+
+You can attach your build status through the wercker badge; for instance in the `README` of your repository on GitHub.
+
+![image](http://f.cl.ly/items/0A1i3y2c3J1E2R0r2F0i/Screen%20Shot%202013-06-13%20at%202.45.46%20PM.png)
+
+Again you can sign up for wercker [here](https://app.wercker.com/users/new/)
+
+## Earn some stickers!
+
 Let us know about the applications you build with Heroku and wercker. Don't forget to tweet out a screenshot of your first green build to [@wercker](http://twitter.com/wercker) and we'll send you some wercker stickers.
+
