@@ -153,9 +153,10 @@ Lets briefly go through this file. First, you'll see the `box` definition that s
 
 Finally, you can see the `build` section, which contains two steps. First, the `pip-install` buildsteps that wraps the `pip install -r requirements.txt` command. Second, a custom buildstep defined via the `script` clause (a simple bash command). The step is named `flask tests` and runs the unit test that we previously created. You can leverage the custom step for any script you want to execute, for instance to *minify* your javascript or to compile your *sass* assets.
 
-Now that we have created all the files we need, lets push this our to our version control system:
+Now that we have created all the files we need, lets push this our to our version control system and add the appropriate `.gitignore` as we don't want to include compiled files and the venv folder which is machine specific:
 
 ``` bash
+$ echo -e ".wercker\nvenv/\n*.pyc" > .gitignore
 $ git add .
 $ git commit -am 'initial commit'
 $ git push origin master
