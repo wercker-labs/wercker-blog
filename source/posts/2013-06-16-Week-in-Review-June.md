@@ -18,7 +18,7 @@ We wrote up several articles on how to test and deploy your apps with wercker:
 
 * [How to streamline your Middleman deploys](http://blog.wercker.com/2013/06/10/Streamlining-Middleman-Deploys-to-s3.html) went into how to set
 up your deployment pipeline with [middleman](http://middlemanapp.com) and wercker to [Amazon's S3](http://aws.amazon.com/s3/).
-* We also had a tutorial on how to test your [Flask](flask.pocoo.org) apps, backed by Redis with wercker, that was even featured on [Python Weekly](http://www.pythonweekly.com/)!
+* We also had a [tutorial](http://blog.wercker.com/2013/06/11/Gettingstarted-with-flask-redis.html) on how to test your [Flask](http://flask.pocoo.org) apps, backed by Redis with wercker, that was even featured on [Python Weekly](http://www.pythonweekly.com/)!
 
 There were also some announcements:
 
