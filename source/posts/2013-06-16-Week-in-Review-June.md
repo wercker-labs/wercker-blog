@@ -22,7 +22,7 @@ up your deployment pipeline with [middleman](http://middlemanapp.com) and wercke
 
 There were also some announcements:
 
-* Wercker now supports RedHat's OpenShift platform-as-a-service as a deployment target, read the announcement plus tutorial [here](http://blog.wercker.com/2013/06/11/OpenShift-Support.html)
+* Wercker now supports RedHat's [OpenShift](openshift.com) platform-as-a-service as a deployment target, read the announcement plus tutorial [here](http://blog.wercker.com/2013/06/11/OpenShift-Support.html)
 * Our [Heroku add-on](https://addons.heroku.com/wercker) is now in beta, we wrote up a tutorial on it [here](http://blog.wercker.com/2013/06/13/Wercker-heroku-addon-in-beta.html)
 
 Finally, we wrote on how to [integrate](http://blog.wercker.com/2013/06/12/Github-commit-status-API.html) wercker with your commits and pull requests on GitHub.
