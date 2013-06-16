@@ -12,6 +12,8 @@ We've had a good number of updates this week at wercker, a quick overview of wha
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
+READMORE
+
 We wrote up several articles on how to test and deploy your apps with wercker:
 
 * [How to streamline your Middleman deploys](http://blog.wercker.com/2013/06/10/Streamlining-Middleman-Deploys-to-s3.html) went into how to set
