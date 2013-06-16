@@ -1,6 +1,6 @@
 ---
 title: Week in Review for June 16th
-date: 2012-10-18
+date: 2013-06-16
 tags: weekinreview
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
