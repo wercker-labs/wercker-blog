@@ -16,7 +16,7 @@ We love it when other developers find out what they can do with wercker on their
 
 ## Less and wercker
 
-[Less]((http://lesscss.org/) is a stylesheet language that extends CSS and runs on [node.js](http://nodejs.org) or on the client-side.
+[Less](http://lesscss.org/) is a stylesheet language that extends CSS and runs on [node.js](http://nodejs.org) or on the client-side.
 
 ![image](http://f.cl.ly/items/092101063x1A2M3L0s0D/Image%202013.06.17%203%3A05%3A15%20PM.png)
 
