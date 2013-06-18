@@ -20,7 +20,7 @@ READMORE
 ## Introduction
 
 The [wercker command line
-interface](http://devcenter.wercker.com/articles/cli/) is written in Python and thus easily installable across various platforms, whether your running on Mac, Linux or Windows. 
+interface](http://devcenter.wercker.com/articles/cli/) is written in Python and thus easily installable across various platforms, whether your running on Mac, Linux or Windows.
 
 We've open [sourced it on
 GitHub](https://github.com/wercker/wercker-cli), so feel free to make contributions or
@@ -68,23 +68,23 @@ Usage:
 
 In the next paragraphs we will give an overview of the most important
 commands. But first we need a small application that we want to add to
-wercker and make actual use of the commandline! 
+wercker and make actual use of the commandline!
 
-For your convenience we've already created an application in Ruby using
-the [sinatra](http://sinatrarb.com) micro framework. Take a look on the
-[werkcer GitHub page](https://github.com/wercker/getting-started-ruby) and go ahead and clone
+For your convenience we've already created an application in Node.js using
+the [Express](http://expressjs.com/)  framework. Take a look on the
+[werkcer GitHub page](https://github.com/wercker/getting-started-nodejs) and go ahead and clone
 this application:
 
 ``` bash
-git clone https://github.com/wercker/getting-started-ruby.git
+git clone https://github.com/wercker/getting-started-nodejs.git
 ```
 
-Go into your project folder and you will see, that indeed it is a simple
-sinatra API that returns a collection of city names in JSON. It also has
-a unit test.
+Upon inspecting the project folder you will see that this is a simple
+application that returns a list of cities as JSON. It also contains a unit test written with
+[SuperTest](https://github.com/visionmedia/supertest).
 
-The repository also contains a `Procfile` which we will use to deploy
-our application to Heroku.
+There is also a `Procfile` present which we will use to deploy
+our application to Heroku. In order to deploy to Heroku we need to create an application on Heroku
 
 ### Adding an application to wercker
 
