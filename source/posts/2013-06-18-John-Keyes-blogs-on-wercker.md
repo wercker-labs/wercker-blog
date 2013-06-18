@@ -34,4 +34,4 @@ In his [post](http://keyes.ie/ignore-files-when-deploying-from-wercker/), John w
 
 Big thanks to [John Keyes](http://keyes.ie/) for writing up these posts! They also give some insight on how to customize the [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) and thus your build and deploy pipeline on wercker.
 
-We'll be announcing some more updates on this front in the coming weeks so stay tuned! We'll also make sure [John](http://twitter.com/jkeyes) will receice some extra wercker stickers ;-)
+We'll be announcing some more updates on this front in the coming weeks so stay tuned! We'll also make sure [John](http://twitter.com/jkeyes) will receive some extra wercker stickers ;-)
