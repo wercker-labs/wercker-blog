@@ -245,7 +245,7 @@ As you can see from the previous table, our latest build has passed and we are r
 wercker deploy
 ```
 This will present a small interactive menu where you can select the **passed** build to deploy (we have only one!),
-and to which deploy target you want to deploy (we only created one for Heroku). In both cases the CLI defaults to the most sensible option (latest passed build and our only deploy target)
+and to which deploy target you want to deploy (we only created one for Heroku). In both cases the CLI defaults to the most sensible option (latest passed build and our only deploy target).
 
 ``` bash
 -----------------------
