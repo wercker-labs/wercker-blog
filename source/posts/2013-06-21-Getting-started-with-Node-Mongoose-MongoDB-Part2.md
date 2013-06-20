@@ -17,7 +17,13 @@ READMORE
 
 ### Introduction
 
-In our [previous post](http://blog.wercker.com/2013/06/20/Getting-started-with-Node-Mongoose-MongoDB-Part1.html) we created a [node.js](http://nodejs.org) application powered by [express](http://expressjs.com) and [mongoose](http://mongoosejs.com), a object document mapper for [MongoDB](http://mongodb.org). We created this application using test-driven development using [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest). Now, let's deploy our app!
+In our [previous post](http://blog.wercker.com/2013/06/20/Getting-started-with-Node-Mongoose-MongoDB-Part1.html) we created a [node.js](http://nodejs.org) application powered by [express](http://expressjs.com) and [mongoose](http://mongoosejs.com), a object document mapper for [MongoDB](http://mongodb.org). We created this application using test-driven development using [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest).
+
+You can visit the finished application on wercker [here](https://app.wercker.com/#project/51c032c8b5c1c6ab300005ac).
+
+The code to this tutorial app is [open source](https://github.com/mies/getting-started-nodejs-mongoose) on GitHub so feel free to fork and clone it.
+
+Now, let's deploy our app!
 
 ### Deploying our app
 
