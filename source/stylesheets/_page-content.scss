@@ -27,13 +27,15 @@
 
 		h1 {
 			margin-bottom: .2*$column-gutter;
-			line-height: 1em;
+			line-height: 1.3em;
 			color: $successColor;
 		}
 
 		.subheader {
 			color: $black;
 			font-size: 1.3em;
+			line-height: 1.7em;
+			margin-bottom: 1.7em;
 		}
 
 		hr { margin-bottom: 2*$column-gutter;}
@@ -66,7 +68,11 @@
 
 		ol {
 			list-style: none;
+			line-height: 1.3em;
 			font-size: 0.9em;
+			li {
+				padding-bottom: 4px;
+			}
 		}
 	}
 
