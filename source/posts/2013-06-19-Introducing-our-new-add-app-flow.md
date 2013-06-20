@@ -8,12 +8,12 @@ published: false
 ---
 
 <h4 class="subheader">
-At wercker, we love getting feedback from our users as it helps us finetuning
-and improving the product in a meaningful way for our users. In this post we're
+At wercker, we love and appreciate receiving feedback from our users and the developer community as it helps us finetune
+and improve wercker in a meaningful way. In this post we're
 introducing the new <strong>add application flow</strong> that we just
-deployed to production.
+deployed to production and which we couldn't have delivered without this feedback.
 
-Sign up for wercker <a href="https://app.wercker.com/users/new/">for free here</a>
+As always you can sign up for wercker <a href="https://app.wercker.com/users/new/">for free here</a>
 
 </h4>
 
@@ -86,6 +86,6 @@ defaults in place.
 
 Let us know what you think, as we always welcome more feedback.
 
-As always, signing up for wercker is [free and
+Signing up for wercker is [free and
 easy]((https://app.wercker.com/users/new/).
 
