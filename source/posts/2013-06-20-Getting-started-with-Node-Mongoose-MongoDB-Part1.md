@@ -11,7 +11,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
   about time that we feature a blog post on building and testing a node and mongo application with wercker! So let's get started!
 </h4>
 
-![image](http://f.cl.ly/items/0x3f1I3h00140n200j34/wercker%2Bmongodb%2Bnode.jpg)
+![image](http://f.cl.ly/items/2n1g2M0G2q3Y2X183s1s/wercker%2Bmongodb%2Bnode.jpg)
 
 READMORE
 

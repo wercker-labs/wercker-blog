@@ -8,20 +8,20 @@ published: false
 ---
 
 <h4 class="subheader">
-  The wercker technology stack consists of <a href="http://nodejs.org">node.js</a> and is powered by <a href="http://www.10gen.com/">10gen's</a> <a href="http://mongodb.org">MongoDB</a>, so it's
-  about time that we feature a blog post on building and testing a node and mongo application with wercker! So let's get started!
+  This is a followup from our previous post where we created an application with <a href="http://nodejs.org">node.js</a>, powered by <a href="http://www.10gen.com/">10gen's</a> <a href="http://mongodb.org">MongoDB</a>. Not that we've set up our build pipeline with wercker, we are going to deploy our application to <a href="http://heroku.com">Heroku</a> and use <a href="http://mongolab.com">MongoLab</a>, a MongoDB-as-a-Service cloud platform.
 </h4>
 
-![image](http://f.cl.ly/items/0x3f1I3h00140n200j34/wercker%2Bmongodb%2Bnode.jpg)
+![image](http://f.cl.ly/items/18081Z1D403n3t0L0S2Y/wercker%2Bmongolab%2Bnode.jpg)
 
 READMORE
 
 ### Introduction
 
+In our [previous post](http://blog.wercker.com/2013/06/20/Getting-started-with-Node-Mongoose-MongoDB-Part1.html) we created a [node.js](http://nodejs.org) application powered by [express](http://expressjs.com) and [mongoose](http://mongoosejs.com), a object document mapper for [MongoDB](http://mongodb.org). We created this application using test-driven development using [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest). Now, let's deploy our app!
 
 ### Deploying our app
 
-We will deploy our app to Heroku, so make sure you a [Heroku](http://heroku.com) account and have installed the [Heroku Toolbelt](http://toolbelt.heroku.com). Let's first create an app:
+We will deploy our application to Heroku, so make sure you have a (verified) [Heroku](http://heroku.com) account and have installed the [Heroku Toolbelt](http://toolbelt.heroku.com). Let's first create an app:
 
 ``` bash
 heroku create
