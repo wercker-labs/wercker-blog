@@ -18,7 +18,7 @@ READMORE
 
 ### Introduction
 
-In this tutorial we are going to build a complete [REST API](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) consisting of node.js, mongodb; tested and delivered by wercker. This tutorial is also available in shortform on our [dev center]().
+In this tutorial we are going to build a complete [REST API](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) consisting of node.js, mongodb; tested and delivered by wercker. This tutorial is also available in shortform on our [dev center](http://devcenter.wercker.com/articles/languages/nodejs/tdd-with-mongoose.html).
 We will be leveraging the [express](http://expressjs.com/) and [mongoose](http://mongoosejs.com/) packages available on [npm](http://npmjs.org). The application that we will be building will be an API that exposes and stores **todo items**. We will be using [MongoDB](http://mongodb.org) to store our items, which is a powerful and flexibel non-relational datastore.
 
 For your convenience you can fork and clone the finished repository from [GitHub](https://github.com/wercker/getting-started-nodejs-mongoose). You can visit my finished application on wercker with its current buildstatus [here](https://app.wercker.com/#project/51c032c8b5c1c6ab300005ac).
@@ -29,11 +29,11 @@ You can sign up for wercker for free [here](https://app.wercker.com/users/new/).
 
 Let us first declare our dependencies through the `package.json` format. We will be using [express](http://expressjs.com/) as our application framework, and [mongoose](mongoosejs.com), an object document mapper for MongoDB and node.js applications. For testing purposes we will leverage [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest).
 
-We also immediately include a `script` clause that calls `npm test` so our tests will be run. Our final `package.json` file looks as follows:
+We also immediately include a `script` clause that calls `mocha` (exexuted through the standard `npm test` command that runs any test) so our tests will be run. Our final `package.json` file looks as follows:
 
 ``` javascript
 {"name": "getting-started-nodejs-mongoose",
-  "description": "Sample application built with node.js, mongoose, mongodb. Delivered by wercker.",
+  "description": "Sample app built with node.js, mongoose, mongodb. Delivered by wercker.",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -69,20 +69,113 @@ Note that we use the `node.js` box and, as said, make use of `wercker/mongodb` t
 
 ### Writing our tests
 
-As we're doing test-driven-development, we are going to write our tests first. We will test three routes that we will create in the next step. Specifically, we want to test the creation of **todo** items, the listing of **all** todo items and the details of a **single** todo item based on the author information provided in the request. As said, we will use [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest) for the writing of our tests. In a separate `test` folder, create a file called `test.js` with the following contents:
+As we're doing test-driven-development, we are going to write our tests first. We will test three routes that we will create in the next paragraph. Specifically, we want to test the creation of **todo** items, the listing of **all** todo items and the details of a **single** todo item based on the author information provided in the request. As said, we will use [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest) for the writing of our tests. In a separate `test` folder, create a file called `test.js` with the following contents:
 
 ``` javascript
+var request = require('supertest'),
+    express = require('express');
+
+var app = require('../app.js');
+
+describe('POST', function(){
+  it('responds with a json success message', function(done){
+    request(app)
+    .post('/todos')
+    .set('Accept', 'application/json')
+    .expect('Content-Type', /json/)
+    .send({'action': 'write post on TDD with mongodb, nodejs and wercker', 'author': 'mies'})
+    .expect(200, done);
+  });
+});
+
+describe('GET', function(){
+  it('responds with a list of todo items in JSON', function(done){
+    request(app)
+    .get('/todos')
+    .set('Accept', 'application/json')
+    .expect('Content-Type', /json/)
+    .expect(200, done);
+  });
+});
+
+describe('GET', function(){
+  it('responds with a single todo item in JSON based on the author', function(done){
+    request(app)
+    .get('/todos/mies')
+    .set('Accept', 'application/json')
+    .expect('Content-Type', /json/)
+    .expect(200, done);
+  });
+});
 ```
 In this file, we see the three separate use-cases that we want to test, now that we know what the results should be of our API, let's go ahead and write it.
 
 ### Creating our API
 
-Now, let's write our API. Create a file called `app.js` that looks as follows, we will go over it a bit.
+Now, let's write our API. Create a file called `app.js` that looks as follows, we will go over it in a bit.
 
 ``` javascript
+// Requires
+
+var express = require('express');
+var mongoose = require ("mongoose");
+
+var app = express();
+app.use(express.bodyParser());
+
+var Todo = require('./models/todo');
+
+// Configure express
+app.configure('development', function() {
+  mongoose.connect('mongodb://localhost/todos');
+});
+
+app.configure('test', function() {
+  mongoose.connect('mongodb://'+ process.env.WERCKER_MONGODB_HOST + '/todos');
+});
+
+app.configure('production', function() {
+  mongoose.connect('mongodb://localhost/todos');
+});
+
+// Routes
+app.get('/', function(req, res) {
+  res.send({'version' : '0.0.1'});
+});
+
+app.get('/todos', function(req, res) {
+  Todo.find(function(err, result) {
+    res.send(result);
+  });
+});
+
+app.get('/todos/:author', function(req, res) {
+  Todo.findOne({'author': req.params.author}, function(err, result) {
+    if (err) {
+      res.status(500);
+      res.send(err);
+    } else {
+      res.send({result: result});
+    }
+  });
+});
+
+app.post('/todos', function(req, res) {
+  new Todo({action: req.body.action, author: req.body.author}).save();
+  res.send({'new todo' : req.body.action});
+});
+
+// startup server
+port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on port number: ", port);
+});
+
+module.exports = app;
+
 ```
 
-We define our, `dev`, `production` and `testing` environments with any specifcs we might need. For instance, our development environment might have a local instance of MongoDB running, whereas in our `test` and `production` environments these settings obviously differ. In the case of wercker, we utilize the environment variable, `WERCKER_MONGODB_HOST`, provided by defining our dependency on MongoDB in the previously defined `wercker.yml` file.
+We define our, `dev`, `production` and `testing` environments with any specifcs we might need. For instance, our development environment might have a local instance of MongoDB running, whereas in our `test` and `production` environments these settings obviously differ. In the case of wercker, we utilize the environment variable, `WERCKER_MONGODB_HOST`, provided by defining our dependency on MongoDB in the previously defined `wercker.yml` file. We do not yet know what our production environment will look like (stay tuned for part 2 of this post), so we'll just leave the connection string to `localhost`.
 
 #### Defining our Mongoose Model
 
@@ -133,5 +226,13 @@ This will trigger a build on wercker which looks like this:
 ![image](http://f.cl.ly/items/3h1K2f3g1S242f3X0o1T/Screen%20Shot%202013-06-19%20at%204.46.42%20PM.png)
 
 If the build passed, we're ready to deploy our application, which we will discuss in Part 2 of this post, so stay tuned.
+
+Congratulations, you've set up your test-driven-development environment with wercker. Now any changes you push will be tested and built by wercker.
+
+In part 2 of the post we will go into the deployment capabilities of wercker and set up our production environment.
+
+## Earn some stickers!
+
+Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
 Don't forget to sign up for wercker for free [here](https://app.wercker.com/users/new/).
