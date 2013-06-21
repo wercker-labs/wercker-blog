@@ -71,7 +71,7 @@ added a wercker.yml to your repository. The new flow automatically detects the p
 
 If the `wercker.yml` is not present we will try to detect the programming language of your project and present a suggested wercker.yml file with sensible defaults that you need to commit and push to your repository.
 
-![image](http://f.cl.ly/items/3V33302R3W1F3z03461m/Screen%20Shot%202013-06-21%20at%2012.00.50%20PM.png).
+![image](http://f.cl.ly/items/3V33302R3W1F3z03461m/Screen%20Shot%202013-06-21%20at%2012.00.50%20PM.png)
 
 Again, you can read more on the `wercker.yml` file and its possibilities at our [dev center](http://devcenter.wercker.com).
 
