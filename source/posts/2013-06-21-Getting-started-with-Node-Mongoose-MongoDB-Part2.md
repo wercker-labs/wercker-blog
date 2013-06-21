@@ -107,9 +107,9 @@ First, we add a deploy target. Go to your settings tab for your application on w
 
 ![image](http://f.cl.ly/items/352B0a0W1Y0b1b0n0W0I/Screen%20Shot%202013-06-20%20at%2012.32.30%20PM.png)
 
-As the page indicates, retrieve your Heroku API key from your [Heroku Dashboard](https://dashboard.heroku.com/account) and paste in the form. Next, you are presented with a form where you can *name* your deploy target (let's go with *production*) and are able to auto deploy specific branches. We've previously written a post on auto-deployment [here](http://blog.wercker.com/2013/06/05/Autodeployment.html). We are also able to either select an existing Heroku app that we want to deploy to, or create one. I'm going to pick the application I've previously created using the `heroku create` command and to which I've also added the [MongoLab add-on](https://addons.heroku.com/mongolab)
+As the page indicates, retrieve your Heroku API key from your [Heroku Dashboard](https://dashboard.heroku.com/account) and paste it in the form. Next, you are presented with a form where you can *name* your deploy target (let's go with *production*) and are able to auto deploy specific branches. We've previously written a post on auto-deployment [here](http://blog.wercker.com/2013/06/05/Autodeployment.html). We are also able to either select an existing Heroku app that we want to deploy to, or create one. I'm going to pick the application I've previously created using the `heroku create` command and to which I've also added the [MongoLab add-on](https://addons.heroku.com/mongolab)
 
-![image](http://f.cl.ly/items/2u1r3F2T3t2F2i2q2Q38/Screen%20Shot%202013-06-20%20at%2012.35.08%20PM.png)
+![image](http://f.cl.ly/items/3u3a2v3b000b2E0D3l06/Screen%20Shot%202013-06-20%20at%201.22.17%20PM.png)
 
 Let's deploy our application!
 
