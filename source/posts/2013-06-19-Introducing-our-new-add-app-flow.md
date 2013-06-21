@@ -4,7 +4,6 @@ date: 2013-06-19
 tags: wercker, ui, design, flow
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
-published: false
 ---
 
 <h4 class="subheader">
@@ -26,8 +25,8 @@ and [deployment](http://devcenter.wercker.com/articles/introduction/deployment.h
 
 ## wercker.yml
 
-The [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file is a readable and concise DSL (in [yaml](http://www.yaml.org/) that allows 
-you to set up this pipeline and the environment it should run in. A small example of such a pipeline is the following default `wercker.yml` 
+The [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file is a readable and concise DSL (in [yaml](http://www.yaml.org/) that allows
+you to set up this pipeline and the environment it should run in. A small example of such a pipeline is the following default `wercker.yml`
 for Ruby applications:
 
 ```yaml
@@ -56,35 +55,45 @@ show this as well.
 In the case of GitHub, you can even choose between private and public
 repositories (or both).
 
-![image]()
+![image](http://f.cl.ly/items/0v080B3l1b1I2P3P3x2z/Screen%20Shot%202013-06-21%20at%2011.53.17%20AM.png)
 
 We now present you with a list of repositories and also show if a repository is
-private, public and a fork of another repo.
+private, public and a fork of another repo. We introduced a search box which you use to filter your application,
+making selection even snappier.
 
-![image]()
+![image](http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png)
 
-Next, we ask you to add werckerbot as a collaborator to your repository on either GitHub or Bitbucket. This is necessary as 
+Next, we ask you to add werckerbot as a collaborator to your repository on either GitHub or Bitbucket. This is necessary as
 wercker needs to be able to **temporary** clone your repository, in order to run your tests and deploy your application.
 You can read more on **werckerbot** at our [dev center](http://devcenter.wercker.com/articles/gettingstarted/werckerbot.html)
 
-![image]()
+![image](http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png)
 
-Now wercker is ready to help you with the `wercker.yml` file. It could of course be the case that you've already 
-added a `wercker.yml` to your repository.
+Now, wercker is ready to help you with the `wercker.yml` file. It could of course be the case that you've already
+added a `wercker.yml` to your repository. The new flow automatically detects the presence of a `wercker.yml` in your repository.
 
-![image]()
+If the `wercker.yml` is not present we will try to detect the programming language of your project and present a suggested `wercker.yml` with sensible defaults.
 
-Done!
+![image](http://f.cl.ly/items/3V33302R3W1F3z03461m/Screen%20Shot%202013-06-21%20at%2012.00.50%20PM.png).
+
+Again, you can read more on the `wercker.yml` file and its possibilities at our [dev center](http://devcenter.wercker.com).
+
+
+Finally when you're done we present you with a success message and allow you to make your project **public** on wercker, which is great for open source projects.
 
 We think this new flow is a great improvement from our previous version, with
-concise information but still allowing you to quickly add an application to
-wercker. Even fore more experienced users you are still able to swiftly get your project into wercker and get started.
+concise information yet still allowing you to quickly add an application to
+wercker, even for experienced users.
 
-It also helps you in creating your build and deploy pipeline using the
+It also assists you in creating your build and deploy pipeline using the
 [wercker.yml(http://devcenter.wercker.com/articles/werckeryml/) file, with sensible
 defaults in place.
 
-Let us know what you think, as we always welcome more feedback.
+Let us know what you think, as we always welcome more feedback!
+
+## Earn some stickers!
+
+Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
 Signing up for wercker is [free and
 easy]((https://app.wercker.com/users/new/).
