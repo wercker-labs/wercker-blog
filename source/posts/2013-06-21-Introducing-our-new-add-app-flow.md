@@ -52,9 +52,6 @@ We first allow you to select your git provider, currently either
 already authorized wercker to connect with either of these platforms, we will
 show this as well.
 
-In the case of GitHub, you can even choose between private and public
-repositories (or both).
-
 ![image](http://f.cl.ly/items/0v080B3l1b1I2P3P3x2z/Screen%20Shot%202013-06-21%20at%2011.53.17%20AM.png)
 
 We now present you with a list of repositories and also show if a repository is
