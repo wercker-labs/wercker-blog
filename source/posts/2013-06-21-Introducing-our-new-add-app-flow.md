@@ -1,6 +1,6 @@
 ---
 title: Introducing our new add application flow
-date: 2013-06-19
+date: 2013-06-21
 tags: wercker, ui, design, flow
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
