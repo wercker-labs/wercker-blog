@@ -22,19 +22,19 @@ READMORE
 
 By adding new features, improving workflows and listening closely to the feedback that our customers give us, we're refining [wercker](http://wercker.com) with each deploy.
 
-At the pace we're all doing this, it is sometimes hard to keep up our product homepage up to date to reflect al these changes and improvements.
-Today we're happy to anounce a new version of our product landing page and in those post we'd like to take a moment and talk you through our design process.
+At the pace we're all doing this, it is sometimes hard to keep our product homepage up to date to reflect al these changes and improvements.
+Today we're happy to anounce a new version of our product landing page and in this post we'd like to take a moment and talk you through our design process and the end result.
 
 As always you can sign up for wercker <a href="https://app.wercker.com/users/new/">for free here</a>
 
 ### 5 days
 
-Instead of spending hours and hours wireframing, concepting and designing in photoshop.
+Instead of spending hours and hours wireframing, concepting and designing in photoshop,
 we wanted to refresh our homepage in 5 days, and create a foundation that we can leverage at a later stage.
 
 With that being said, we immediately started building a flexible grid using [Foundation](http://foundation.zurb.com/) from Zurb.
-We created a block based layout that we could easily swap and combine, resulting in a spacious look and feel.
-The new design is fresh and more in line with the current version of [wercker](http://wercker.com) itself.
+We created a block based layout whose components we could easily swap and combine, resulting in a spacious look and feel.
+The new design is fresh and more in line with the current version of the actual [wercker](http://wercker.com) platform itself.
 
 ![image](http://f.cl.ly/items/2E461J021F2i0m0u142V/wercker_home_screenshot1.jpg)
 
