@@ -9,7 +9,7 @@ published: false
 
 <h4 class="subheader">
 
-We're happy to showcase a new look for our product <a href="http://wercker.com">homepage</a>
+We're happy to showcase a new look for our product <a href="http://wercker.com">homepage</a>.
 At wercker we're continuously improving our platform, how it looks, feels and works.
 
 <img src="http://f.cl.ly/items/412f0n0f1B0E1Q1m3o0L/wercker_home_screenshot2.jpg" alt="wercker - the open delivery platform">
@@ -46,7 +46,7 @@ twitter on their mobile device. The wercker platform itself has also been design
 Furthermore, new customers are able to sign up from their phone or tablet, but also add an application to wercker from it.
 When on the road our customers can keep an eye on their build or even deploy with a *touch* of a button.
 
-![image](http://f.cl.ly/items/2E461J021F2i0m0u142V/wercker_home_screenshot1.jpg)
+![image](http://f.cl.ly/items/251I112q2r3h2D421P2R/wercker_home_screenshot3.jpg)
 
 ### Middleman
 
