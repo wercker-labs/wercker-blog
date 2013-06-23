@@ -50,6 +50,7 @@ Usage:
     wercker status
     wercker deploy
     wercker builds
+    wercker open
     wercker open targets
     wercker queue
     wercker apps
@@ -59,7 +60,6 @@ Usage:
     wercker targets add
     wercker targets list
     wercker targets details
-    wercker validate
     wercker update
     wercker --version
     wercker --help
@@ -289,6 +289,12 @@ We can also check if we have the latest version of the CLI by running
 
 ``` bash
 wercker update
+```
+
+By running the command below, your default browser will launch and open up the application that you are currently working on in wercker:
+
+``` bash
+wercker open
 ```
 
 Finally, an overview of all your apps on wercker and their latest build status can be achieved through:
