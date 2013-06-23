@@ -4,7 +4,6 @@ date: 2013-06-23
 tags: weekinreview
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
-published: false
 ---
 
 <h4 class="subheader">
@@ -17,7 +16,7 @@ READMORE
 
 This is a short summary of this week's updates:
 
-* First we had an in-dept article on the [wercker](http://devcenter.wercker.com/articles/cli/) [command line interface](http://blog.wercker.com/2013/06/18/Spotlight-on-the-wercker-cli.html). We went through
+* First, we had an in-dept article on the [wercker](http://devcenter.wercker.com/articles/cli/) [command line interface](http://blog.wercker.com/2013/06/18/Spotlight-on-the-wercker-cli.html). We went through
 the most common commands and showcased how you build and deploy a simple application to [Heroku](http://heroku.com).
 ![image](http://f.cl.ly/items/040n28281v0V1D1N0v2z/Screen%20Shot%202013-06-23%20at%202.37.34%20PM.png)
 * We had a [two-part](http://blog.wercker.com/2013/06/20/Getting-started-with-Node-Mongoose-MongoDB-Part1.html) [tutorial](http://blog.wercker.com/2013/06/21/Getting-started-with-Node-Mongoose-MongoDB-Part2.html) on test-driven-development with [nodejs](http://nodejs.org), [MongoDB](http://mongodb.org) and of course [wercker](http://wercker.com).
