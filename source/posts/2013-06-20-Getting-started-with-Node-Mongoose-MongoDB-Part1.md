@@ -230,6 +230,8 @@ Congratulations, you've set up your test-driven-development environment with wer
 
 In part 2 of the post we will go into the deployment capabilities of wercker and set up our production environment.
 
+##### Note Part 2 is now [available](http://blog.wercker.com/2013/06/21/Getting-started-with-Node-Mongoose-MongoDB-Part2.html)
+
 ## Earn some stickers!
 
 Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
