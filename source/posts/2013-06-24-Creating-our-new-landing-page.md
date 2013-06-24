@@ -4,7 +4,6 @@ date: 2013-06-24
 tags: wercker, ui, design
 author: Lindsey Bateman
 gravatarhash: e1c82876f21cdafafd2b01a1e625f587
-published: false
 ---
 
 <h4 class="subheader">
