@@ -15,7 +15,7 @@ READMORE
 
 ### Getting started
 
-Signing up for wercker is easy and free, [so go ahead](https://app.wercker.com/users/new/). You can check out the code for this tutorial on [GitHub](https://github.com/mies/getting-started-rails4), feel free to fork and clone this app.
+Signing up for wercker is easy and free, [so go ahead](https://app.wercker.com/users/new/). You can check out the code for this tutorial on [GitHub](https://github.com/mies/getting-started-rails4), feel free to fork and clone this app. This article is also available in short-form on our [dev center](http://devcenter.wercker.com/articles/languages/ruby/settingup-rails4.html).
 
 Explore this application on wercker [here](https://app.wercker.com/#project/51c9b6524b940c9e190033d3).
 
