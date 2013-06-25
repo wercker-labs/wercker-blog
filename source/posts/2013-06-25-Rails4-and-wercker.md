@@ -3,7 +3,7 @@ title: Rails 4 and wercker
 date: 2013-06-25
 tags: wercker, ruby, rails
 author: Micha Hernandez van Leuffen
-published: false
+gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
