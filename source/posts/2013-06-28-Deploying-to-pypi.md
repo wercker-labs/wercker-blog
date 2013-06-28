@@ -16,7 +16,7 @@ READMORE
 
 ## The wercker command line interface
 
-As always, signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
+As always, signing up for wercker is [free and easy](https://app.wercker.com/users/new/). This post is also available in short-form on our [dev center](http://devcenter.wercker.com/articles/deployment/pypi.html).
 
 The [package](https://pypi.python.org/pypi/wercker/0.7.1) that we will be deploying to PyPI is the [wercker command line interface](http://devcenter.wercker.com/articles/cli/).
 
