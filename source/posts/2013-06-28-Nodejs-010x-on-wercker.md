@@ -7,7 +7,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-In several <a href="http://blog.wercker.com/2013/06/20/Getting-started-with-Node-Mongoose-MongoDB-Part1.html">previous</a> <a href="http://blog.wercker.com/2013/06/21/Getting-started-with-Node-Mongoose-MongoDB-Part2.html">posts</a> we've mentioned that team wercker is a big fan of Node.js and some of the wercker components are written in Node. We've now added support for Node.js version 0.10.x and in this post we briefly want to discuss setting up your Node.js 0.10.x projects.
+In <a href="http://blog.wercker.com/2013/06/20/Getting-started-with-Node-Mongoose-MongoDB-Part1.html">several</a> previous <a href="http://blog.wercker.com/2013/06/21/Getting-started-with-Node-Mongoose-MongoDB-Part2.html">posts</a> we've mentioned that team wercker is a big fan of Node.js and some of the wercker components are written in Node. We've now added support for Node.js version 0.10.x and in this post we briefly want to discuss setting up your Node.js 0.10.x projects.
 </h4>
 
 READMORE
