@@ -31,7 +31,7 @@ This guide is also available in short form on our [dev center](http://devcenter.
 * You have [created an application in OpenShift](https://openshift.redhat.com/app/console/application_types)
 * A [GitHub](https://github.com/) or [Bitbucket](http://bitbucket.org) account with a pre-made repository
 * You have [registered for a wercker account](https://app.wercker.com/users/new) and [signed in](https://app.wercker.com/users)
-* You have [added your application to wercker](/articles/gettingstarted/web.html)
+* You have [added your application to wercker](http://devcenter.wercker.com/articles/gettingstarted/web.html)
 
 
 ### Deploy target
