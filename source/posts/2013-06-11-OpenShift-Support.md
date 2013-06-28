@@ -21,7 +21,7 @@ Alongside integrating with OpenShift, Wercker is now also a developer [partner](
 
 ## Getting started with wercker and OpenShift
 
-In this post we're outlining how to get started with wercker and OpenShift. For your convenience, we've created a [sample application in Ruby on GitHub](https://github.com/wercker/getting) that you can fork to get started with OpenShift and wercker. OpenShift offers several application quickstarts that you can view [here](https://openshift.redhat.com/app/console/application_types). Keep in mind, that wercker currently supports Node.js, Ruby and Python, but more stacks are coming soon!
+In this post we're outlining how to get started with wercker and OpenShift. For your convenience, we've created a [sample application in Ruby on GitHub](https://github.com/wercker/getting-started-openshift) that you can fork to get started with OpenShift and wercker. OpenShift offers several application quickstarts that you can view [here](https://openshift.redhat.com/app/console/application_types). Keep in mind, that wercker currently supports Node.js, Ruby and Python, but more stacks are coming soon!
 
 This guide is also available in short form on our [dev center](http://devcenter.wercker.com/articles/deployment/openshift.html).
 
