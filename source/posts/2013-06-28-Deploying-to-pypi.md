@@ -81,6 +81,6 @@ We can imagine this being useful for other types of repositories or packages ind
 
 ### Earn some stickers!
 
-Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
+Tell us about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
 Signing up for wercker is [free and easy]((https://app.wercker.com/users/new/).
