@@ -24,7 +24,7 @@ The wercker CLI is written in Python. Briefly, you can install this CLI via the 
 
     $ pip install wercker
 
-We've previously written about the command line interface and its possibilities in a post [here](http://blog.wercker.com/2013/06/18/Spotlight-on-the-wercker-cli.html)
+We've previously written about the command line interface and its possibilities in a post [here](http://blog.wercker.com/2013/06/18/Spotlight-on-the-wercker-cli.html).
 
 Pip fetches the wercker CLI from [PyPI](https://pypi.python.org/), the Python package repository. Each time we update the CLI we want to be able to deploy it to the PyPI index automatically.
 
@@ -39,6 +39,7 @@ For this tutorial we assumes a few things:
 * you have an account on PyPI. You can register at [https://pypi.python.org/pypi?%3Aaction=register_form](https://pypi.python.org/pypi?%3Aaction=register_form)
 * a tool/library you want to push to PyPI. More information on what you need for PyPI can be found in the [The Hitchhiker’s Guide to Packaging](http://guide.python-distribute.org/index.html)
 * your application is already on wercker (i.e. you have already run `wercker create` or have added your application via the web interface). See [getting started with the wercker CLI](http://devcenter.wercker.com/articles/gettingstarted/cli.html) or adding your application via the [web interface](http://devcenter.wercker.com/articles/gettingstarted/web.html) for more information on adding your application to wercker.
+* the package you want to deploy to PyPI has a passed, or *green*, build on [wercker](http://devcenter.wercker.com/articles/introduction/builds.html).
 
 ## Creating your wercker.yml file
 
@@ -73,7 +74,7 @@ Go to [wercker](https://app.wercker.com) and add a custom deploy target to your 
 
 ![image](http://f.cl.ly/items/0I2f3x2D1u3H1F3q0A2y/Screen%20Shot%202013-06-28%20at%202.32.50%20PM.png)
 
-That's all, you can now deploy your succesful builds by running `wercker deploy` (or of course deploying from the web interface). You can see if your deploy has been succesful by going to the 'deploys' tab on wercker, as showcased below:
+That's all, you can now deploy your green builds by running `wercker deploy` (or of course deploying from the web interface). You can see if your deploy has been succesful by going to the 'deploys' tab on wercker, as showcased below:
 
 ![image](http://f.cl.ly/items/3I0O1g1l2d1e252u0x2m/Screen%20Shot%202013-06-28%20at%202.34.19%20PM.png)
 
