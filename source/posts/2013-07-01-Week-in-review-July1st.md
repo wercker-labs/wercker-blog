@@ -16,9 +16,9 @@ READMORE
 
 This is a short summary of this week's updates:
 
-* A big update this week was that we've openend up registration so that anyone can [join](http://blog.wercker.com/2013/06/24/Opening-up-registrations.html) wercker. StartupJunce was kind of enough to cover this and briefly [talk](startupjuncture.com/2013/06/28/wercker-opens-platform/) to us about wercker.
+* A big update this week was that we've openend up registration so that anyone can [join](http://blog.wercker.com/2013/06/24/Opening-up-registrations.html) wercker. StartupJuncture was kind of enough to cover this and briefly [talk](startupjuncture.com/2013/06/28/wercker-opens-platform/) to us about wercker.
 
-* Alongside going into public beta, we redesigned the wercker homepage. Wercker's inhouse designer blogs about its design process [here](http://blog.wercker.com/2013/06/24/Creating-our-new-landing-page.html).
+* Alongside going into public beta, we redesigned the wercker homepage. Wercker's inhouse designer, [Lindsey Bateman](https://app.wercker.com/#lindseybateman) blogs about its design process [here](http://blog.wercker.com/2013/06/24/Creating-our-new-landing-page.html).
 
 * Several wercker users went ahead and made some awesome [contributions](http://blog.wercker.com/2013/06/26/Developer-contributions.html), specifically regarding the creation of custom [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) files for wordpress and Clojure.
 
