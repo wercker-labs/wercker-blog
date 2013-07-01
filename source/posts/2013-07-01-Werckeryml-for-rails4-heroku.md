@@ -7,14 +7,14 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-Right on the heels of our <a href="http://blog.wercker.com/2013/06/25/Rails4-and-wercker.html">post</a> on how to use Rails4 and wercker, <a href="https://twitter.com/frunns">Frans Krojegård</a> was kind enough to share his <a href="http://devcenter.wercker.com/articles/werckeryml/">wercker.yml</a> file that showcases a complete build and deployment pipeline on wercker!
+Right on the heels of our <a href="http://blog.wercker.com/2013/06/25/Rails4-and-wercker.html">post</a> on how to use <a href="http://weblog.rubyonrails.org/2013/6/25/Rails-4-0-final/">Rails4</a> and <a href="http://wercker.com">wercker</a>, <a href="https://twitter.com/frunns">Frans Krojegård</a> was kind enough to share his <a href="http://devcenter.wercker.com/articles/werckeryml/">wercker.yml</a> file that showcases a complete build and deployment pipeline on wercker!
 </h4>
 
 As always, signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
 READMORE
 
-Frans' wercker.yml file uses the wercker Ruby 2.0 [box](https://github.com/wercker/box-ubuntu12.04-ruby2.0.0), a Postgres [service](http://devcenter.wercker.com/articles/services/) and contains [Rake](http://rake.rubyforge.org/) task that bootstraps his database. Finally, he runs his rspec tests using `bundle exec rspec`. For deployment, he leverages the `heroku-deploy` step, after which he runs a database migration script. You can view his complete [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file below or check out the [gist](https://gist.github.com/frunns/5895115).
+Frans' wercker.yml file for his [Rails4](http://www.infoq.com/news/2013/06/rails4) application, uses the wercker Ruby 2.0 [box](https://github.com/wercker/box-ubuntu12.04-ruby2.0.0), a Postgres [service](http://devcenter.wercker.com/articles/services/) and contains [Rake](http://rake.rubyforge.org/) task that bootstraps his database. Finally, he runs his rspec tests using `bundle exec rspec`. For deployment, he leverages the `heroku-deploy` step, after which he runs a database migration script. You can view his complete [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file below or check out the [gist](https://gist.github.com/frunns/5895115).
 
 ``` yaml
 box: wercker/ubuntu12.04-ruby2.0.0
