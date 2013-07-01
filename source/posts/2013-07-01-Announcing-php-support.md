@@ -10,6 +10,8 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 Today, we're very excited to announce <a href="http://php.net/">PHP</a> support for wercker! PHP is of course a popular scripting language that powers for instance the <a href="http://drupal.org">Drupal CMS</a> and is the programming language that backs <a href="http://wikipedia.org">Wikipedia</a> and <a href="http://facebook.com">Facebook</a>.
 </h4>
 
+![image](http://f.cl.ly/items/190T2x2r463e020g182U/wercker%2Bphp.png)
+
 READMORE
 
 ### Getting started with PHP and wercker
