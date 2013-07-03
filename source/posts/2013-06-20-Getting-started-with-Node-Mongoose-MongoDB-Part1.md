@@ -24,6 +24,8 @@ For your convenience you can fork and clone the finished repository from [GitHub
 
 You can sign up for wercker for free [here](https://app.wercker.com/users/new/).
 
+[Part two](http://blog.wercker.com/2013/06/21/Getting-started-with-Node-Mongoose-MongoDB-Part2.html) of this tutorial is now also available in which we deploy our finished application.
+
 ### Declaring our dependencies
 
 Let us first declare our dependencies through the `package.json` format. We will be using [express](http://expressjs.com/) as our application framework, and [mongoose](mongoosejs.com), an object document mapper for MongoDB and node.js applications. For testing purposes we will leverage [Mocha](http://visionmedia.github.io/mocha/) and [SuperTest](https://github.com/visionmedia/supertest).
