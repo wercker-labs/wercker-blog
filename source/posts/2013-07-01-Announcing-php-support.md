@@ -20,6 +20,8 @@ As always; signing up for wercker is [free and easy](https://app.wercker.com/use
 
 There are three versions available on the wercker PHP box. The previous stable release PHP 5.3, the current stable release PHP 5.4 and the upcoming release PHP 5.5. By default the current stable release 5.4 is active. In terms of package managers, the following tools are installed [PEAR](http://pear.php.net/), [Pyrus](http://pear.php.net/manual/en/pyrus.about.php) and [Composer](http://getcomposer.org/). You can read more about leveraging these package managers on our [dev center](http://devcenter.wercker.com/articles/languages/php.html).
 
+##### Update: we have added a tutorial to get started with wercker and PHP on our [dev center](http://devcenter.wercker.com/articles/languages/php/gettingstarted-php.html)
+
 ### wercker.yml
 
 The [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) is the way to define your build and deployment pipeline on wercker. Doing so for PHP is trivial:
