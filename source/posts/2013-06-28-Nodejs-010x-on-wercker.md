@@ -56,4 +56,4 @@ You can also view its status and build pipeline on [wercker](https://app.wercker
 
 Tell us about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
-Signing up for wercker is [free and easy]((https://app.wercker.com/users/new/).
+Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
