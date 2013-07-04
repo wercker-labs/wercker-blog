@@ -123,7 +123,8 @@ mixpanel.init("d1764ebb8adc0f5e1d3ee56c54e0df7a");</script>
                 <hr/>
 
                 <ol>
-                  <% blog.tags.each do |tag, articles| %>
+                  <% a = blog.tags.sort_by {|tag, articles| -articles.size } %>
+                  <% a.each do |tag, articles| %>
                     <li><%= link_to tag, tag_path(tag) %> (<%= articles.size %>)</a></li>
                   <% end %>
                 </ol>
