@@ -1,6 +1,6 @@
 ---
-title: Week in Review for July 8th
-date: 2013-07-08
+title: Week in Review for July 7th
+date: 2013-07-07
 tags: weekinreview
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
