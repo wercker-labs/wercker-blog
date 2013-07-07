@@ -4,11 +4,10 @@ date: 2013-07-08
 tags: weekinreview
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
-published: false
 ---
 
 <h4 class="subheader">
-This week we've opened up our registrations and had a number of tutorials. Checkout our week in review below!
+We've had a few updates this week, let's go over them quickly as we ramp up some exciting new developments for next week!
 </h4>
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
@@ -17,17 +16,19 @@ READMORE
 
 This is a short summary of this week's updates:
 
-* A big update this week was that we've openend up registration so that anyone can [join](http://blog.wercker.com/2013/06/24/Opening-up-registrations.html) wercker. StartupJuncture was kind of enough to cover this and briefly [talk](http://startupjuncture.com/2013/06/28/wercker-opens-platform/) to us about wercker.
+* Wercker now has [support](http://blog.wercker.com/2013/07/01/Announcing-php-support.html) for [PHP](http://devcenter.wercker.com/articles/languages/php.html) and we've also created a brief [tutorial](http://devcenter.wercker.com/articles/languages/php/gettingstarted-php.html) on our [dev center](http://devcenter.wercker.com).
 
-* Alongside going into public beta, we redesigned the wercker homepage. Wercker's inhouse designer, [Lindsey Bateman](https://app.wercker.com/#lindseybateman) blogs about its design process [here](http://blog.wercker.com/2013/06/24/Creating-our-new-landing-page.html).
+* As Rails 4 was recently released, [Frans Krojegård](https://twitter.com/frunns) was kind enough to share his [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file showcasing his [build and deployment pipeline](https://gist.github.com/frunns/5895115)
 
-* Several wercker users went ahead and made some awesome [contributions](http://blog.wercker.com/2013/06/26/Developer-contributions.html), specifically regarding the creation of custom [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) files for wordpress and Clojure.
+* Wercker was [featured](https://www.openshift.com/blogs/wercker-increases-developer-velocity-with-continuous-delivery-on-openshift?utm_source=buffer&utm_campaign=Buffer&utm_content=bufferf7070&utm_medium=twitter) on the OpenShift [blog](http://openshift.com/blogs) where we wrote a post on how to get started with wercker and [Red Hat's PaaS](https://www.openshift.com/)
 
-* Finally, we wrote up several tutorials; [how to get started with Rails 4 and wercker](http://blog.wercker.com/2013/06/25/Rails4-and-wercker.html), [using Node.js version 0.10.x](http://blog.wercker.com/2013/06/28/Nodejs-010x-on-wercker.html) and [how to deploy your Python packages to PyPI](http://blog.wercker.com/2013/06/28/Deploying-to-pypi.html).
+* We've begun sending out the wercker stickers to those of you that took screenshots of your first green builds and shared them on twitter. We're glad you guys are liking them!
 
-Stay tuned for more updates this week!
+![image](http://f.cl.ly/items/3v3U2f0u1H062Q2D3t0g/BNmcElCCcAE7Vy9.jpg)
 
-## Earn some stickers!
+![image](http://f.cl.ly/items/260L0P1D0J3H341V142k/4a50a31ae32b11e28f2322000a9e0753_7.jpg)
+
+## Earn some stickers of your own!
 
 Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
