@@ -33,7 +33,7 @@ center](http://devcenter.wercker.com/articles/deployment/pypi.html).
 You can install the wercker command line interface as follows:
 
 ``` bash
-pip install python
+pip install wercker
 ```
 
 Executing the `wercker` command will give the following overview of the available commands:
