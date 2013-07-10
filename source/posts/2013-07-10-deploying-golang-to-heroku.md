@@ -1,5 +1,5 @@
 ---
-title: Build, test and deploy a golang application to Heroku
+title: Build, test and deploy a Go application to Heroku
 date: 2013-07-10
 tags: opendelivery, boxes, golang, heroku
 author: Pieter Joost van de Sande
@@ -8,10 +8,12 @@ published: false
 ---
 
 <h4 class="subheader">
-In a previous post we briefly outlined how to get started with <a href="">golang</a> and wercker. Now we are going to do a deepdive into Golang, wercker and Heroku.
+In a previous post we briefly outlined how to get started with <a href="http://blog.wercker.com/2013/07/10/Golang-on-wercker.html">golang</a> and wercker. Now we are going to do a deepdive into golang, wercker and Heroku.
 </h4>
 
-In this post I will share how you can build, test and deploy a golang application to [Heroku](http://heroku.com) and the Heroku wercker [addon](https://addons.heroku.com/wercker).
+![image](https://s3.amazonaws.com/uploads.hipchat.com/36172/251802/hyi5dw0l78894x1/upload.png)
+
+In this post I will share how you can build, test and deploy a golang application to [Heroku](http://heroku.com) and the Heroku wercker [add-on](https://addons.heroku.com/wercker).
 
 ## Prerequisites
 
@@ -19,9 +21,7 @@ In this post I will share how you can build, test and deploy a golang applicatio
 * You have [registered](https://app.wercker.com/users/new/) for a wercker account
 * You have the [heroku toolbelt](https://toolbelt.heroku.com/) installed
 
-Signing up for wercker is [free and easy](https://app.wercker.com/users/new/). We've open sourced the code for this application on [GitHub](https://github.com/mies/go-http-sample).
-
-You can also find this article on our [dev center](http://devcenter.wercker.com/articles/languages/golang/deploying-go-apps-to-heroku.html)
+Signing up for wercker is [free and easy](https://app.wercker.com/users/new/). We've open sourced the code for this application on [GitHub](https://github.com/pjvds/go-cities).
 
 ## Installing the wercker cli
 
@@ -73,7 +73,7 @@ For this project you want to use my golang box. You can wercker know by adding a
     $ git commit -m 'Adds wercker.yml'
     $ git push origin master
 
-The golang box has - like most boxes at wercker - sensible defaults. These defaults for the go build pipeline are the following:
+The golang box has - like most boxes on wercker - sensible defaults. These defaults for the go build pipeline are the following:
 
 * Setup Go environment
 * Execute `go get ./..` command to get dependencies
@@ -82,18 +82,18 @@ The golang box has - like most boxes at wercker - sensible defaults. These defau
 
 ## Add your project to wercker
 
-Now it is time to add your application to wercker. You can the leverage [wercker addon](https://addons.heroku.com/wercker) which we've [recently released], for Heroku to do most of the setup for you.
+Now it's time to add your application to wercker. You can the leverage [wercker addon](https://addons.heroku.com/wercker) which we've [recently released](http://blog.wercker.com/2013/07/10/Heroku-addon-public-beta.html), for Heroku to do most of the setup for you.
 
     $ heroku addons:add wercker
     Adding wercker on ancient-temple-243 done, v2 (free)
     Use `heroku addons:open wercker` to get started.
     Use `heroku addons:docs wercker` to view documentation.
 
-By provisioning the addon wercker automatically creates a deploy target to Heroku for you.
+By provisioning the add-on wercker automatically creates a deploy target to Heroku for you.
 
-Now you can actually open the wercker addon page, `heroku addons:open wercker` followed by a `wercker create` command to add add your application to wercker.
+Now you can actually open the wercker add-on page, `heroku addons:open wercker` followed by a `wercker create` command to add your application to wercker.
 
-First open the wercker addon page on Heroku:
+First open the wercker add-on page on Heroku:
 
 ``` bash
 heroku addons:open wercker
@@ -121,9 +121,9 @@ Wercker should now be building and testing your Go code. You can use the `wercke
     │ passed │ 100.0%   │ master │ 0687f5fd │ 07/10/13 13:04:05 │ Adds Procfile to tell heroku how to run │
     ├────────┼──────────┼────────┼──────────┼───────────────────┼─────────────────────────────────────────┤
 
-## Triggering a deployment to heroku
+## Triggering a deploy to heroku
 
-When your build passed successfully you can deploy it to Heroku by executing the `wercker deploy` command. This command will list your last successful builds and lets you pick the target to deploy to. This is especially helpful when you have multiple targets like an staging and production environment.
+When your build passed successfully you can deploy it to Heroku by executing the `wercker deploy` command. This command will list your last successful builds and lets you pick the target to deploy to. This is especially helpful when you have multiple targets such as a staging and production environment.
 
     $ wercker deploy
     -----------------------
@@ -161,10 +161,10 @@ When your build passed successfully you can deploy it to Heroku by executing the
 
 ## Continue
 
-Whenever you push new commits to your remote git repository wercker will start a new build. You can go to your application page at [app.wercker.com](https://app.wercker.com) to see the status of these builds or use the `wercker status` command from the CLI as demonstrated in this article. The `wercker deploy` command lets you deploy green builds to heroku.
+Whenever you push new commits to your remote git repository wercker will start a new build. You can go to your application page at [app.wercker.com](https://app.wercker.com) to see the status of these builds or use the `wercker status` command from the CLI as demonstrated in this article. The `wercker deploy` command lets you deploy green builds to Heroku.
 
-You can also enable auto deploymet for specific brances in the settings tab of your application at [app.wercker.com](https://app.wercker.com). With this feature all green builds from an specific branch get deployed to heroku.
+You can also enable auto deploymet for specific brances in the settings tab of your application at [app.wercker.com](https://app.wercker.com). With this feature all green builds from an specific branch get deployed to Heroku.
 
 ## Earn stickers!
 
-Tweet out an screenshot of your successful build or deployment and I will make sure you receive some stickers.
+Tweet out a screenshot of your successful build or deployment with **#wercker** and I will make sure you receive some wercker stickers.
