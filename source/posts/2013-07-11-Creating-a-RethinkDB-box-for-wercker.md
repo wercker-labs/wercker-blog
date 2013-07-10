@@ -1,6 +1,6 @@
 ---
 title: Creating a RethinkDB box for wercker
-date: 2013-07-07
+date: 2013-07-11
 tags: rethinkdb, boxes
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
