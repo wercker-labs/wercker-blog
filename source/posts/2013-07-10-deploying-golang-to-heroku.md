@@ -1,5 +1,7 @@
 # Deploying Golang to Heroku
 
+In this post we will show you how you can build, test and deploy an golang application to heroku.
+
 ## Prerequisites
 
 * You have [registered](https://id.heroku.com/signup) at heroku
@@ -8,7 +10,7 @@
 
 ## Installing wercker cli
 
-<< INSERT HEROKU QUOTE HERE >>
+Heroku’s Adam Wiggins said it best: “Web UIs are great for many things, but command-line interfaces are the heart of developer workflows”. Wercker comes with an powerful CLI that enables you to builds and deploy your software without leaving your terminal windows.
 
     pip install wercker
 
@@ -48,30 +50,32 @@ This sandboxed environment is a set of virtual machines that wercker starts. The
 
 ## Adding an wercker.yml
 
-You can use a `wercker.yml` file to define your wercker build and deployment pipeline. Wercker works with sensible defaults. The go build pipeline executes the following by default:
-
-* Setup Go environment
-* Execute `go get ./..` command to get dependencies
-* Execute `go build ./..` command to build your software
-* Execute `go test ./..` command to run your tests
-
-Add an `wercker.yml` file to the root of you project that tells wercker to run in the `pjvds/golang` box.
+For this project you want to use my golang box. You can tell this to wercker by adding an `wercker.yml` file with set the `box` element to `pjvds/golang`.
 
     $ echo "box: pjvds/golang" > wercker.yml
     $ git add wercker.yml
     $ git commit -m 'Adds wercker.yml'
     $ git push origin master
 
+The golang box has - like most boxes at wercker - sensible defaults. The default for the go build pipeline is to execute the following command:
+
+* Setup Go environment
+* Execute `go get ./..` command to get dependencies
+* Execute `go build ./..` command to build your software
+* Execute `go test ./..` command to run your tests
+
 ## Add your project to wercker
 
-You can now add your application to wercker. Use the wercker heroku addon to simplify this process.
+Now it is time to add your application to wercker. You can leverage wercker addon for heroku to do most of the setup for you.
 
     $ heroku addons:add wercker
     Adding wercker on ancient-temple-243 done, v2 (free)
     Use `heroku addons:open wercker` to get started.
     Use `heroku addons:docs wercker` to view documentation.
 
-Now you can actually create uou can open the wercker addon page followed by a `wercker create` command to add add your application to wercker.
+By adding the addon you share the heroku application details with wercker. Wercker will use this information to create an deployment target for you.
+
+Now you can actually create your can open the wercker addon page followed by a `wercker create` command to add add your application to wercker.
 
     $ wercker create
 
