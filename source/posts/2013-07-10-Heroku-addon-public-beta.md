@@ -7,7 +7,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-We're happy to announce that the <a href="https://addons.heroku.com/wercker">wercker addon for Heroku</a> is now in public beta. This means that you no longer have to a member of the Heroku beta program to use it!
+We're happy to announce that the <a href="https://addons.heroku.com/wercker">wercker addon for Heroku</a> is now in public beta. This means that you no longer have to be a member of the Heroku beta program to use it!
 </h4>
 
 ![image](http://f.cl.ly/items/24352w223K2v142I1Y1V/heroku_flow.jpg)
