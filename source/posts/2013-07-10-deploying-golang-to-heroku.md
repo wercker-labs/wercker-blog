@@ -1,6 +1,15 @@
+---
+title: Build, test and deploy an golang application to heroku
+date: 2013-07-10
+tags: opendelivery, boxes, golang, heroku
+author: Pieter Joost van de Sande
+gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
+published: false
+---
+
 # Deploying Golang to Heroku
 
-In this post we will show you how you can build, test and deploy an golang application to heroku.
+In this post I will share how you can build, test and deploy an golang application to heroku.
 
 ## Prerequisites
 
@@ -10,7 +19,7 @@ In this post we will show you how you can build, test and deploy an golang appli
 
 ## Installing wercker cli
 
-Heroku’s Adam Wiggins said it best: “Web UIs are great for many things, but command-line interfaces are the heart of developer workflows”. Wercker comes with an powerful CLI that enables you to builds and deploy your software without leaving your terminal windows.
+Heroku’s Adam Wiggins said it best: "Web UIs are great for many things, but command-line interfaces are the heart of developer workflows". Wercker comes with an powerful CLI that enables you to builds and deploy your software without leaving your terminal windows.
 
     pip install wercker
 
@@ -18,7 +27,7 @@ Note: you can read the [Wercker CLI Installation](http://devcenter.wercker.com/a
 
 ## Adding your Go project to heroku
 
-If your application is already added to heroku and is successfully running, you can skip this step.
+If your application is already added to heroku, you can skip this step.
 
 Heroku needs to know where your application should be placed in the Go directory hierarchy. You need to specify this with in a `.godir` file in the root of your repository that contains this path. For my [go-cities](https://github.com/pjvds/go-cities) application this needs to be `github.com/pjvds/go-cities`.
 
@@ -40,11 +49,12 @@ Now you can create an application at heroku that will host the Go application. U
 
 ## A note about how wercker builds software
 
-In short, this is how wercker builds your software:
+Before you add your application to wercker it is important to understand the basics of how wercker builds and tests your software.
 
-* Get the code by cloning the git repository and checking out the correct commit.
-* Start an sandboxed environment that represents your stack of choice.
-* Execute the build pipeline within this sandboxed environment.
+* Wercker builds your code on every `git push`
+* It gets the code by cloning the git repository and checking out the correct commit.
+* An sandboxed environment is started that represents your stack of choice.
+* The build pipeline is executed within this sandboxed environment.
 
 This sandboxed environment is a set of virtual machines that wercker starts. These virtual machines are called boxes. There is at least one box, that box is used to execute the build pipeline. It should contain all the software that the build pipeline depends on. Wercker offers predefined boxes for common development stacks like Ruby, Python and NodeJS. But wercker also allows you to create your own box. Something I [have done for go](https://github.com/pjvds/box-golang).
 
