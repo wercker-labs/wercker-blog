@@ -36,19 +36,19 @@ If your application is already added to Heroku, you can skip this step.
 
 Heroku needs to know where your application should be placed in the Go directory hierarchy. You need to specify this with a `.godir` file in the root of your repository that contains this path. For my [go-cities](https://github.com/pjvds/go-cities) application this needs to be `github.com/pjvds/go-cities`.
 
-    $ echo "github.com/pjvds/go-cities" > .godir
-    $ git add .godir
-    $ git commit -m 'Adds .godir that specifies the root directory'
+    echo "github.com/pjvds/go-cities" > .godir
+    git add .godir
+    git commit -m 'Adds .godir that specifies the root directory'
 
 Heroku also needs to know how to start your application. This needs to be specified using a `Procfile`.
 
-    $ echo "web ./go-cities -port $PORT" > Procfile
-    $ git add Procfile
-    $ git commit -m 'Adds Procfile to tell heroku how to run'
+    echo "web ./go-cities -port $PORT" > Procfile
+    git add Procfile
+    git commit -m 'Adds Procfile to tell heroku how to run'
 
 Now you can create an application at Heroku that will host the Go application. Use the [golang](http://mmcgrana.github.io/2012/09/getting-started-with-go-on-heroku.html) [BuildPack](https://github.com/kr/heroku-buildpack-go) to add Go support for this application.
 
-    $ heroku create -b https://github.com/kr/heroku-buildpack-go.git
+    heroku create -b https://github.com/kr/heroku-buildpack-go.git
     Creating ancient-temple-243... done, stack is cedar
     Git remote heroku added
 
@@ -67,10 +67,10 @@ This sandboxed environment is a set of virtual machines that wercker starts. The
 
 For this project you want to use my golang box. You can wercker know by adding a `wercker.yml` file with the `box` element set to `pjvds/golang`.
 
-    $ echo "box: pjvds/golang" > wercker.yml
-    $ git add wercker.yml
-    $ git commit -m 'Adds wercker.yml'
-    $ git push origin master
+    echo "box: pjvds/golang" > wercker.yml
+    git add wercker.yml
+    git commit -m 'Adds wercker.yml'
+    git push origin master
 
 The golang box has - like most boxes on wercker - sensible defaults. These defaults for the go build pipeline are the following:
 
@@ -83,7 +83,7 @@ The golang box has - like most boxes on wercker - sensible defaults. These defau
 
 Now it's time to add your application to wercker. You can the leverage [wercker addon](https://addons.heroku.com/wercker) which we've [recently released](http://blog.wercker.com/2013/07/10/Heroku-addon-public-beta.html), for Heroku to do most of the setup for you.
 
-    $ heroku addons:add wercker
+    heroku addons:add wercker
     Adding wercker on ancient-temple-243 done, v2 (free)
     Use `heroku addons:open wercker` to get started.
     Use `heroku addons:docs wercker` to view documentation.
@@ -106,7 +106,7 @@ wercker create
 
 Wercker should now be building and testing your Go code. You can use the `wercker status` command to get the status of the last builds of your project.
 
-    $ wercker status
+    wercker status
     -----------------------
     welcome to wercker-cli
     -----------------------
@@ -124,7 +124,7 @@ Wercker should now be building and testing your Go code. You can use the `wercke
 
 When your build passed successfully you can deploy it to Heroku by executing the `wercker deploy` command. This command will list your last successful builds and lets you pick the target to deploy to. This is especially helpful when you have multiple targets such as a staging and production environment.
 
-    $ wercker deploy
+    wercker deploy
     -----------------------
     welcome to wercker-cli
     -----------------------
