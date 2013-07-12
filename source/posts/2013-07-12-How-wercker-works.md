@@ -158,7 +158,7 @@ have succesfully completed. Configuration management is done via its
 #### Triggering your deploy
 A deployment can either be triggered manually via the [wercker cli](http://devcenter.wercker.com/articles/cli/),
 manually via the [wercker web application] or automatically with the [auto
-deploy](http://blog.wercker.com/2013/06/05/Autodeployment.html) [feature](http://devcenter.wercker.com/articles/deployment/).
+deploy feature](http://devcenter.wercker.com/articles/deployment/), which we've previously covered [here](http://blog.wercker.com/2013/06/05/Autodeployment.html).
 Only successful builds can be deployed.
 
 We hope this gives you a better understanding of how wercker works and how you can leverage the wercker pipeline for your projects.
