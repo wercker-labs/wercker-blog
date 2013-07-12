@@ -70,7 +70,7 @@ Lets do some basic editing of sass stylesheets. Open up **screen.scss** with you
 ``` css
 @import "compass/reset";
 
-/* style.scss */
+/* screen.scss */
 #navbar {
   width: 80%;
   height: 23px;
