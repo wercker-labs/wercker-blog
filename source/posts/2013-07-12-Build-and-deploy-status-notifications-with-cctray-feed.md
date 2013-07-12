@@ -1,13 +1,10 @@
 ---
-title: Build and deploy status notifications with CCtray.xml
-date: 2013-07-10
-tags: opendelivery, cctray, notifications
+title: Build and deploy status notification with cctray feed
+date: 2013-07-12
+tags: compass, sass, pipeline, buildsteps
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
-
-# Build and deploy status notifications with CCtray.xml
 
 Today we have added build and deployment status output in the cctray.xml format, an RRS-like CI server build status xml feed, which is originally developed for CruiseControl.net. In this post I would like to share the details and how I leverage this to get notified on important status changes via CCMenu.
 
@@ -43,7 +40,7 @@ Here is a list of tools that allow you to monitor cctray.xml feeds and that can 
 
 There are a lot of tools that support the cc status format. But, since I'm working on a Mac most of the time I decided to use [CCMenu](http://ccmenu.sourceforge.net/). It allows you to monitor multiple projects at the same time and identifies the overall build status with a glance to the menu bar.
 
-[!image](/images/ccmenu/tray.png)
+![image](/images/posts/ccmenu/tray.png)
 
 Download and install the latest version of ccmenu from the [CCMenu project](http://sourceforge.net/projects/ccmenu/files/CCMenu/).
 
@@ -51,13 +48,13 @@ Download and install the latest version of ccmenu from the [CCMenu project](http
 
 Navigate to your project page at [app.wercker.com](https://app.wercker.com) and copy your project id from the url.
 
-![image](/images/ccmenu/project_id.png)
+![image](/images/posts/ccmenu/project_id.png)
 
 ### Add builds to CCMenu
 
 Open CCMenu by clicking on the icon in the top menu bar and open preferences.
 
-![image](/images/ccmenu/open_preferences.png)
+![image](/images/posts/ccmenu/open_preferences.png)
 
 ### Enter feed details
 
@@ -70,8 +67,18 @@ Click on the plus sign in the preference window and enter your project cc feed u
 5. Click `Continue`
 6. See the status of your project in your menu bar!
 
-![image](/images/ccmenu/add_feed.png)
+![image](/images/posts/ccmenu/add_feed.png)
 
 ### Other feeds
 
 You can repeat the previous steps for other feeds as well.
+
+### Notification center
+
+CCMenu supports Mac's [Notification Center](http://support.apple.com/kb/ht5362)
+
+![image](/images/posts/ccmenu/notifications.png)
+
+### Final result
+
+![image](/images/posts/ccmenu/final.png)
