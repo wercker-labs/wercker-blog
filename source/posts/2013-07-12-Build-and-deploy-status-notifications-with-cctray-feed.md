@@ -1,16 +1,19 @@
 ---
-title: Build and deploy status notification with cctray feed
+title: Build and deploy status notification with the cctray feed
 date: 2013-07-12
 tags: compass, sass, pipeline, buildsteps
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
 
-Today we have added build and deployment status output in the cctray.xml format, an RRS-like CI server build status xml feed, which is originally developed for CruiseControl.net. In this post I would like to share the details and how I leverage this to get notified on important status changes via CCMenu.
+<h4 class="subheader">
+Today, we have added build and deployment status output in the <strong>cctray.xml</strong> format, an RRS-like continuous integration server status feed, which was originally developed for CruiseControl.net. In this post I would like to share the details and how I leverage this to get notified on important wercker status changes via CCMenu.
+</h4>
+
+Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
 ## Configuration
-Wercker offers two endpoints per project that serve status information in the cctray.xml format. One for build status and one for deployment status.
+Wercker offers two endpoints per project that serve status information in the **cctray.xml** format. One for the build status, and one for the deployment status.
 
 ### Buids status feed
 
@@ -22,15 +25,15 @@ You need to replace `{PROJECT-ID}` with the project id of the project you want t
 
 ### Deploy status feed
 
-The feed url that contains the deployment status of an project's deploy target is:
+The feed url that contains the deployment status of a project's deploy target is:
 
 	https://app.wercker.com/api/v2/applications/{PROJECT-ID}/cc/deploytargets/{DEPLOY-TARGET-NAME}
 
-You need to replace `{PROJECT-ID}` with the project id of the project you want to monitor and `{DEPLOY-TARGET-NAME}` with the name of the deploy target.
+You need to replace `{PROJECT-ID}` with the project id of the project you want to monitor and `{DEPLOY-TARGET-NAME}` with the name of the deploy target. Read more about deploy targets on ou [dev center](http://devcenter.wercker.com/articles/introduction/deploys.html#deploy-targets)
 
 ## Tools
 
-Here is a list of tools that allow you to monitor cctray.xml feeds and that can be used to monitor your build and deployment statusses of your wercker projects.
+Here is a list of tools that allow you to monitor **cctray.xml** feeds and that can be used to monitor your build and deployment statuses of your wercker projects.
 
 * [CCMenu for Mac](http://ccmenu.sourceforge.net/)
 * [CCTray for Windows](http://confluence.public.thoughtworks.org/display/CCNET/CCTray)
@@ -39,7 +42,7 @@ Here is a list of tools that allow you to monitor cctray.xml feeds and that can 
 
 ## Using CCMenu
 
-There are a lot of tools that support the cc status format. But, since I'm working on a Mac most of the time I decided to use [CCMenu](http://ccmenu.sourceforge.net/). It allows you to monitor multiple projects at the same time and identifies the overall build status with a glance to the menu bar.
+There are a lot of tools that support the cc status format. As I'm mostly working on a Mac I decided to use [CCMenu](http://ccmenu.sourceforge.net/). It allows you to monitor multiple projects at the same time, and identifies the overall build status with just a glance at the menu bar.
 
 ![image](/images/posts/ccmenu/tray.png)
 
@@ -59,7 +62,7 @@ Open CCMenu by clicking on the icon in the top menu bar and open preferences.
 
 ### Enter feed details
 
-Click on the plus sign in the preference window and enter your project cc feed url. It is important to follow the following steps closely because CCMenu was acting a bit weird when I entered my details.
+Click on the **plus** sign in the preference window and enter your project `cc` feed url. It is important to follow the following steps closely because CCMenu was acting a bit weird when I entered my details.
 
 1. Enter your feed url
 2. Click `Use URL as entered above` option
@@ -83,3 +86,11 @@ CCMenu supports Mac's [Notification Center](http://support.apple.com/kb/ht5362)
 ### Final result
 
 ![image](/images/posts/ccmenu/final.png)
+
+## Earn some stickers
+
+Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
+
+Follow us on [twitter](http://twitter.com/wercker) as well to stay in the loop.
+
+Sign up for wercker [here](https://app.wercker.com/users/new/)
