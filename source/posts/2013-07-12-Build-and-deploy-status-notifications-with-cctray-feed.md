@@ -7,7 +7,7 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 ---
 
 <h4 class="subheader">
-Today, we have added build and deployment status output in the <strong>cctray.xml</strong> format, an RRS-like continuous integration server status feed, which was originally developed for CruiseControl.net. In this post I would like to share the details and how I leverage this to get notified on important wercker status changes via CCMenu.
+Today, we have added build and deployment status output in the <strong>cctray.xml</strong> format, an RSS-like continuous integration server status feed, which was originally developed for CruiseControl.net. In this post I would like to share the details and how I leverage this to get notified on important wercker status changes via CCMenu.
 </h4>
 
 ![image](http://blog.wercker.com/images/posts/ccmenu/tray.png)
