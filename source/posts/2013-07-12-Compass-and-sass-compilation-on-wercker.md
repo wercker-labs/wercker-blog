@@ -10,7 +10,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 In this tutorial we will briefly discuss how to set up your sass and compass compilation steps on wercker. <a href="http://sass-lang.com/">Sass</a> is a language on top of CSS enabling you to add more structure to your stylesheets. <a href="http://compass-style.org/">Compass</a> is a framework that makes it easier to author your Sass stylesheets.
 </h4>
 
-Wercker can not only be leveraged to run your unit test, but also to build and compile static assets. This includes for instance the minification of javascript files or as this article will describe, compilation of stylesheets.
+Wercker can not only be leveraged to run your unit tests, but also to build and compile static assets. This includes for instance the minification of javascript files or, as this article will describe, compilation of stylesheets.
 
 ![image](http://f.cl.ly/items/3633152I261P0f2u0N0f/Sass_Logo.gif)
 
