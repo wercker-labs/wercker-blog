@@ -14,6 +14,8 @@ In this post we will describe how wercker actually works and go into what goes o
 
 The content presented here is also available on our [dev center](http://devcenter.wercker.com/articles/introduction/pipeline.html).
 
+Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
+
 READMORE
 
 ## The wercker pipeline
