@@ -4,6 +4,7 @@ date: 2013-07-12
 tags: compass, sass, pipeline, buildsteps
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
+published: false
 ---
 
 Today we have added build and deployment status output in the cctray.xml format, an RRS-like CI server build status xml feed, which is originally developed for CruiseControl.net. In this post I would like to share the details and how I leverage this to get notified on important status changes via CCMenu.
