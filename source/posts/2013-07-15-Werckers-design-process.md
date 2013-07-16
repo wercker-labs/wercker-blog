@@ -49,7 +49,7 @@ It also enables us to shift pieces around on Foundation's grid. It obviously com
 We wanted a font for all icons we've created and will create in the future; vector icons which are to be placed inside buttons, behave as text, can be colored and remain razor sharp when enlarged.
 For this we use the [Inkscape](http://inkscape.org/) and [FontForge](http://fontforge.org/) combination allowing us to quickly create and add an icon to our set.
 
-We hope this post has been helpful for your own design purposes. Follow this blog for future updates on wercker and our design process!
+We hope this post has been helpful for your own design purposes and let us know if you have any feedback. Follow this blog for future updates on wercker and our design process!
 
 ## Earn some stickers!
 
