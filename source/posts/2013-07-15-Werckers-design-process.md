@@ -44,7 +44,7 @@ It also enables us to shift pieces around on Foundation's grid. It obviously com
 
 ## Icon font pack
 
-![iamge](http://f.cl.ly/items/0d083c1m3d1A3E0k243S/design_post_3.png)
+![image](http://f.cl.ly/items/0d083c1m3d1A3E0k243S/design_post_3.png)
 
 We wanted a font for all icons we've created and will create in the future; vector icons which are to be placed inside buttons, behave as text, can be colored and remain razor sharp when enlarged.
 For this we use the [Inkscape](http://inkscape.org/) and [FontForge](http://fontforge.org/) combination allowing us to quickly create and add an icon to our set.
