@@ -24,7 +24,7 @@ testing framework.
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
-You can find the source code for this application on [GitHub](https://github.com/mies/getting-started-meteor), so feel
+You can find the source code for this application (inspired by Laika's sample app) on [GitHub](https://github.com/mies/getting-started-meteor), so feel
 free to fork away! This application is public on wercker as well, so you
 can view the current [build status](https://app.wercker.com/#project/51e2d1fcaabf671f79003ad7/).
 
