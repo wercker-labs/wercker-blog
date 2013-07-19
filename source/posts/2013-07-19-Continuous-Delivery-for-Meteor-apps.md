@@ -12,7 +12,7 @@ support to <a href="http://meteor.com">Meteor</a> apps. Meteor is an open source
 web applications at a rapid pace.
 </h4>
 
-At wercker we're all about increasing #developervelocity, so we love
+At wercker we're all about increasing **#developervelocity**, so we love
 what the guys at Meteor have built with their framework. Creating Meteor
 apps is not only simple and fast, it is also tremendous fun.
 
