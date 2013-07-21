@@ -21,7 +21,7 @@ This is a short summary of this week's updates:
 
 ![image](http://f.cl.ly/items/0y1f3B2o0Z0m0h193P10/meteorjs.jpeg)
 
-* This week we announced [Meteor](http://meteor.com) support for wercker. We released a Meteor box, packed with [Phantomjs](http://phantomjs.org) and wrote up a [tutorial](http://blog.wercker.com/2013/07/19/Continuous-Delivery-for-Meteor-apps.html) for writing a TDD meteor app that built and tested with wercker deployed to [Heroku](http://heroku.com) using the [Meteor Buildpack](https://github.com/jordansissel/heroku-buildpack-meteor) and the [Laika](http://arunoda.github.io/laika/) testing framework.
+* This week we announced [Meteor](http://meteor.com) support for wercker. We released a Meteor [box](http://devcenter.wercker.com/articles/boxes/), packed with [Phantomjs](http://phantomjs.org) and wrote up a [tutorial](http://blog.wercker.com/2013/07/19/Continuous-Delivery-for-Meteor-apps.html) for writing a TDD meteor app that built and tested with wercker deployed to [Heroku](http://heroku.com) using the [Meteor Buildpack](https://github.com/jordansissel/heroku-buildpack-meteor) and the [Laika](http://arunoda.github.io/laika/) testing framework.
 
 * Last, we're extremely proud that we made Forbes [top 10 startups](http://www.forbes.com/sites/ilyapozin/2013/07/19/10-cloud-startups-changing-the-data-landscape/) that are changing the data landscape, alongside the [SaltStack](http://saltstack.com/) configuration management tool.
 
