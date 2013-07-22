@@ -1,16 +1,16 @@
 ---
 title: Announcing the Open Delivery Platform
-date: 2013-07-17
+date: 2013-07-22
 tags: opendelivery, boxes, steps
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-From the moment we've started wercker, 
-we got many requests for specific stacks; programming languages, databases and other services. 
+From the moment we've started wercker,
+we got many requests for specific stacks; programming languages, databases and other services.
 
-Furthermore, every developer and development team has their favorite tools, frameworks and practices. 
+Furthermore, every developer and development team has their favorite tools, frameworks and practices.
 
 At wercker its our mission to make developers' lives easier and we
 strive to empower developers and not get in their way.
@@ -51,8 +51,8 @@ variables](http://www.12factor.net/config). If all **steps** in the
 pipeline are succesful, a build has passed.
 
 ## Boxes
-Boxes are basically virtual machines that consist of an operating system and a set of packages installed that support your stack of choice. 
-For a while now wercker has had default **boxes** that support the **Node.js**, **Python** and **Ruby** programming environments. 
+Boxes are basically virtual machines that consist of an operating system and a set of packages installed that support your stack of choice.
+For a while now wercker has had default **boxes** that support the **Node.js**, **Python** and **Ruby** programming environments.
 In terms of services, we've had **MongoDB**, **MySQL**, **Postgres**, **Redis** and **RabbitMQ**.
 
 You leverage these boxes through the
@@ -83,7 +83,7 @@ Creating these boxes is trivial; you can either provision these boxes
 through **Bash** based scripting or full-fledged provisioning frameworks
 such as **Chef** or Puppet.
 
-Similar to applications on wercker, boxes are defined through a single file called **wercker-box.yml**. 
+Similar to applications on wercker, boxes are defined through a single file called **wercker-box.yml**.
 Boxes can be deployed to the [wercker
 directory](http://app.wercker.com/#explore), which is an index of
 both boxes and steps, the latter we will discuss in a bit.
@@ -97,7 +97,7 @@ To help you get started we've created a guide for creating a
 simple Bash scripting, loaded with
 [RethinkDB](http://rethinkdb.com), an open source, distributed database,
 which you can view
-[here](http://devcenter.wercker.com/articles/boxes/bash.html). 
+[here](http://devcenter.wercker.com/articles/boxes/bash.html).
 
 Alongside
 a Bash-based guide, there is also documentation for creating your boxes
