@@ -93,7 +93,7 @@ use your own programming language or service, but lets other developers
 on wercker use and improve these boxes as well!
 
 To help you get started we've created a guide for creating a
-[box](http://app.wercker.com/) using
+[box](https://app.wercker.com/#explore/boxes/mies/rethinkdb) using
 simple Bash scripting, loaded with
 [RethinkDB](http://rethinkdb.com), an open source, distributed database,
 which you can view
@@ -102,7 +102,7 @@ which you can view
 Alongside
 a Bash-based guide, there is also documentation for creating your boxes
 using [Chef](http://www.opscode.com/chef/) that [provisions a CouchDB
-box](). You can view that guide [here](http://devcenter.wercker.com/articles/boxes/chef.html).
+box](https://app.wercker.com/#explore/boxes/mies/couchdb). You can view that guide [here](http://devcenter.wercker.com/articles/boxes/chef.html).
 
 ## Steps
 
