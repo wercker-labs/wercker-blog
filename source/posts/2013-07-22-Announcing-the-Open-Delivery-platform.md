@@ -199,7 +199,7 @@ To kickstart box development some of us created boxes for
 the wercker boxes
 available on our official [GitHub page](http://github.com/wercker).
 
-We also have a large collection of steps available on wercker's [GitHub
+We also have a large collection of steps again available on wercker's [GitHub
 page](http://github.com/wercker), and have a bunch of steps
 on hand in the [wercker directory](http://app.wercker.com/#explore).
 
