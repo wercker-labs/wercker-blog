@@ -195,7 +195,7 @@ To kickstart box development some of us created boxes for
 [Erlang](https://github.com/mies/box-erlang),
 [RethinkDB](https://github.com/mies/box-rethinkdb),
 [CouchDB](https://github.com/mies/box-couchdb) and
-[Meteor](https://github.com/mies/box-meteor). Apart from
+[Meteor](https://github.com/mies/box-meteor), apart from
 the wercker boxes
 available on our official [GitHub page](http://github.com/wercker).
 
