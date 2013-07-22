@@ -168,7 +168,7 @@ Boxes and steps are like any other application on wercker, a git
 repository.
 
 As boxes and steps are applications, they can be deployed. Instead of
-[deploying](/articles/deployment) your application to Heroku or AWS, you
+[deploying](http://devcenter.wercker.com/articles/deployment) your application to Heroku or AWS, you
 deploy (or publish) your box or step to the wercker directory.
 
 Add your git repository containing your step or box just like any other
