@@ -1,17 +1,34 @@
 ---
-title: "Improving Go build time with wercker cache"
-date: 2013-05-31
+title: "Improving Go build time with the wercker cache"
+date: 2013-07-25
 tags: wercker, golang, caching, ci
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
 ---
 
-I am using [wercker](https://app.wercker.com) to execute the build for my projects. One of these projects is written in [Go](http://golang.org "golang"). Last I've added Go support to wercker last week, In this post I want to share how I improved the build time by using wercker's build cache.
+<h4 class="subheader">
+As we recently released the <a
+href="http://blog.wercker.com/2013/07/22/Announcing-the-Open-Delivery-platform.html">Open
+Delivery Platform</a> wercker is now capable of building and delivering
+<a href="http://devcenter.wercker.com/articles/languages/go.html">Golang
+projects</a>. In this post we want to take you through speeding up your
+build time for golang projects with caching present on <a
+href="http://wercker.com">wercker</a>.
+</h4>
+
+
+READMORE
+
+Our previous post on go dealt with [how to set up your golang projects
+with wercker](http://blog.wercker.com/2013/07/10/Golang-on-wercker.html)
+and [deploying them](http://blog.wercker.com/2013/07/10/deploying-golang-to-heroku.html) to Heroku
+In this post I want to share how I improved the build time by using wercker's build cache.
 
 ## The build
 
-Here are the steps including their duration [from one of the builds](https://app.wercker.com/#build/51dfef45bf67fc2f7500046a) of [httpcallback.io](https://github.com/pjvds/httpcallback.io):
+Here are the steps including their duration [from one of the builds](https://app.wercker.com/#build/51dfef45bf67fc2f7500046a) 
+of my own golang project called [httpcallback.io](https://github.com/pjvds/httpcallback.io):
 
 1. get code (0 sec)
 2. setup environment (15 sec)
@@ -24,11 +41,12 @@ Here are the steps including their duration [from one of the builds](https://app
 
 Total time: 1 min 14 sec
 
-This means that the `go get` is 75% of my build time.
+This means that the `go get` step constitutes 75% of my build time.
 
 ## Wercker cache
 
-Wercker has a per project build cache directory that is shared betweens builds. A build can update the cache by writing to the `$WERCKER_CACHE_DIR` directory. If the build succeeds, this directory is saved when the build succeeds for future builds. We can levarage this to cache our Go workspace.
+Wercker has a per project build cache directory that is shared betweens builds.
+A build can update the cache by writing to the `$WERCKER_CACHE_DIR` directory. If the build succeeds, this directory is saved when the build succeeds for future builds. We can levarage this to cache our Go workspace.
 
 ## Go workspace
 
