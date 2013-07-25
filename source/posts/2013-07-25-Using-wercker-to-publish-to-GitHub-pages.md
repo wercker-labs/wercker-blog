@@ -87,6 +87,8 @@ section in our GitHub settings:
 
 ![image](http://f.cl.ly/items/0L2J03450X340u0I190w/create-auth-key.png)
 
+**NOTE:** this token has already been deleted since writing this post
+
 Next, we create a deploy target on wercker for GitHub Pages. Let's call
 it **production**. We also add an [environment variable](http://12factor.net/config) that we hide
 from our log, called **GIT_REMOTE** holding our newly created token in

@@ -1,7 +1,7 @@
 ---
-title: "Improving Go build time with the wercker cache"
+title: "Improving golang build time with the wercker cache"
 date: 2013-07-25
-tags: wercker, golang, caching, ci
+tags: golang, caching
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
@@ -17,10 +17,11 @@ build time for golang projects with caching present on <a
 href="http://wercker.com">wercker</a>.
 </h4>
 
+![image](http://f.cl.ly/items/0o2L381f1S3w2V1n2Q1o/EB41D256-9697-407A-9883-A1BE1AFF8674.jpg)
 
 READMORE
 
-Our previous post on go dealt with [how to set up your golang projects
+Our previous post on Go dealt with [how to set up your golang projects
 with wercker](http://blog.wercker.com/2013/07/10/Golang-on-wercker.html)
 and [deploying them](http://blog.wercker.com/2013/07/10/deploying-golang-to-heroku.html) to Heroku
 In this post I want to share how I improved the build time by using wercker's build cache.
