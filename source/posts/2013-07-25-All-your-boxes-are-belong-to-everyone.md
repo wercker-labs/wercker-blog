@@ -17,4 +17,4 @@ Private boxes and steps are definitely on the roadmap for us, however as we feel
 
 As such, when creating a project for a box on wercker which is private you are unable to add the [wercker directory](http://devcenter.wercker.com/articles/directory/) as a deploy target.
 
-We'd love to hear your thoughts on this and if should speed up the ability to create private boxes and steps.
+We'd love to hear your thoughts on this and let us know if we should speed up the ability to create private boxes and steps!
