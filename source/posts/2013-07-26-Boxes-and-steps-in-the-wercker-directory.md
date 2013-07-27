@@ -29,7 +29,7 @@ You can view boxes available in the wercker directory
 
 * [rpanachi](https://app.wercker.com/#rpanachi) developed an [Erlang box](https://app.wercker.com/#applications/51eec60f26239dd93b0007f3/tab/details) which comes with [Rebar](https://github.com/basho/rebar) the build tool for Erlang
 
-* [Alan Harpe](https://app.wercker.com/#aussiegeek) created a [statsy box](https://app.wercker.com/#explore/boxes/aussiegeek/statsy-werker/) for,
+* [Alan Harpe](https://app.wercker.com/#aussiegeek) created a [statsy box](https://app.wercker.com/#explore/boxes/aussiegeek/statsy-werker) for,
 [statsy](https://github.com/streadway/statsy), the statistics aggregator.
 
 
@@ -42,7 +42,7 @@ You can view steps available in the wercker directory
 
 * [Simon Menke](https://app.wercker.com/#simonmenke) came out with [git merge](https://app.wercker.com/#applications/51ed20e3457ed4ea12000431/tab/details) a step that merges two git branches
 
-* [pjvds](https://app.wercker.com/#pjvds) developed a [step](https://app.wercker.com/#explore/steps/pjvds/setup-go-workspace/) that adds your Go project to workspace directory hierarchy
+* [pjvds](https://app.wercker.com/#pjvds) developed a [step](https://app.wercker.com/#explore/steps/pjvds/setup-go-workspace) that adds your Go project to workspace directory hierarchy
 
 We look forward to more boxes and steps in the directory next week!
 
