@@ -40,7 +40,7 @@ You can view steps available in the wercker directory
 
 * [Eric Fode](https://app.wercker.com/#ericfode) created a [step](https://app.wercker.com/#applications/51f1acdbafc314f65d0021bd/tab/details) for SBT that runs the unittest of your Scala projects
 
-* [Simon Menke](https://app.wercker.com/#simonmenke) came out with [git merge](https://app.wercker.com/#applications/51ed20e3457ed4ea12000431/tab/details) a step that merges two git branches
+* [Simon Menke](https://app.wercker.com/#simonmenke) came out with [git merge](https://app.wercker.com/#applications/51ed20e3457ed4ea12000431/tab/details), a step that merges two git branches
 
 * [pjvds](https://app.wercker.com/#pjvds) developed a [step](https://app.wercker.com/#explore/steps/pjvds/setup-go-workspace) that adds your Go project to workspace directory hierarchy
 
