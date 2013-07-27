@@ -29,7 +29,7 @@ You can view boxes available in the wercker directory
 
 * [rpanachi](https://app.wercker.com/#rpanachi) developed an [Erlang box](https://app.wercker.com/#applications/51eec60f26239dd93b0007f3/tab/details) which comes with [Rebar](https://github.com/basho/rebar) the build tool for Erlang
 
-* [Alan Harpe](https://app.wercker.com/#aussiegeek) created a [statsy box](https://app.wercker.com/#explore/boxes/aussiegeek/statsy-werker) for,
+* [Alan Harper](https://app.wercker.com/#aussiegeek) created a [statsy box](https://app.wercker.com/#explore/boxes/aussiegeek/statsy-werker) for,
 [statsy](https://github.com/streadway/statsy), the statistics aggregator.
 
 
