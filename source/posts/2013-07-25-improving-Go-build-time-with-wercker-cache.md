@@ -1,5 +1,5 @@
 ---
-title: "Improving golang build time with the wercker cache"
+title: "Improving golang build times with the wercker cache"
 date: 2013-07-25
 tags: golang, caching
 author: Pieter Joost van de Sande
