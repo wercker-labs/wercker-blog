@@ -7,11 +7,11 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-It's been less than a week since we announce the 
-<a href="http://blog.wercker.com/2013/07/22/Announcing-the-Open-Delivery-platform.html">Open Delivery platform</a> and opened 
+It's been less than a week since we announce the
+<a href="http://blog.wercker.com/2013/07/22/Announcing-the-Open-Delivery-platform.html">Open Delivery platform</a> and opened
 up the doors to the <a href="https://app.wercker.com/#explore">wercker directory</a> such that everyone can
 create their own <a href="http://devcenter.wercker.com/articles/boxes/">boxes</a> and
-<a href="http://devcenter.wercker.com/articles/steps/">steps</a> for their build and 
+<a href="http://devcenter.wercker.com/articles/steps/">steps</a> for their build and
 deployment <a href="http://devcenter.wercker.com/articles/introduction/pipeline.html">pipelines</a> on wercker.
 </h4>
 
@@ -42,8 +42,7 @@ You can view steps available in the wercker directory
 
 * [Simon Menke](https://app.wercker.com/#simonmenke) came out with [git merge](https://app.wercker.com/#applications/51ed20e3457ed4ea12000431/tab/details), a step that merges two git branches
 
-* [pjvds](https://app.wercker.com/#pjvds) developed a
-* [step](https://app.wercker.com/#explore/steps/pjvds/setup-go-workspace) that adds your Go project to the workspace directory hierarchy
+* [pjvds](https://app.wercker.com/#pjvds) developed a [step](https://app.wercker.com/#explore/steps/pjvds/setup-go-workspace) that adds your Go project to the workspace directory hierarchy
 
 We look forward to more boxes and steps in the directory next week!
 
