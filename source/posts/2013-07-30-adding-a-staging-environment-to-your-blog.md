@@ -50,9 +50,11 @@ The Jekyll doctor step validates the content against deprecations.
 
 #### Sass compile
 
+``` yaml
   - script:
         name: sass compile
         code: bundle exec sass --style compressed assets/scss/styles.scss:assets/css/styles.min.css --debug-info
+```
 
 This step compiles the [sassy css files](https://github.com/pjvds/born2code.net/tree/master/assets/scss) and minifies the end result.
 
@@ -85,6 +87,7 @@ This directory is the input for the deployment pipeline and will contain both ve
 
 #### Generate staging robots.txt
 
+``` yaml
   - create-file:
         name: generate staging robots.txt
         filename: $WERCKER_OUTPUT_DIR/staging/robots.txt
@@ -93,6 +96,7 @@ This directory is the input for the deployment pipeline and will contain both ve
           # of born2code.net, no need to index it.
           User-agent: *
           Disallow: /
+```
 
 Create a **robots.txt** file for the staging version of the website, which specifies that nothing should be indexed.
 
