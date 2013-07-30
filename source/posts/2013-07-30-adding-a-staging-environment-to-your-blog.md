@@ -30,18 +30,21 @@ The build pipeline consists of the following steps:
 
 #### Bundle install
 
+``` yaml
     # Install dependencies
     - bundle-install
-
+```
 This step retrieves the gems such as [Jekyll](http://jekyllrb.com/), [Redcarpet](https://github.com/vmg/redcarpet) and [sass](http://sass-lang.com/). I used the [bundle-install](https://app.wercker.com/#applications/51c829d13179be44780020be/tab/details) from wercker which does some smart things with caching to reduce execution time.
 
 #### Jekyll doctor
 
+``` yaml
     # Execute jeykyll doctor command to validate the
     # site against a list of known issues.
     - script:
         name: jekyll doctor
         code: bundle exec jekyll doctor
+```
 
 The Jekyll doctor step validates the content against deprecations.
 
@@ -55,16 +58,19 @@ This step compiles the [sassy css files](https://github.com/pjvds/born2code.net/
 
 #### Jekyll build
 
+``` yaml
     # Generate staging, no drafts in here
     - script:
         name: generate staging site
         code: |-
           bundle exec jekyll build --trace
+```
 
 Builds the website into `_site`.
 
 #### Copy site output
 
+``` yaml
     - script:
         name: copy site output
         code: |-
@@ -72,6 +78,7 @@ Builds the website into `_site`.
           mkdir -P "$WERCKER_OUTPUT_DIR/{staging,production}
           cp --recursive _site/* "$WERCKER_OUTPUT_DIR/staging"
           cp --recursive _site/* "$WERCKER_OUTPUT_DIR/production"
+```
 
 Copies the `jekyll build` result from `_site` to the **staging** and **production** directories in the output directory of the build pipeline.
 This directory is the input for the deployment pipeline and will contain both versions of the site.
@@ -91,6 +98,7 @@ Create a **robots.txt** file for the staging version of the website, which speci
 
 #### Generate production robots.txt
 
+``` yaml
     - create-file:
         name: generate production robots.txt
         filename: $WERCKER_OUTPUT_DIR/production/robots.txt
@@ -98,6 +106,7 @@ Create a **robots.txt** file for the staging version of the website, which speci
           User-agent: *
           Allow: /
           Sitemap: http://born2code.net/sitemap.xml
+```
 
 Create a robots.txt file for the **production** version of the website, which indexex everything and hints to the **sitemap.xml** file.
 
@@ -107,11 +116,13 @@ The deploy pipeline consists of the following steps:
 
 #### s3sync
 
+``` yaml
     - s3sync:
         key-id: $KEY
         key-secret: $SECRET
         bucket-url: $BUCKET
         source-dir: $SOURCE
+```
 
 Synchronized the directory `$SOURCE` (_staging_ or _production_) to the `$BUCKET` (_s3://staging.born2code.net/_ or _s3://born2code.net/_) bucket on Amazon s3. The values of these variables are specified in by the deploy target.
 
@@ -133,17 +144,20 @@ _note: these are not my real keys!_
 
 Now the following will trigger a deploy to the staging environment:
 
+``` bash
   $ git checkout development
   $ vim _posts/2013-07-30-adding-a-staging-environment-to-my-blog.md
   $ git add .
   $ git commit -m 'Adds post: adding staging environment to my blog'
   $ git push
-
+```
 I can now review my blog at staging: [staging.born2code.net](http://staging.born2code.net) and when I think it is all good to go to production, I just merge with master and push.
 
+``` bash
   $ git checkout master
   $ git merge development
   $ git push
+```
 
 Congrats you now have a continuous delivery pipeline for both a staging and production environment!
 
