@@ -1,5 +1,5 @@
 ---
-title: Drupal7 pipeline by Desmond Morris
+title: Continuous Delivery for Drupal with wercker
 date: 2013-07-30
 tags: php, drupal
 author: Micha Hernandez van Leuffen
