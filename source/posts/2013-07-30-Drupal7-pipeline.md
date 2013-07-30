@@ -85,6 +85,10 @@ A simple yet powerful wercker pipeline for Drupal applications!
 
 Thanks goes out to [Desmond](https://twitter.com/desmondmorris) for sharing his wercker.yml with everyone!
 
+## Update
+
+Desmond now also created a Drush step that you can leverage in your **wercker.yml** for even more automation power. Check it out in the [wercker directory](https://app.wercker.com/#applications/51f7ae136b20d0a93e000a07/tab/details)
+
 ## Earn some stickers!
 
 Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
