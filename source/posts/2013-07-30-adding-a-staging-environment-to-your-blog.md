@@ -127,7 +127,7 @@ Auto deployment is enabled for both targets. All pushes to the development branc
 
 ![target config](http://f.cl.ly/items/1V2L0Q3j3v3u1p2a3b2K/target-config.png)
 
-_note: this are not my real keys!_
+_note: these are not my real keys!_
 
 ## Done
 
