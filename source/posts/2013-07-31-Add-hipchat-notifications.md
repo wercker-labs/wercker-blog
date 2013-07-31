@@ -1,5 +1,5 @@
 ---
-title: Adding hipchat notifications to your build and deployments
+title: Adding hipchat notifications to your build and deploys
 date: 2013-07-31
 tags: hipchat
 author: Pieter Joost van de Sande
