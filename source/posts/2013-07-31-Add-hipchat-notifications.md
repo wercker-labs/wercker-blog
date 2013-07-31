@@ -15,7 +15,7 @@ deployment <a href="http://devcenter.wercker.com/articles/introduction/pipeline.
 
 ![image](http://f.cl.ly/items/0e3e432H43303U0Y450F/wercker%2Bhipchat.png)
 
-Today, we want to share a step that we've created internally at wercker that adds Atlassian [HipChat]() notifcations to your
+Today, we want to share a step that we've created internally at wercker that adds Atlassian [HipChat](https://www.hipchat.com/) notifcations to your
 builds and deploys at wercker.
 
 In order to make this happen we've also released a new phase in the [wercker pipeline](http://devcenter.wercker.com/articles/introduction/pipeline.html), after build and deploy steps, called `after-steps`, which can be used to execute steps after the build or deployment pipeline is finished. This makes them ideally suited for notifications. A followup post that deals with the `after-steps` will be released shortly on our blog!
