@@ -1,5 +1,5 @@
 ---
-title: Adding hipchat notifications to your build and deploys
+title: Adding HipChat notifications to your build and deploys
 date: 2013-07-31
 tags: hipchat
 author: Pieter Joost van de Sande
@@ -35,7 +35,7 @@ build:
     after-steps:
         - hipchat-notify:
             token: $HIPCHAT_TOKEN
-            room_id: 628943
+            room-id: 628943
             from-name: wercker
 deploy:
     steps:
@@ -43,11 +43,11 @@ deploy:
     after-steps:
         - hipchat-notify:
             token: $HIPCHAT_TOKEN
-            room_id: 628943
+            room-id: 628943
             from-name: wercker
 ```
 
-The `room_id` variable is obviously the **id** for your HipChat room that you want to send the notifications to. The `from-name` is the name you want to designate to the send of the message, which defaults to **wercker**.
+The `room-id` variable is obviously the **id** for your HipChat room that you want to send the notifications to. The `from-name` is the name you want to designate to the send of the message, which defaults to **wercker**.
 
 The `$HIPCHAT_TOKEN` can be set as an pipeline variable, which is available for the build pipeline, as well as the deployment pipeline.
 
