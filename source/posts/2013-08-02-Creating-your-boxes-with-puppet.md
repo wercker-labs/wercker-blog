@@ -19,7 +19,7 @@ READMORE
 In this post we will go through the process of creating a wercker box
 which is provisioned via [Puppet](https://puppetlabs.com).
 
-This article is also available on our [dev center](http://devcenter.wercker.com/articles/boxes/puppet.html)
+This article is also available on our [dev center](http://devcenter.wercker.com/articles/boxes/puppet.html).
 
 We assume some basic knowledge of Puppet, in order to build this box.
 See the [Puppet documentation](http://docs.puppetlabs.com/) for more more information on modules and manifests.
