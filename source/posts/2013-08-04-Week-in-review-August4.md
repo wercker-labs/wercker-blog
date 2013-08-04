@@ -24,7 +24,7 @@ This is a summary of this week's updates:
 
 * We introduced a way to add [HipChat](https://www.hipchat.com/) notifications to your applications on wercker. Check out the blog post on this [here](http://blog.wercker.com/2013/07/31/Add-hipchat-notifications.html)
 
-* Finally, we wrote a [tutorial](http://blog.wercker.com/2013/08/02/Creating-your-boxes-with-puppet.html) on how to create your own [wercker boxes](http://devcenter.wercker.com/articles/boxes/) with [Puppet](http://puppetlabs.com/) and [Librarian-Puppet](https://github.com/rodjek/librarian-puppet) so you can leverage wercker's [open delivery platform](http://blog.wercker.com/2013/07/22/Announcing-the-Open-Delivery-platform.html).
+* Finally, we wrote a [tutorial](http://blog.wercker.com/2013/08/02/Creating-your-boxes-with-puppet.html) on how to create your own [wercker boxes](http://devcenter.wercker.com/articles/boxes/) with [Puppet](http://puppetlabs.com/) and [Librarian-Puppet](https://github.com/rodjek/librarian-puppet) so you can leverage wercker's [open delivery platform](http://blog.wercker.com/2013/07/22/Announcing-the-Open-Delivery-platform.html). This tutorial features a box provisioned with [memcached](http://memcached.org/).
 
 We also had some awesome user contributed posts this week!
 
