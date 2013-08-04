@@ -34,7 +34,6 @@ We also had some awesome user contributed posts this week!
 
 Extra sticker achievements for both Luke and Sebastian! Thanks guys!
 
-
 We'll have more updates next week so follow us on [twitter](http://twitter.com/wercker) or subscribe to this blog's [feed](http://blog.wercker.com/feed.xml).
 
 ## Earn some stickers!
