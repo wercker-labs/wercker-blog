@@ -1,18 +1,19 @@
 ---
-title: Checking test coverage with gocov
+title: Code coverage with gocov and wercker
 date: 2013-08-05
-tags: gocov, golang
+tags: gocov, golang, codecoverage
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
-
-Code coverage can be an important metric to watch. It gives you insight in which parts of your code are covered well by tests and which can have some extra attention. In this post I will explain how I leverages gocov to add test coverage reports to the build pipeline of one of my go projects.
+<h4 class="subheader">
+Code coverage can be an important metric to watch. It gives you insight in which parts of your code are covered well by tests and which might need some extra attention. In this post I will explain how I leverage <a href="https://github.com/axw/gocov">gocov</a> in adding test coverage reports to the build pipeline of one of my go projects.
+</h4>
 
 ## Executing tests with gocov
 
-To measure test coverage in Go we can use [gocov](https://github.com/axw/gocov) created by [Andrew Wilkins](http://awilkins.id.au/). It has a `test` command that executes the test with the default `go test` test runner and generate the coverage details in json format. The `gocov test` command respects the `go test` commands and still prints output from it to the console. Here is an example of a script step that runs the tests for all packages and sub package of the working directory and writes the coverage results to `coverage.json`:
+To measure test coverage in Go we can use [gocov](https://github.com/axw/gocov) created by [Andrew Wilkins](http://awilkins.id.au/). It has a `test` command that executes the test with the default `go test` test runner and generates the coverage details in json format. The `gocov test` command respects the `go test` command and still prints output from it to the console. Here is an example of a script [step](http://devcenter.wercker.com/articles/steps/) that runs the tests for all packages and subpackages of the working directory and writes the coverage results to a file called `coverage.json`:
 
+``` yaml
     - script:
         name: Test
         code: |-
@@ -21,9 +22,11 @@ To measure test coverage in Go we can use [gocov](https://github.com/axw/gocov) 
 
             # Execute actual tests and store coverage result
             gocov test ./... > coverage.json
+```
 
-Next to the `coverage.json` that will be create, it writes the following output:
+Next to the `coverage.json` that will be created, it writes the following output:
 
+``` bash
   ok    github.com/pjvds/go-cqrs/sourcing 0.070s
   ok    github.com/pjvds/go-cqrs/storage  0.023s
   ok    github.com/pjvds/go-cqrs/storage/eventstore 0.022s
@@ -32,6 +35,7 @@ Next to the `coverage.json` that will be create, it writes the following output:
   ok    github.com/pjvds/go-cqrs/tests  0.021s
   ?     github.com/pjvds/go-cqrs/tests/domain [no test files]
   ?     github.com/pjvds/go-cqrs/tests/events [no test files]
+```
 
 You can see the actual step result on wercker: [go-cqrs / 6c8cd61 / test](https://app.wercker.com/#buildstep/51ffb8a9170dc79a480004e1).
 
@@ -39,12 +43,15 @@ You can see the actual step result on wercker: [go-cqrs / 6c8cd61 / test](https:
 
 The `coverage.json` created by the previous step can now be used as input for the `report` command. This commands generates a textual report based on the `coverage.json`. It makes sence to do this in a seperate step to seperate the test output and the coverage output. Here is an example of a script step that executes the `gocov report` command:
 
+``` yaml
   - script:
         name: Coverage
         code: gocov report coverage.json
+```
 
 This step will write the following output:
 
+``` bash
   github.com/pjvds/go-cqrs/storage/eventstore/Log.go     InitLogging     100.00% (3/3)
   github.com/pjvds/go-cqrs/storage/eventstore/EventStore.go  EventStore.ReadStream   0.00% (0/27)
   github.com/pjvds/go-cqrs/storage/eventstore/EventStore.go  EventStore.WriteStream  0.00% (0/22)
@@ -56,12 +63,13 @@ This step will write the following output:
 
   github.com/pjvds/go-cqrs/tests/Log.go  InitLogging   100.00% (3/3)
   github.com/pjvds/go-cqrs/tests     -----------   100.00% (3/3)
+```
 
 You can see the actual step result on wercker: [go-cqrs / 6c8cd61 / coverage](https://app.wercker.com/#buildstep/51ffb8a9170dc79a480004e2).
 
 ## Writing to the artifact dir
 
-The `coverage.json` can also be used to create a nice self sufficient html report. We can use [gocov-html](https://github.com/matm/gocov-html) tool for this. Here is how I enchanced the previous step and added html reporting that is stored in the artifact directory.
+The `coverage.json` can also be used to create a nice self sufficient html report. We can use [gocov-html](https://github.com/matm/gocov-html) tool for this. Here is how I enchanced the previous step and added html reporting that is stored in the `artifact` directory.
 
     - script:
         name: Coverage
@@ -76,4 +84,9 @@ When this step succeeds you can download the artifacts package and open `coverag
 
 ## What is next
 
-Now wercker gives insight in your test coverage for your go projects. The next step is to use the coverage as a number to pass or fail the build. Stay tuned for an update where we will create a step to do this.
+Now wercker gives insight in your test coverage for your golang projects. The next step is to use the coverage as a number to pass or fail the build. Stay tuned for an update where we will create a step to do this.
+## Earn some stickers!
+
+Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
+
+Follow us on [twitter](http://twitter.com/wercker) as well to stay in the loop.
