@@ -7,7 +7,7 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
 ---
 
-Code Coverage can be an important metric to watch.
+Code coverage can be an important metric to watch. It gives you insight in which parts of your code are covered well by tests and which can have some extra attention. In this post I will explain how I leverages gocov to add test coverage reports to the build pipeline of one of my go projects.
 
 ## Executing tests with gocov
 
