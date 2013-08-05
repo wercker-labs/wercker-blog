@@ -10,7 +10,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 <a href="http://blog.wercker.com/2013/07/31/Add-hipchat-notifications.html">Last week</a> with HipChat notifications, we introduced the 'after-steps' functionality on wercker, which allows you to create hooks to be called after builds or deploys.
     With the <a href="http://blog.wercker.com/2013/07/22/Announcing-the-Open-Delivery-platform.html">Open Delivery platform</a> you are now able to create your own <a href="http://devcenter.wercker.com/articles/boxes/">boxes</a> and
 <a href="http://devcenter.wercker.com/articles/steps/">steps</a> for your build and
-deployment <a href="http://devcenter.wercker.com/articles/introduction/pipeline.html">pipelines</a> on wercker. In this post we want to showcase how to add <a href="http://campfirenow.com">Campfire</a> notifications throught the 'Campfire-Notify-Step'
+deployment <a href="http://devcenter.wercker.com/articles/introduction/pipeline.html">pipelines</a> on wercker. In this post we want to showcase how to add <a href="http://campfirenow.com">Campfire</a> notifications through the 'Campfire-Notify-Step', which is an `after-step` as well.
 </h4>
 
 ![image](http://f.cl.ly/items/263n40133k442U3E1p2A/wercker%2Bcampfire.png)
@@ -38,13 +38,13 @@ build:
 
 The `room-id` variable is obviously the **id** for your Campfire room that you want to send the notifications to.
 
-The `$CAMPFIRE_TOKEN` can be set as an pipeline variable, which is available for the build pipeline, as well as the deployment pipeline.
+The `$CAMPFIRE_TOKEN` can be set as an pipeline variable, which is available for the build pipeline, as well as the deployment pipeline. The `subdomain` is the subdomain for your campfire room.
 
 ![image](http://f.cl.ly/items/1R0L3O0c0m3t2p1N0F2M/Screen%20Shot%202013-08-05%20at%201.20.40%20PM.png)
 
 _note: this is not my real token!_
 
-Check your info/account page for your API token that you can use as the above mentioned environment variable.
+Check your info/account page on your Campifre for your API token that you can use as the above mentioned environment variable.
 
 View our Campfire step in the [wercker directory](https://app.wercker.com/#applications/51f2a3e8df5a46247c000e0d/tab/details).
 
