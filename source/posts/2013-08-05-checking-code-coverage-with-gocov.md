@@ -9,6 +9,10 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 Code coverage can be an important metric to watch. It gives you insight in which parts of your code are covered well by tests and which might need some extra attention. In this post I will explain how I leverage <a href="https://github.com/axw/gocov">gocov</a> in adding test coverage reports to the build pipeline of one of my go projects.
 </h4>
 
+![image](http://f.cl.ly/items/3r151t3Q2a1o0w2K3c3V/52DD0AE7-E6D1-481C-B8AE-7727C180C0CC.jpg)
+
+READMORE
+
 ## Executing tests with gocov
 
 To measure test coverage in Go we can use [gocov](https://github.com/axw/gocov) created by [Andrew Wilkins](http://awilkins.id.au/). It has a `test` command that executes the test with the default `go test` test runner and generates the coverage details in json format. The `gocov test` command respects the `go test` command and still prints output from it to the console. Here is an example of a script [step](http://devcenter.wercker.com/articles/steps/) that runs the tests for all packages and subpackages of the working directory and writes the coverage results to a file called `coverage.json`:
