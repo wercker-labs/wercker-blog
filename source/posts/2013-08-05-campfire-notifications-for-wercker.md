@@ -15,6 +15,8 @@ deployment <a href="http://devcenter.wercker.com/articles/introduction/pipeline.
 
 ![image](http://f.cl.ly/items/263n40133k442U3E1p2A/wercker%2Bcampfire.png)
 
+READMORE
+
 The `after-steps` phase in the [wercker pipeline](http://devcenter.wercker.com/articles/introduction/pipeline.html) allows you execute steps after the build or deployment pipeline is finished, which is perfect for notifications. We created the [Campfire-Notify step](https://app.wercker.com/#applications/51f2a3e8df5a46247c000e0d/tab/details) internally at wercker to shoot off messages on failed deploys.
 
 ## Adding Campfire notifications
