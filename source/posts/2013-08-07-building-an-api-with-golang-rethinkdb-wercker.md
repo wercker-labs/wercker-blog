@@ -10,9 +10,11 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 In a <a href="http://blog.wercker.com/2013/07/23/Building-your-own-box-with-Bash.html">previous article</a> we've explained how to build your own <a href="http://devcenter.wercker.com/articles/boxes/">wercker box</a> provisioned with <a href="http://rethinkdb.com">RethinkDB</a>, an open source distributed database, which is quite awesome.
 </h4>
 
-![image](http://f.cl.ly/items/133A2T2C003n253o1e1i/RethinkDb.png)
+![image](http://f.cl.ly/items/330P0J3G2d0S3Y2q2U0Z/Image%202013.08.07%204%3A15%3A36%20PM.jpeg)
 
 In this tutorial we are going to explain how to build a small API in Go, backed by RethinkDB. We are going to leverage the excellent RethinkDB [driver for Go](https://github.com/christopherhesse/rethinkgo) by [Christopher Hesse](https://twitter.com/christophrhesse).
+
+![image](http://f.cl.ly/items/133A2T2C003n253o1e1i/RethinkDb.png)
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/). You can check out the code for this tutorial [here](https://github.com/mies/getting-started-golang-rethinkdb) and view its status on wercker [here](https://app.wercker.com/#applications/5202373e3ca948bc5a004cd1)
 
