@@ -7,7 +7,7 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 ---
 
 <h4 class="subheader">
-I have automated the <a href="http://blog.wercker.com/2013/05/31/simplify-you-jekyll-publishing-process-with-wercker.html">build</a> and <a href="http://blog.wercker.com/2013/07/30/adding-a-staging-environment-to-your-blog.html">deployment</a> pipeline for my blog. For every push, wercker generates my site, which validates the content and tests it for known deprecationss. It generates two different versions of the site. One for staging and one for production. When I push from the `staging` branch, it automaticly gets deployed to my staging environment. The same goes for the `master`, which automatically gets deployed to my production environment.
+I have automated the <a href="http://blog.wercker.com/2013/05/31/simplify-you-jekyll-publishing-process-with-wercker.html">build</a> and <a href="http://blog.wercker.com/2013/07/30/adding-a-staging-environment-to-your-blog.html">deployment</a> pipeline for my personal <a href="http://born2code.net">blog</a>. For every push, wercker generates my site, which validates the content and tests it for known deprecationss. It generates two different versions of the site. One for staging and one for production. When I push from the `staging` branch, it automaticly gets deployed to my staging environment. The same goes for the `master`, which automatically gets deployed to my production environment.
 </h4>
 
 ![image](http://f.cl.ly/items/1T2B40451f1O3R0d1M2Y/A0284044-4F04-4350-82FB-0E78A59D461C.jpg)
