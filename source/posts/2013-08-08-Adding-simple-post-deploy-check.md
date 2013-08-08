@@ -116,3 +116,9 @@ deploy:
         name: Post deploy tests
         code: source post-deploy-tests.sh
 ```
+
+## Earn some stickers!
+
+Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
+
+Follow us on [twitter](http://twitter.com/wercker) as well to stay in the loop.
