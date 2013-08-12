@@ -51,12 +51,12 @@ build:
   steps:
     # install dependencies
     - npm-install
-    # test our couchdb box by create a 'baseball' database and then retrieve all the database names
+    # test our couchdb box by creating a 'wercker' database and then retrieve all the database names
     - script:
         name: curl
         code: |
           echo $WERCKER_COUCHDB_HOST
-          curl -X PUT "$WERCKER_COUCHDB_HOST:5984/baseball"
+          curl -X PUT "$WERCKER_COUCHDB_HOST:5984/wercker"
           curl -X GET "$WERCKER_COUCHDB_HOST:5984/_all_dbs"
     # Run our test application
     - npm-test
