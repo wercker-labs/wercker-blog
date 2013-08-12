@@ -10,6 +10,10 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 We've previously written about how we created a <a href="http://blog.wercker.com/2013/07/24/Building-your-own-box-with-Chef.html">CouchDB Service box</a> for your wercker <a href="http://devcenter.wercker.com/articles/introduction/pipeline.html">pipelines</a>. We got some questions on how to leverage this box so in this article we are going to showcase how to do some continuous integration with the CouchDB box and node.js.
 </h4>
 
+![image](http://f.cl.ly/items/3a473k3r1r1O453i0I3o/Image%202013.08.12%203%3A09%3A04%20PM.png)
+
+READMORE
+
 You can find the code for this sample application on [GitHub](https://github.com/mies/getting-started-couchdb). View my application and its status on wercker [here](https://app.wercker.com/#applications/51cb0a0ec3f3032f38000067).
 
 [![wercker status](https://app.wercker.com/status/21e01d1e73b3f3e230a920e6eab2ef80/m "wercker status")](https://app.wercker.com/project/bykey/21e01d1e73b3f3e230a920e6eab2ef80)
