@@ -1,5 +1,5 @@
 ---
-title: Adding IRC notifications
+title: Adding IRC notifications to your builds and deploys
 date: 2013-08-13
 tags: golang, boxes
 author: Micha Hernandez van Leuffen
