@@ -10,7 +10,7 @@ build:
         server: irc.freenode.net
         port: 6667
         nickname: wercker
-        channel: #wercker-dev
+        channel: wercker-dev
 deploy:
     steps:
         - s3sync:
