@@ -1,5 +1,5 @@
 ---
-title: Boxes and steps in the wercker directory
+title: Golang box updated to 1.1.2
 date: 2013-08-13
 tags: golang, boxes
 author: Micha Hernandez van Leuffen
