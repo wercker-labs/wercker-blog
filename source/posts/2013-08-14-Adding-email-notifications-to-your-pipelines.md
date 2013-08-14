@@ -62,7 +62,7 @@ You can view the complete available options below:
 * `on` - Possible values: `always` and `failed`, default `always`
 
 
-Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/520b5ea98a20a2624500a932/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/wercker/wercker-step-email-notify)
+Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/520b5ea98a20a2624500a932/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/wercker/wercker-step-email-notify).
 
 ## Earn some stickers!
 
