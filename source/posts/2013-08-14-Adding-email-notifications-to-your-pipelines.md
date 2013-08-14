@@ -1,6 +1,6 @@
 ---
 title: Adding email notifications to your builds and deploys
-date: 2013-08-13
+date: 2013-08-14
 tags: email, notifications
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
