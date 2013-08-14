@@ -7,10 +7,10 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-After <a href="http://blog.wercker.com/2013/07/31/Add-hipchat-notifications.html">HipChat</a>, <a href="http://blog.wercker.com/2013/08/05/campfire-notifications-for-wercker.html">Campfire</a> and <a href="">IRC</a> notifications, you are now also able to send email notifications from your <a href="http://devcenter.wercker.com/articles/introduction/pipeline.html">build deploy pipelines</a>.
+After <a href="http://blog.wercker.com/2013/07/31/Add-hipchat-notifications.html">HipChat</a>, <a href="http://blog.wercker.com/2013/08/05/campfire-notifications-for-wercker.html">Campfire</a> and <a href="">IRC</a> notifications, you are now also able to send email notifications from your <a href="http://devcenter.wercker.com/articles/introduction/pipeline.html">build and deploy pipelines</a>.
 </h4>
 
-Adding these email notifications is trivial but **Bring Your Own Email Server (BYOES)**. We have now also [updated](http://devcenter.wercker.com/articles/werckeryml/notifications.html) our [developer center](http://devcenter.wercker.com) with all the notification documentation in place.
+Adding these email notifications is trivial but **Bring Your Own Email Server (BYOES)**. We have now also [updated](http://devcenter.wercker.com/articles/werckeryml/notifications.html) our [developer center](http://devcenter.wercker.com) with all the notification documentation in one place.
 
 ![image](http://f.cl.ly/items/2e1W1f0B0A0Q420E0b39/wercker%2Bemail.png)
 
@@ -35,7 +35,7 @@ build:
     after-steps:
         - wercker/email-notify:
             from: alerts@wercker.com
-            to: mies@wercker.com
+            to: example@example.com
             username: $USER
             password: $PASS
             host: YOURSMTPSERVER

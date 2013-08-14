@@ -5,12 +5,6 @@ build:
         - script:
             name: middleman build
             code: bundle exec middleman build
-    after-steps:
-     - wouter/irc-notify:
-        server: irc.freenode.net
-        port: 6667
-        nickname: wercker
-        channel: wercker-dev
 deploy:
     steps:
         - s3sync:
