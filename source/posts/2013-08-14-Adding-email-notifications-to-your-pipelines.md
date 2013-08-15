@@ -33,7 +33,7 @@ build:
             name: middleman build
             code: bundle exec middleman build --verbose
     after-steps:
-        - wercker/email-notify:
+        - mies/email-notify:
             from: alerts@wercker.com
             to: example@example.com
             username: $USER
