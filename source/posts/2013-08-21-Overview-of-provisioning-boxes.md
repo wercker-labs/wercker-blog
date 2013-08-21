@@ -94,5 +94,3 @@ Check out the [wercker dev center](http://devcenter.wercker.com) for articles on
 ## Earn some stickers!
 
 Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
-
-Thanks for tuning in, and there will be more posts next week! Follow us on [twitter](http://twitter.com/wercker) as well to stay in the loop.
