@@ -113,13 +113,13 @@ build:
 
 I've added the application to wercker as described in the [Golang with wercker](http://blog.wercker.com/2013/07/10/Golang-on-wercker.html) blogpost.
 
-![screenshot of a green build]()
+![screenshot of a green build](/images/posts/app-engine-go/app-build-at-wercker.png)
 
 ## Creating the project at Google's AppEngine
 
 Now I need an application at Google App Engine to deploy to. I create one by [loging in to Google App Engine](https://cloud.google.com/products/app-engine) and it asks me to create a application:
 
-![create app engine project]()
+![create app engine project](/images/posts/app-engine-go/create-app-engine-app.png)
 
 ## Add App.yaml App Engine configuration
 
@@ -140,13 +140,13 @@ handlers:
 
 After I created an application at Google App Engine, I log in to wercker and navigate to the settings tab of my application to add an custom deploy target.
 
-![create custom deploy target]()
+![create custom deploy target](/images/posts/app-engine-go/add-custom-deploy-target.png)
 
 I name it `app-engine` and enable auto deploy for the `master` branch. Which means that wercker will automatically trigger an deployment whenever a build succeeds from the `master` branch.
 
 I add an environment variable `APP_ENGINE_PASS` to the deploy target so that I can use it from the deployment pipeline. I mark it as protected to prevent the password value to be available via the user interface and will not be written to the deploy log.
 
-![add password variable]()
+![add password variable](/images/posts/app-engine-go/add-password-variable.png)
 
 _note: this is not my real password... duh!
 
@@ -169,7 +169,7 @@ Now the deployment pipeline will execute two steps. The [`setup-go-workspace`](h
 
 I push the `wercker.yml` change to [GitHub](https://github.com/pjvds/go-cities-appengine) and watch wercker building my project. Since I've added a deploy target with auto deploy enabled for the master branch wercker will trigger a deploy automatically.
 
-![deploying...]()
+![deploying...](/images/posts/app-engine-go/deploying.png)
 
 ## Done!
 
