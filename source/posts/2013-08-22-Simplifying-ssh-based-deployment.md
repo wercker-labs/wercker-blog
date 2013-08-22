@@ -50,3 +50,23 @@ application from wercker to [Digital Ocean]().
 
 ## Deploying to Digital Ocean
 
+This tutorial assumes you've created a droplet on [Digital
+Ocean](http://digitalocean.com) and have
+configured it with
+[passwordless-login](https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys--2), as we'll, of course, be using SSH
+keys!
+
+The application we will be deploying is a simple golang application that
+returns city names as JSON.
+You can find the source code for it on [GitHub]().
+
+First, we'll create a custom deploy target for our application. Let's
+call the deploy target **digitalocean**. Here we also auto-deploy the
+master branch of our application.
+
+In the SSH menu for you droplet add the public key that you've just
+created on wercker as explained in the previous section *How does it
+work*.
+
+![image](http://f.cl.ly/items/0o140V3V34120t430I0C/Screen%20Shot%202013-08-22%20at%202.46.54%20PM.png)
+
