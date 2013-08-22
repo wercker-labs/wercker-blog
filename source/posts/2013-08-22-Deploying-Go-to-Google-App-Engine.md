@@ -7,6 +7,12 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
 ---
 
+<h4 class="subheader">
+[Go](http://golang.org) is one of my favorite languages. It like how it brings most advantages from dynamic languages to the static world. Also Google App Engine is a mature platform that offers features like switching versions, feature switches and a pack of out of the box services. In this post I describe how I leverage wercker to deploy my Go application to it.
+</h4>
+
+READMORE
+
 ## The application
 
 I've created a small [application](https://github.com/pjvds/go-cities-appengine/) in [Go](http://golang.org) that prints a list of cities on request. The application logic can be found in [`app.go`](https://github.com/pjvds/go-cities-appengine/blob/master/app.go):
