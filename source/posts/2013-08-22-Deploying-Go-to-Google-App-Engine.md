@@ -148,7 +148,7 @@ I add an environment variable `APP_ENGINE_PASS` to the deploy target so that I c
 
 ![add password variable](/images/posts/app-engine-go/add-password-variable.png)
 
-_note: this is not my real password... duh!
+_note: this is not my real password... duh!_
 
 ## Define the deploy pipeline
 
