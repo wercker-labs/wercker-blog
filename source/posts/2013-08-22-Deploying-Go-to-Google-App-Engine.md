@@ -86,7 +86,7 @@ func TestHandleIndexContainsAmsterdam(t *testing.T) {
 
 ## The build pipeline
 
-The build pipeline is defined in [wercker.yml](https://github.com/pjvds/go-cities-appengine/blob/master/wercker.yml). It defines that
+The build pipeline is defined in [wercker.yml](https://github.com/pjvds/go-cities-appengine/blob/master/wercker.yml). It consists of a step that first sets up a Go workspace and then executes to the go commands to get the dependencies, build and test the application.
 
 ``` yaml
 box: wercker/golang
@@ -109,10 +109,6 @@ build:
         code: |-
             go test
 
-    - script:
-        name: Copy output
-        code: |-
-          rsync -avz "$WERCKER_SOURCE_DIR/" "$WERCKER_OUTPUT_DIR"
 ```
 
 ## Building at wercker
