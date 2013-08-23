@@ -4,11 +4,10 @@ date: 2013-08-22
 tags: deployment, golang, AppEngine
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
 
 <h4 class="subheader">
-<a href="http://golang.org">Go</a> is one of my favorite languages. It like how it brings the many advantages from dynamic languages to the static world. Also Google App Engine is a mature platform that offers benefits such as switching versions, feature switches and a pack of various services out of the box. In this post I describe how I leverage wercker to deploy my Go application to App Engine.
+<a href="http://golang.org">Go</a> is one of my favorite languages. I like how it brings the many advantages from dynamic languages to the static world. Also Google App Engine is a mature platform that offers benefits such as switching versions, feature switches and a pack of various services out of the box. In this post I describe how I leverage wercker to deploy my Go application to App Engine.
 </h4>
 
 READMORE
@@ -160,12 +159,12 @@ In the previous step I've added a deploy target, which can best be explained as 
 deploy:
   steps:
     - setup-go-workspace
-    - pjvds/appengine-deploy:
+    - pjvds/go-appengine-deploy:
         email: pj@wercker.com
         password: $APP_ENGINE_PASS
 ```
 
-Now the deployment pipeline will execute two steps. The [`setup-go-workspace`](https://app.wercker.com/#applications/51fa5e6ba4037f7171000f75/tab/details) will setup a go workspace and the [`pjvds/appengine-deploy`](https://app.wercker.com/#applications/520cc5498a20a26245010fb9/tab/details) will do the actual deployment for us. I set the email option to `pj@wercker.com` and the password option to the `APP_ENGINE_PASS` environment variable that I have added to the deploy target in the previous step.
+Now the deployment pipeline will execute two steps. The [`setup-go-workspace`](https://app.wercker.com/#applications/51fa5e6ba4037f7171000f75/tab/details) will setup a go workspace and the [`pjvds/go-appengine-deploy`](https://app.wercker.com/#applications/52177327e36a64ff11002960/tab/details) will do the actual deployment for us. I set the email option to `pj@wercker.com` and the password option to the `APP_ENGINE_PASS` environment variable that I have added to the deploy target in the previous step.
 
 ## Time to (auto) deploy!
 
