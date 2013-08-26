@@ -10,6 +10,8 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 <a href="http://golang.org">Go</a> is one of my favorite languages. I like how it brings the many advantages from dynamic languages to the static world. Also Google App Engine is a mature platform that offers benefits such as switching versions, feature switches and a pack of various services out of the box. In this post I describe how I leverage wercker to deploy my Go application to App Engine.
 </h4>
 
+![image](http://f.cl.ly/items/0C1E2R1t0v3n101L1g25/77AFC437-D853-4973-A15B-6E9BBAEA6079.jpg)
+
 READMORE
 
 ## The application
