@@ -1,14 +1,13 @@
 ---
 title: Deploying your PHP application to fortrabbit
-date: 2013-08-28
+date: 2013-08-27
 tags: deployment, golang, AppEngine
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
 
 <h4 class="subheader">
-Today we got a support ticket from a user that wants to deploy his PHP application to [fortrabbit](http://fortrabbit.com/ "fortrabbit homepage"), a PHP as a service provider. To help this customer I decided to create a small sample app and try to deploy it to fortrabbit. This blogpost describes the steps I took. I will give you a short summery right away: It was very easy!
+Today we received a support ticket from a customer that wants to deploy his PHP application to <a href="http://fortrabbit.com/">fortrabbit</a>, a PHP as a service provider. In order to help this customer I decided to create a small sample app and try to deploy it to fortrabbit. This blogpost describes the steps I took. I will give you a short summery right away: It was very easy!
 </h4>
 
 READMORE
@@ -27,7 +26,7 @@ echo json_encode($cities, JSON_PRETTY_PRINT);
 ?>
 ```
 
-It also contains some [tests](https://github.com/pjvds/php-fortrabbit-sample-app/blob/master/tests/) and has a small [wercker.yml](https://github.com/pjvds/php-fortrabbit-sample-app/blob/master/wercker.yml) that defines the build pipeline. Here is the content of [wercker.yml](https://github.com/pjvds/php-fortrabbit-sample-app/blob/master/index.php):
+It also contains some [tests](https://github.com/pjvds/php-fortrabbit-sample-app/blob/master/tests/) and has a minimal [wercker.yml](https://github.com/pjvds/php-fortrabbit-sample-app/blob/master/wercker.yml) that defines the build pipeline. Here is the content of my [wercker.yml](https://github.com/pjvds/php-fortrabbit-sample-app/blob/master/index.php):
 
 ``` yaml
 # Execute the pipeline with the wercker/php box
@@ -51,21 +50,21 @@ build:
 
 ## Generating SSH Key
 
-Wercker has the ability to generate SSH keys that are available from the build and deployment pipeline. These can be generated from the application settings tab at wercker. I generate a key with the name `fortrabbit` and wercker shows me the public key.
+Wercker has the ability to generate SSH keys that are available from within the build and deployment pipeline. These can be generated from the application settings tab at wercker. I generated a key with the name `fortrabbit` and wercker shows me the public key.
 
 ![generating an ssh key at wercker.com](/images/posts/deploying-your-php-application-to-fortrabbit/generating-ssh-key.png)
 
 ## Adding public key to fortrabbit
 
-To be able to git push deploy to fortrabbit we need to add the public key part of the SSH key pair to our application. This can be done in the manage view of your application via the [application overview](https://my.fortrabbit.com/apps).
+In order to be able to **git push** to fortrabbit (the way to *deploy* your app to fortrabbit) we need to add the public key part of the SSH key pair to our application. This can be done in the manage view of your application via the [application overview](https://my.fortrabbit.com/apps).
 
 ![application overview](/images/posts/deploying-your-php-application-to-fortrabbit/app-overview.png)
 
-Navigate to the git tab.
+Navigate to the **git** tab.
 
 ![git tab](/images/posts/deploying-your-php-application-to-fortrabbit/git-tab.png)
 
-Enter a name for the git user, I picked wercker and paste the public key part into the big text area.
+Enter a name for the git user, I picked **wercker** and paste the public key part into the big text area.
 
 ![git tab](/images/posts/deploying-your-php-application-to-fortrabbit/add-key.png)
 
@@ -73,7 +72,7 @@ Hit the `Save Git Users` button to confirm.
 
 ## Deployment pipeline
 
-I have played a bit and came up with the following deployment pipeline that I added to the [wercker.yml](https://github.com/pjvds/php-fortrabbit-sample-app/blob/738f0b69d403b6045f809470bc5b27b97a9f58db/wercker.yml#L18-L56):
+I've played around a bit and came up with the following deployment pipeline that I added to the [wercker.yml](https://github.com/pjvds/php-fortrabbit-sample-app/blob/738f0b69d403b6045f809470bc5b27b97a9f58db/wercker.yml#L18-L56):
 
 ``` yaml
 deploy:
@@ -115,7 +114,7 @@ deploy:
           git push fortrabbit master -f
 ```
 
-Most steps should be self explaining, but here is what is it does in plain English:
+Most steps should be self explanatory, but here is what it does in plain English:
 
   * Trust forstrabbit git hostname, eq: `it2.eu1.frbit.com`
   * Setup git repository and add all files to push
@@ -124,19 +123,19 @@ Most steps should be self explaining, but here is what is it does in plain Engli
 
 ## Add deploy target
 
-The last step is to add an deploy target to the application at wercker. This can be done via the settings tab of the application:
+The last step is to add a deploy target to the application on wercker. This can be done via the settings tab of the application:
 
 ![add deploy target](/images/posts/deploying-your-php-application-to-fortrabbit/add-deploy-target.png)
 
-I name it production, and enable auto deploy for the master branch.
+I've named it **production*, and have enabled auto deploy for the master branch.
 
 ![deploy target basic properties](/images/posts/deploying-your-php-application-to-fortrabbit/deploy-target-basic-properties.png)
 
-We can add environment variables to the deploy target to make information available during the deployment. I start by exposing the SSH key that I have added earlier:
+We can add environment variables to the deploy target to make information available during deployment. I start by exposing the SSH key that I've added earlier:
 
 ![add ssh key variable](/images/posts/deploying-your-php-application-to-fortrabbit/add-key-var.png)
 
-Next I add the two text variables `FORSTRABBIT_GIT_REMOTE` and `FORSTRABBIT_GIT_HOST`, which I set to the values displayed on the git tab at fortrabbit.
+Next, I add the two text variables `FORSTRABBIT_GIT_REMOTE` and `FORSTRABBIT_GIT_HOST`, which I set to the values displayed on the git tab on fortrabbit.
 
 ## Deploy!
 
@@ -144,7 +143,7 @@ Navigate to your latest build and choose deploy:
 
 ![deploy](/images/posts/deploying-your-php-application-to-fortrabbit/deploy.png)
 
-When the deploy is finish I proudly look at the running version of the application:
+When the deploy is finished I proudly look at the running version of the application:
 
 ![cities running at fortrabbit](/images/posts/deploying-your-php-application-to-fortrabbit/cities-running-at-fortrabbit.png)
 
