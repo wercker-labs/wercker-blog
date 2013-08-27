@@ -4,9 +4,14 @@ date: 2013-08-28
 tags: deployment, golang, AppEngine
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
+published: false
 ---
 
+<h4 class="subheader">
 Today we got a support ticket from a user that wants to deploy his PHP application to [fortrabbit](http://fortrabbit.com/ "fortrabbit homepage"), a PHP as a service provider. To help this customer I decided to create a small sample app and try to deploy it to fortrabbit. This blogpost describes the steps I took. I will give you a short summery right away: It was very easy!
+</h4>
+
+READMORE
 
 ## The PHP application
 
