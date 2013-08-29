@@ -42,7 +42,7 @@ Heroku needs to know where your application should be placed in the Go directory
 
 Heroku also needs to know how to start your application. This needs to be specified using a `Procfile`.
 
-    echo "web ./go-cities -port $PORT" > Procfile
+    echo "web: ./go-cities -port $PORT" > Procfile
     git add Procfile
     git commit -m 'Adds Procfile to tell heroku how to run'
 
