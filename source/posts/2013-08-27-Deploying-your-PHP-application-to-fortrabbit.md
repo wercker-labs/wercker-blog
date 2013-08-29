@@ -7,7 +7,7 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 ---
 
 <h4 class="subheader">
-Today we received a support ticket from a customer that wants to deploy his PHP application to <a href="http://fortrabbit.com/">fortrabbit</a>, a PHP as a service provider. In order to help this customer I decided to create a small sample app and try to deploy it to fortrabbit. This blogpost describes the steps I took. I will give you a short summery right away: It was very easy!
+Today we received a support ticket from a customer that wants to deploy his PHP application to <a href="http://fortrabbit.com/">fortrabbit</a>, a PHP as a service provider. In order to help this customer I decided to create a small sample app and try to deploy it to fortrabbit. This blogpost describes the steps I took. I will give you a short summary right away: It was very easy!
 </h4>
 
 READMORE
