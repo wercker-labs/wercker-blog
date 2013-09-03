@@ -343,6 +343,10 @@ This will trigger a deploy and wercker will go through the **deploy** section of
 
 Congratulations you've succesfully set up your continuous delivery pipeline with wercker and Digital Ocean.
 
+If you visit your droplet you should see our clouds!
+
+![image](http://f.cl.ly/items/160G1g0L3a3q1g2w1R2o/Screen%20Shot%202013-09-03%20at%202.42.02%20PM.png)
+
 ## Earn some stickers!
 
 Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
