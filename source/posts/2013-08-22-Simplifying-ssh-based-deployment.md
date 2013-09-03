@@ -151,7 +151,7 @@ deploy:
       code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no YOURSERVER.COM start gocities
 ```
 
-First, we need to add the server we want to deploy to, to the known hosts file. We can do this using the [add-to-know_hosts step](https://app.wercker.com/#applications/521764dde36a64ff110022f2/tab/details).
+First, we need to add the server we want to deploy to, to the known hosts file. We can do this using the [add-to-known_hosts step](https://app.wercker.com/#applications/521764dde36a64ff110022f2/tab/details).
 
 Second, we create a temporary file and make it available as an environment variable using the [mktemp step](https://app.wercker.com/#applications/52167277e9fa619606001064/tab/details). This filepointer will contain our private key that we've previously created.
 
