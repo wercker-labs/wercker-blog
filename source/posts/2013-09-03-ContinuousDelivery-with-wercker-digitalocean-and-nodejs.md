@@ -296,7 +296,7 @@ deploy:
     - create-file:
         name: write key
         filename: $PRIVATEKEY_PATH
-        content: $FOO_PRIVATE
+        content: $WERCKER_PRIVATE
         overwrite: true
     - script:
         name: transfer application
@@ -306,7 +306,7 @@ deploy:
           scp -i $PRIVATEKEY_PATH -o StrictHostKeyChecking=no -o UserKnownHostsFile=no app.js package.json root@mies.io:/var/local/www
     - script:
         name: npm install
-        code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no mies.io "cd /var/local/www/ &&  npm install"
+        code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no mies.io "cd /var/local/www/ &&  npm install --production"
     - script:
         name: start application
         code: |
@@ -318,7 +318,7 @@ First, we need to add the server we want to deploy to, to the known hosts file. 
 
 Second, we create a temporary file and make it available as an environment variable using the [mktemp step](https://app.wercker.com/#applications/52167277e9fa619606001064/tab/details). This filepointer will contain our private key that we've previously created.
 
-Next, we write the contents of our private key ($FOO_PRIVATE) to the temporary file we created in the previous step using mktemp. We use the [create-file step](https://app.wercker.com/#applications/51c829dd3179be4478002113/tab/details) to do so. Now we are ready to communicate with our droplet!
+Next, we write the contents of our private key ($WERCKER_PRIVATE) to the temporary file we created in the previous step using mktemp. We use the [create-file step](https://app.wercker.com/#applications/51c829dd3179be4478002113/tab/details) to do so. Now we are ready to communicate with our droplet!
 
 I transfer my application in the following step, consisting of `package.json` and the `app.js` file using scp to my remote /var/local/www/ folder.
 
