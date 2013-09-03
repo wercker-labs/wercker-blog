@@ -4,6 +4,7 @@ date: 2013-09-03
 tags: wercker, cli, services, boxes
 author: Jacco Flenter
 gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
+published: false
 ---
 
 <h4 class="subheader">
@@ -90,7 +91,7 @@ We get one result for CouchDB. So let's get some more details through the use of
 The result earlier is truncated since it is not relevant to show all the details on CouchDB's service on wercker for this article. However you may decide to use version 0.1.2, since the latest version is a prerelease with its -dev marking. Adding it like so: 
 
 ``` bash
-wercker services add mies/couchdb 0.1.2`
+wercker services add mies/couchdb 0.1.2
 ```
 
 Now let's validate the result by running `wercker services`
