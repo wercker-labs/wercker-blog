@@ -303,15 +303,15 @@ deploy:
         code: |
           pwd
           ls -la
-          scp -i $PRIVATEKEY_PATH -o StrictHostKeyChecking=no -o UserKnownHostsFile=no app.js package.json root@mies.io:/var/local/www
+          scp -i $PRIVATEKEY_PATH app.js package.json root@mies.io:/var/local/www
     - script:
         name: npm install
-        code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no mies.io "cd /var/local/www/ &&  npm install --production"
+        code: ssh -i $PRIVATEKEY_PATH -l root mies.io "cd /var/local/www/ &&  npm install --production"
     - script:
         name: start application
         code: |
-          ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no mies.io "if [[ \"$(status node-app)\" = *start/running* ]]; then stop node-app -n ; fi"
-          ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no mies.io start node-app
+          ssh -i $PRIVATEKEY_PATH -l root mies.io "if [[ \"$(status node-app)\" = *start/running* ]]; then stop node-app -n ; fi"
+          ssh -i $PRIVATEKEY_PATH -l root mies.io start node-app
 ~~~~
 
 First, we need to add the server we want to deploy to, to the known hosts file. We can do this using [the add-to-know_hosts step](https://app.wercker.com/#applications/521764dde36a64ff110022f2/tab/details).
