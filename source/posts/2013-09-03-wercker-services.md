@@ -4,11 +4,10 @@ date: 2013-09-03
 tags: wercker, cli, services, boxes
 author: Jacco Flenter
 gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
-published: false
 ---
 
 <h4 class="subheader">
-A while ago we introduced the concepts of boxes on the wercker platform, which allows you to create your own environments and services (think CouchDB/MongoDB or even RabbitMQ). 
+A while ago we introduced the concepts of boxes on the wercker platform, which allows you to create your own environments and services (think CouchDB/MongoDB or even RabbitMQ).
 We have just made it easier to add any service to your wercker app.
 </h4>
 
@@ -16,7 +15,7 @@ READMORE
 
 This week we've added two improvements to the wercker toolchain. First of all, you can now easily see in our [overview of boxes](https://app.wercker.com/#/explore/boxes) what boxes or services are available (note: you can also use the filter to show only services).
 
-![image](http://cl.ly/RBkE/Screen%20Shot%202013-09-03%20at%205.24.32%20PM.png)
+![image](/images/posts/services/boxes.png)
 
 The second improvement is to the [wercker cli](http://devcenter.wercker.com/articles/cli/installation.html), it now supports a range of service related commands:
 
@@ -88,7 +87,7 @@ We get one result for CouchDB. So let's get some more details through the use of
 ```
 
 ### Adding and updating ###
-The result earlier is truncated since it is not relevant to show all the details on CouchDB's service on wercker for this article. However you may decide to use version 0.1.2, since the latest version is a prerelease with its -dev marking. Adding it like so: 
+The result earlier is truncated since it is not relevant to show all the details on CouchDB's service on wercker for this article. However you may decide to use version 0.1.2, since the latest version is a prerelease with its -dev marking. Adding it like so:
 
 ``` bash
 wercker services add mies/couchdb 0.1.2
