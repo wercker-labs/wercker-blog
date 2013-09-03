@@ -64,7 +64,7 @@ app.get('/clouds.json', function(req, res){
   res.end();
 });
 
-var port = 5000;
+var port = 80;
 app.listen(port);
 
 module.exports = app;
