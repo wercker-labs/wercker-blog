@@ -23,7 +23,7 @@ You can check out the source code of this application on [GitHub]()
 ## Creating our application
 Let's start building our app! First, create a `git` repository that will hold our source code:
 
-~~~~
+~~~~bash
 mkdir digitalocean-wercker-nodejs
 cd digitalocean-wercker-nodejs
 git init
@@ -31,7 +31,7 @@ git init
 
 Now, lets declare our dependencies through node.js' `package.json` file:
 
-~~~~
+~~~~json
 {
   "name": "digitalocean-wercker-nodejs",
   "version": "0.0.1",
@@ -50,7 +50,7 @@ Here we specify the details of our application, most importantly the dependencie
 
 Next, we're ready to build our actual application. Create a filed called `app.js` with the following contents:
 
-~~~~
+~~~~javascript
 var express = require('express');
 var app = express();
 
@@ -72,7 +72,7 @@ module.exports = app;
 
 Now push your code to your version control provider of choice. Wercker supports either [GitHub](http://github.com) or [Bitbucket](http://bitbucket.org).
 
-~~~~
+~~~~bash
 git add .
 git commit -am 'initial commit'
 git push origin master
@@ -114,7 +114,7 @@ Your project has now been added and you will be greeted by the wercker dashboard
 
 You can trigger a build manually but lets add the **wercker.yml** file which we need to add to our repository anyway. Add this file to your project repository and push it to git. Changes to the wercker.yml that are pushed will be picked up by wercker automatically.
 
-~~~~
+~~~~bash
 git add wercker.yml
 git commit -am 'added wercker.yml'
 git push origin master
@@ -128,13 +128,13 @@ As you will see, the `git push` triggers a new build that looks as follows:
 
 Let's also create a unittest for our application. Add a folder called `test` to your repository and in this folder add a file named `test.js`.
 
-~~~~
+~~~~bash
 mkdir test
 touch test/test.js
 ~~~~
 Add the following contents to the `test.js` file:
 
-~~~~
+~~~~javascript
 var request = require('supertest')
   , express = require('express');
 
@@ -155,31 +155,30 @@ The unittest checks if our applications returns JSON at the url that we've defin
 
 We need to update our `package.json` file such that our test will be run on wercker when we run `npm test`. Make sure your `package.json` file looks as follows:
 
-~~~~
-  {
-    "name": "digitalocean-wercker-nodejs",
-    "version": "0.0.1",
-    "engines" : {
-    "node": "0.10.x"
-    },
-    "dependencies": {
-      "express": "3.x",
-      "supertest" : "0.4.0",
-      "mocha" : "1.6.0"
-    },
-    "scripts": {
-      "test": "mocha",
-      "start": "app.js"
-    }
+~~~~json
+{
+  "name": "digitalocean-wercker-nodejs",
+  "version": "0.0.1",
+  "engines" : {
+  "node": "0.10.x"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "supertest" : "0.4.0",
+    "mocha" : "1.6.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "app.js"
   }
-
+}
 ~~~~
 
 We've included a `scripts` section that runs the `mocha` test framework when `npm test ` called.
 
 As the `wercker.yml` suggested by wercker already runs `npm test` by default we are good to go. Add and commit our unittest and updated `package.json` to your repository and push it.
 
-~~~~
+~~~~bash
 git add tests
 git commit -am 'added unittest and updated package.json`
 git push origin master
@@ -215,24 +214,24 @@ When we create a new droplet this key will be added by default. If you want to u
 
 Let's provision our droplet so we're able to run nodejs applications. First, install some prerequisites:
 
-~~~~
+~~~~bash
 sudo apt-get install python-software-properties python g++ make
 ~~~~
 
 If you're droplet is running Ubuntu 12.10 you will need to install the following package as well:
 
-~~~~
+~~~~bash
 sudo apt-get install software-properties-common
 ~~~~
 Add the node.js PPA as recommended by the official maintainers of node.js, Joyent.
 
-~~~~
+~~~~bash
 sudo add-apt-repository ppa:chris-lea/node.js
 ~~~~
 
 Finally, install node.js:
 
-~~~~
+~~~~bash
 sudo apt-get install nodejs
 ~~~~
 
@@ -269,7 +268,7 @@ Now that we have created a deploy target on wercker, have set up communication t
 
 Update your [wercker.yml file](http://devcenter.wercker.com/articles/werckeryml/) with the following contents.
 
-~~~~
+~~~~yaml
 box: wercker/nodejs
 # Build definition
 build:
@@ -328,7 +327,7 @@ Finally, I check through upstart if my application is running. If this is the ca
 
 Don't forget to commit and push the updated `wercker.yml` file:
 
-~~~~
+~~~~bash
 git commit -am 'updated wercker.yml with deploy pipeline'
 git push origin master
 ~~~~
