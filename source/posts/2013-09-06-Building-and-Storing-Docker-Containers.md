@@ -42,6 +42,8 @@ Watch the video below to see how to build and store your Docker image to S3.
 <iframe src="//player.vimeo.com/video/73947111" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/73947111">Storing your Docker images to S3 with wercker</a> from <a href="http://vimeo.com/user19091499">Team wercker</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 </div>
 
+Preview the code in the video [here](https://github.com/mies/docker-container-to-s3)
+
 <a id="form"></a>
 We've been hard at work at making delivery of Docker containers from wercker to various cloud providers, a reality.
 
