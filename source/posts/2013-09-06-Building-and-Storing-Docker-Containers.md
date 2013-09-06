@@ -20,7 +20,7 @@ In the coming weeks we will post several tutorials, screencasts and
 updates on our beta support for Docker containers.
 
 <div class="text-center">
-<a href="#form" class="button radius secondary">Apply for our beta Docker support</a>
+<a href="http://blog.wercker.com/2013/09/06/Building-and-Storing-Docker-Containers.html#form" class="button radius secondary">Apply for our beta Docker support</a>
 </div>
 
 ![image](http://f.cl.ly/items/0B2m3d3k1N2S3p3b0g0B/wercker_loves_docker.png)
