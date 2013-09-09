@@ -30,13 +30,6 @@ READMORE
 
 * Finally, we [showcased](http://blog.wercker.com/2013/08/22/Deploying-Go-to-Google-App-Engine.html) how to deploy [golang](http://golang.org/) applications to [Google App Engine](https://appengine.google.com)
 
-Don't forget to apply for our Docker support!
-
-<div class="text-center">
-<a href="http://wercker.com/docker/index.html#form" class="button radius secondary">Apply for our beta Docker support</a>
-</div>
-
-
 ## Earn some stickers!
 
 Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
