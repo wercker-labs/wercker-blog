@@ -14,13 +14,13 @@ Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
 This is a summary of this week's updates:
 
-![image](http://f.cl.ly/items/0A2A3r0n1I2j2x2p3f06/Screen%20Shot%202013-08-16%20at%203.06.18%20PM.png)
-
 * Our big announcement this week was that we're working on experimental support for [Docker](http://docker.io). Over the coming weeks we will share screencasts and posts with you relating to building and of course deploying Docker containers. You can apply for early access on our new [Docker landing page](http://wercker.com/docker). We also posted our first screencast on building and storing containers to S3, which you can view [here](http://blog.wercker.com/2013/09/06/Building-and-Storing-Docker-Containers.html).
 
 <div class="text-center">
 <a href="http://wercker.com/docker/index.html#form" class="button radius secondary">Apply for our beta Docker support</a>
 </div>
+
+READMORE
 
 * We wrote up an in-depth [tutorial](http://blog.wercker.com/2013/09/03/ContinuousDelivery-with-wercker-digitalocean-and-nodejs.html) on doing continuous delivery for a node.js app from wercker to [Digital Ocean](http://digitalocean.com).
 
