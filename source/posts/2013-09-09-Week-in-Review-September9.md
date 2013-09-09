@@ -18,6 +18,10 @@ This is a summary of this week's updates:
 
 * Our big announcement this week was that we're working on experimental support for [Docker](http://docker.io). Over the coming weeks we will share screencasts and posts with you relating to building and of course deploying Docker containers. You can apply for early access on our new [Docker landing page](http://wercker.com/docker). We also posted our first screencast on building and storing containers to S3, which you can view [here](http://blog.wercker.com/2013/09/06/Building-and-Storing-Docker-Containers.html).
 
+<div class="text-center">
+<a href="http://wercker.com/docker/index.html#form" class="button radius secondary">Apply for our beta Docker support</a>
+</div>
+
 * We wrote up an in-depth [tutorial](http://blog.wercker.com/2013/09/03/ContinuousDelivery-with-wercker-digitalocean-and-nodejs.html) on doing continuous delivery for a node.js app from wercker to [Digital Ocean](http://digitalocean.com).
 
 * The [wercker CLI](http://devcenter.wercker.com/articles/cli/) was [updated](http://blog.wercker.com/2013/09/03/wercker-services.html) with improved support for service discovery for the [wercker directory](). You can search and add services to your [wercker.yml file!](http://devcenter.wercker.com/articles/werckeryml/).
@@ -26,7 +30,12 @@ This is a summary of this week's updates:
 
 * Finally, we [showcased](http://blog.wercker.com/2013/08/22/Deploying-Go-to-Google-App-Engine.html) how to deploy [golang](http://golang.org/) applications to [Google App Engine](https://appengine.google.com)
 
-Don't forget to apply for our [Docker experimental support](http://wercker.com/docker)
+Don't forget to apply for our Docker support!
+
+<div class="text-center">
+<a href="http://wercker.com/docker/index.html#form" class="button radius secondary">Apply for our beta Docker support</a>
+</div>
+
 
 ## Earn some stickers!
 
