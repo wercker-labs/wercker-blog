@@ -143,7 +143,7 @@ print 'Creating database'
 
 r.db_create('wercker_tutorial').run(conn)
 
-print 'creating table'
+print 'Creating table'
 
 r.db('wercker_tutorial').table_create('decepticons').run(conn)
 
@@ -170,6 +170,10 @@ The python script does the following:
 * create a table called 'decepticons'
 * insert some data in the master RethinkDB container
 * fetch and display data from the second slave
+
+The small test that we wrote passed as you can seen from the screenshot.
+
+![image](http://f.cl.ly/items/2b2M1R2n2y0M09260c3g/Screen%20Shot%202013-09-10%20at%202.40.50%20PM.png)
 
 We have tested the cluster capabilities of our RethinkDB Docker image and can now deploy, [share](http://blog.wercker.com/2013/09/06/Building-and-Storing-Docker-Containers.html) or push this image to the Docker index.
 
