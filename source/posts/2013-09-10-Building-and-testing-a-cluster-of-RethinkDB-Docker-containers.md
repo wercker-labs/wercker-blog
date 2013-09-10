@@ -30,9 +30,9 @@ you can find Docker images, for instance for your favorite [database](https://in
 even [operating system](https://index.docker.io/_/ubuntu/).
 
 Before pushing your Docker images to the Index you want to make certain that they work as expected.
-Our experimental Docker support is ideally suited for not only building your Docker containers but also testing them.
+Our experimental Docker support is ideally suited for not only building your Docker containers, but also for testing them.
 
-For this tutorial we will build and test a container running [RethinkDB](http://rethinkdb.com), an open source database.
+In this tutorial we will build and test a container running [RethinkDB](http://rethinkdb.com), an open source database.
 Let's say that you want to create a RethinkDB [cluster](http://rethinkdb.com/docs/start-a-cluster/) with a master and several slaves.
 We'd want to make sure that we can correctly set up a cluster from our Docker image before deployment.
 
@@ -86,7 +86,7 @@ After specifying the AMI that has Docker preinstalled I define my build pipeline
 * install pip itself and the dependencies which includes the RethinkDB python [driver](http://rethinkdb.com/docs/install-drivers/python/)
 * build the container and name it `mies/rethinkdb`
 * run a shell script to bootstrap the containers (we'll discuss this in a bit)
-* run a python script that adds some date to our RethinkDB database and fetches it
+* run a python script that adds some data to our RethinkDB database and fetches it
 
 ## Bootstrapping the containers
 
@@ -171,7 +171,7 @@ The python script does the following:
 * insert some data in the master RethinkDB container
 * fetch and display data from the second slave
 
-We have tested the cluster capabilities of our RethinkDB Docker image and can now deploy, [share]() or push this image to the Docker index.
+We have tested the cluster capabilities of our RethinkDB Docker image and can now deploy, [share](http://blog.wercker.com/2013/09/06/Building-and-Storing-Docker-Containers.html) or push this image to the Docker index.
 
 ## Apply for our Docker beta
 
