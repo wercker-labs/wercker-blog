@@ -6,6 +6,12 @@ author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
+<!-- Auto-detect URL of current page and title if necessary -->
+<a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+
+<!-- Override the URL and Title for the button -->
+<a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="Building and testing a cluster of RethinkDB Docker containers" data-url="http://blog.wercker.com/2013/09/10/Building-and-testing-a-cluster-of-RethinkDB-Docker-containers.html">Vote on HN</a>
+
 <h4 class="subheader">
 
     In the coming weeks we will be releasing more posts and screenshots on our experimental support for
@@ -176,6 +182,13 @@ The small test that we wrote passed as you can seen from the screenshot.
 ![image](http://f.cl.ly/items/2b2M1R2n2y0M09260c3g/Screen%20Shot%202013-09-10%20at%202.40.50%20PM.png)
 
 We have tested the cluster capabilities of our RethinkDB Docker image and can now deploy, [share](http://blog.wercker.com/2013/09/06/Building-and-Storing-Docker-Containers.html) or push this image to the Docker index.
+
+<!-- Auto-detect URL of current page and title if necessary -->
+<a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+
+<!-- Override the URL and Title for the button -->
+<a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="Building and testing a cluster of RethinkDB Docker containers" data-url="http://blog.wercker.com/2013/09/10/Building-and-testing-a-cluster-of-RethinkDB-Docker-containers.html">Vote on HN</a>
+
 
 ## Apply for our Docker beta
 
