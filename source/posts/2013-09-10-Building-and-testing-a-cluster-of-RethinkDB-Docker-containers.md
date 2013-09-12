@@ -9,9 +9,6 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 <!-- Auto-detect URL of current page and title if necessary -->
 <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
 
-<!-- Override the URL and Title for the button -->
-<a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="Building and testing a cluster of RethinkDB Docker containers" data-url="http://blog.wercker.com/2013/09/10/Building-and-testing-a-cluster-of-RethinkDB-Docker-containers.html">Vote on HN</a>
-
 <h4 class="subheader">
 
     In the coming weeks we will be releasing more posts and screenshots on our experimental support for
@@ -185,10 +182,6 @@ We have tested the cluster capabilities of our RethinkDB Docker image and can no
 
 <!-- Auto-detect URL of current page and title if necessary -->
 <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
-
-<!-- Override the URL and Title for the button -->
-<a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="Building and testing a cluster of RethinkDB Docker containers" data-url="http://blog.wercker.com/2013/09/10/Building-and-testing-a-cluster-of-RethinkDB-Docker-containers.html">Vote on HN</a>
-
 
 ## Apply for our Docker beta
 
