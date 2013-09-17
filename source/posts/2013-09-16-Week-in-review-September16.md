@@ -24,7 +24,7 @@ READMORE
 
 * [Éverton Ribeiro](https://app.wercker.com/#nuxlli) created not only a [box](https://app.wercker.com/#applications/523343d3341102d868008e5f) for developing apps in [Elixir](http://elixir-lang.org/), a language on top of the Erlang VM, but also a [driver](https://app.wercker.com/#applications/5234d26adfe78bb24c00038f) for [RethinkDB](http://rethinkdb.com). Thanks Éverton!
 
-* [Michael Pearson](mipearson) created a step for [Flowdock](https://www.flowdock.com/) notifications on wercker. Check it out [here](https://app.wercker.com/#applications/5232a884341102d86800611b/tab/details)
+* [Michael Pearson](https://app.wercker.com/#mipearson) created a step for [Flowdock](https://www.flowdock.com/) notifications on wercker. Check it out [here](https://app.wercker.com/#applications/5232a884341102d86800611b/tab/details)
 
 * Finally, [Sarah Adams](https://app.wercker.com/#adams-sarah) made a big contribution to the [HipChat notifications step](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details), which now comes with colored output!
 
