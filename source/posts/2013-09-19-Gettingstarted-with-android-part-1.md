@@ -9,7 +9,7 @@ published: false
 
 
 <h4 class="subheader">
-In this post we'll dive into how to get started with a simple <a href="http://www.android.com/">Android</a> application using android studio version 0.2.9.</h4>
+In part I of this post we'll dive into how to get started with a simple <a href="http://www.android.com/">Android</a> application using android studio version 0.2.9.</h4>
 
 ![wercker and android](/images/posts/android/wanda.jpg)
 
