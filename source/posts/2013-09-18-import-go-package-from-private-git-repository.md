@@ -7,7 +7,7 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
 ---
 
-An import path in Go denotes a package stored in the local file system. Certain import paths also describe how to obtain the source code for the package, like: `github.com/user/project`. This denotes that the source code is hosted at github.com. The `go get` command will try to clone the repository in the local file system with `git://`, then `https://`, then `http://`. For private repositories only the first two are available. In this post I want to describe how to leverage deployment keys to gain access to private packages hosted in an other repository.
+An import path in Go denotes a package stored in the local file system. Certain import paths also describe how to obtain the source code for the package, like: `github.com/user/project`. This denotes that the source code is hosted at github.com. A repository can be private, and this means that you need a way to gain access to it. In this post I want to describe how to leverage deployment keys for this to gain access to private packages hosted in an other repository.
 
 ## Deploy Keys
 
