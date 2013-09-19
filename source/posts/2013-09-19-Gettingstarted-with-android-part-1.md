@@ -4,7 +4,7 @@ date: 2013-09-19
 tags: android
 author: Jacco Flenter
 gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
-published: false
+published: true
 ---
 
 
