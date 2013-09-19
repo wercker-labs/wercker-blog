@@ -21,9 +21,9 @@ READMORE
 
 ### Prerequisites
 
-* A [GitHub](https://github.com/) or [Bitbucket](http://bitbucket.org) account with a pre-made repository that will hold your code
-* You have [registered for a wercker account](https://app.wercker.com/users/new) and [signed in](https://app.wercker.com/users)
-* [Android studio](http://developer.android.com/sdk/installing/studio.html) is already installed on your machine
+* A [GitHub](https://github.com/) or [Bitbucket](http://bitbucket.org) account with a pre-made repository that will hold your code.
+* You have [registered for a wercker account](https://app.wercker.com/users/new) and [signed in](https://app.wercker.com/users).
+* [Android studio](http://developer.android.com/sdk/installing/studio.html) is already installed on your machine.
 * Basic Java and android development knowledge.
 
 ### Creating a new project
