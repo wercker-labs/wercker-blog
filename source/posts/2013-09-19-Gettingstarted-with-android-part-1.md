@@ -49,9 +49,9 @@ In android studio **you may get a error** about an unresolvable dependency. Andr
 
 ### Git
 
-Go to the project location in the terminal and edit a `.gitignore`:
+Go to the project location in the terminal and create a `.gitignore`:
 
-```
+``` text
 # built application files
 *.apk
 *.ap_
@@ -69,13 +69,8 @@ gen/
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Eclipse project files
-.classpath
-.project
 .gradle
 ```
-
-It's important that the local.properties file is not added to the repository, it contains the location of android sdk, which (on wercker) is handled through environment variables.
 
 Now we can initialize the repository as documented on github/bitbucket when you create a new one. After that, let's add it to wercker.
 
