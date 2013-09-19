@@ -1,5 +1,5 @@
 ---
-title: Getting started with Android
+title: Getting started with Android - part 1
 date: 2013-09-19
 tags: android
 author: Jacco Flenter
@@ -90,6 +90,7 @@ build:
         code: |
           gradle -v
           echo $ANDROID_HOME
+          echo ANDROID_SDK_VERSION
           echo $ANDROID_BUILD_TOOLS
           echo $ANDROID_UPDATE_FILTER
     # A step that executes `gradle build` command
