@@ -99,7 +99,7 @@ build:
           gradle --refresh-dependencies --rerun-tasks --full-stacktrace build -q --project-cache-dir=$WERCKER_CACHE_DIR
 ```
 
-You don't need to add it to your application, but let's add it. Later we will expand it.
+You don't have to add the yaml to your application, but let's add it. Later we will expand it.
 
 ```
 $ git add wercker.yml
@@ -109,8 +109,8 @@ $ git push
 
 Switching back to your application on wercker, you will see a new build. Open the build and view the information each individual step gives. The "show base information" step shows information about the tools installed on the android box:
 
-* which sdk items are installed
-* which versions of the build tools are available
+* which sdk items are installed.
+* which versions of the build tools are available.
 * which version of gradle is installed.
 
 The "run gradle" step returns very little, since it is run in quiet mode.
