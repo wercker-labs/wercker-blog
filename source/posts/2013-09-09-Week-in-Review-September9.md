@@ -7,7 +7,7 @@ gravatarhash: d4b19718f9748779d7cf18c6303dc17f
 ---
 
 <h4 class="subheader">
-It's that time again where we review the week! We had a number of updates over the past two week so let's go over them.
+It's that time again where we review the week! We had a number of updates over the past two weeks so let's go over them.
 </h4>
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
