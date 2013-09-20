@@ -90,14 +90,14 @@ build:
         code: |
           gradle -v
           echo $ANDROID_HOME
-          echo ANDROID_SDK_VERSION
+          echo $ANDROID_SDK_VERSION
           echo $ANDROID_BUILD_TOOLS
           echo $ANDROID_UPDATE_FILTER
     # A step that executes `gradle build` command
     - script:
         name: run gradle
         code: |
-          gradle --refresh-dependencies --rerun-tasks --full-stacktrace build -q --project-cache-dir=$WERCKER_CACHE_DIR
+          gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
 ```
 
 You don't need to add it to your application, but let's add it. Later we will expand it.
