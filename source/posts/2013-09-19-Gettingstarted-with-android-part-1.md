@@ -68,7 +68,7 @@ gen/
 
 # Local configuration file (sdk path, etc)
 local.properties
-
+.idea/workspace.xml
 .gradle
 ```
 
