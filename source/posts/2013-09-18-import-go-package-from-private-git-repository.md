@@ -13,7 +13,7 @@ An import path in Go denotes a package stored in the local file system. Certain 
 
 ## Deploy Keys
 
-A deploy key is simply a password-less SSH key that grands read-only access to a repository. Both Github and BitBucket support deploy keys by adding the public part of a key. Deploy keys have the following features and limitations:
+A deploy key is simply a password-less SSH key that grants read-only access to a repository. Both GitHub and Bitbucket support deploy keys by adding the public part of a key. Deploy keys have the following features and limitations:
 
 * Deployment keys do not apply to your plan limit.
 * You can add the same deployment key to multiple repositories.
@@ -21,13 +21,13 @@ A deploy key is simply a password-less SSH key that grands read-only access to a
 
 ## Adding a key to your application
 
-Wercker allows you to generate SSH key for your application, which we can be used as a deploy key. Open your application at wercker and go to the application settings tab. Here you find the _key management_ section. Use the generate new key pair button to generate a new key.
+Wercker allows you to generate SSH keys for your application, which we can be used as a deploy key. Open your application on wercker and go to the application settings tab. Here you find the _key management_ section. Use the *generate new key pair* button to create a new key.
 
 ![create ssh key at wercker](/images/posts/import-go-package-from-private-git-repository/generate-key.png)
 
 ## Add variable for key
 
-Before we can use the key in our build pipeline, we need expose it as a variable. This can be done in the pipeline section of the application settings tab. Press the add new variable button, pick the SSH Key pair option and select your key.
+Before we can use the key in our build pipeline, we need to expose it as a variable. This can be done in the pipeline section of the application settings tab. Press the add new variable button, pick the SSH Key pair option and select your key.
 
 ![](/images/posts/import-go-package-from-private-git-repository/pipeline-variable.png)
 
