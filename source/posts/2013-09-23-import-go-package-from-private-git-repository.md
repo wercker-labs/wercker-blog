@@ -4,20 +4,19 @@ date: 2013-09-23
 tags: deployment, golang
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
 
 <h4 class="subheader">
-The `go get` command helps to download the packages to the right location for you. In this blogpost I want to share my solution for retrieving private packages from GitHub or Bitbucket from your build.
+The `go get` command helps to download the packages to the right location for you. In this blogpost I want to share my solution for retrieving private packages from GitHub or Bitbucket from your builds on wercker.
 </h4>
 
 READMORE
 
-Go dependencies are quite simple. All code should be available in the Go workspace. This means that you must have a copy of the source code of all your dependencies stored in the local file system. With the `go get` command you retrieve these from remote source control systems. Go knowns populair hostings services like GitHub and BitBucket. It supports git, mercurial, svn and bazzaar.
+Go dependencies are quite simple. All code should be available in the Go workspace. This means that you must have a copy of the source code of all your dependencies stored on the local file system. With the `go get` command you retrieve these from remote source control systems. Go is aware of popular version control services such as GitHub and Bitbucket. It supports git, mercurial, svn and bazaar.
 
 ## No SSH support
 
-Although the documentation states otherwise, the current version of go does not support the retrieval of code from private repositories via SSH. We need to do this manually in the build pipeline. It will allways try to retrieve the code via https. Https is not the protocoll you want to use for this because it requires a username and password from an existing GitHub or BitBucket user account which will also effect the limits of your plan. When using SSH you can use deploy keys to gain access to a repository.
+Although the documentation states otherwise, the current version of go does not support the retrieval of code from private repositories via SSH. We need to do this manually in the build pipeline. It will allways try to retrieve the code via https. Https is not the protocol you want to use for this because it requires a username and password from an existing GitHub or Bitbucket user account, which will also effect the limits of your plan. When using SSH, you can however use deploy keys to gain access to a repository.
 
 ## Deploy Keys
 
