@@ -1,5 +1,5 @@
 ---
-title: Import Go package from private git repository
+title: Import a Go package from a private git repository
 date: 2013-09-23
 tags: deployment, golang
 author: Pieter Joost van de Sande
