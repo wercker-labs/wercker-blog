@@ -7,7 +7,17 @@ gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
 ---
 
-An import path in Go denotes a package stored in the local file system. Certain import paths also describe how to obtain the source code for the package, like: `github.com/user/project`. This denotes that the source code is hosted at github.com. A repository can be private, and this means that you need a way to gain access to it. In this post I want to describe how to leverage deployment keys for this to gain access to private packages hosted in an other repository.
+<h4 class="subheader">
+The `go get` command helps to download the packages to the right location for you. In this blogpost I want to share my solution for retrieving private packages from GitHub or Bitbucket from your build.
+</h4>
+
+READMORE
+
+Go dependencies are quite simple. All code should be available in the Go workspace. This means that you must have a copy of the source code of all your dependencies stored in the local file system. With the `go get` command you retrieve these from remote source control systems. Go knowns populair hostings services like GitHub and BitBucket. It supports git, mercurial, svn and bazzaar.
+
+## No SSH support
+
+Although the documentation states otherwise, the current version of go does not support the retrieval of code from private repositories via SSH. We need to do this manually in the build pipeline. It will allways try to retrieve the code via https. Https is not the protocoll you want to use for this because it requires a username and password from an existing GitHub or BitBucket user account which will also effect the limits of your plan. When using SSH you can use deploy keys to gain access to a repository.
 
 ## Deploy Keys
 
@@ -19,13 +29,13 @@ A deploy key is simply a password-less SSH key that grands read-only access to a
 
 ## Adding a key to your application
 
-Wercker allows you to generate SSH key for your application, which we can be used as a deploy key. Open your application at wercker and go to the application settings tab. Here you find the _key management_ section. Use the generate new key pair button to generate a new key.
+Wercker allows you to generate a SSH key for your application, which we can be used as a deploy key. Open your application at wercker and go to the application settings tab. Here you find the _key management_ section. Use the generate new key pair button to generate a new key.
 
 ![create ssh key at wercker](/images/posts/import-go-package-from-private-git-repository/generate-key.png)
 
 ## Add variable for key
 
-Before we can use the key in our build pipeline, we need expose it as a variable. This can be done in the pipeline section of the application settings tab. Press the add new variable button, pick the SSH Key pair option and select your key.
+We need to add the public part to GitHub or BitBucket. We will do this in a minute, first lets expose this key to the build and deployment pipeline. In the  pipeline section of the application settings tab, press the add new variable button, pick the SSH Key pair option and select your key.
 
 ![](/images/posts/import-go-package-from-private-git-repository/pipeline-variable.png)
 
@@ -51,7 +61,7 @@ build:
 
 ## Getting the dependency
 
-Due to a bug in `go get` we cannot get the private package via ssh. Until this is fixed we need to clone the repository ourself. As said in the intro, an import path denotes a package stored in the local file system. If we clone the package in the correct place, `go get` will see it is already installed and will not try to get it. It will able to update the package, since `go get` will execute a `git fetch` with the default remote that is added by our clone.
+As said in the beginning of this article, due to a bug in `go get` we cannot get the private package via ssh. Until this is fixed we need to clone the repository ourself. An import path denotes a package stored in the local file system. If we clone the package in the correct place, `go get` will see it is already installed and will not try to get it. Which means `go get` still works for public packages. It will able to update the package, since `go get` will execute a `git fetch` with the default remote that is added by our clone.
 
 To clone the package to the correct path we need to understand the structure for code hosting services. Here are the conventions for GitHub and Bitbucket, a full list is available via the `go help remote` command:
 
