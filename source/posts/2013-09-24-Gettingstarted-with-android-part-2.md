@@ -28,7 +28,7 @@ with a pre-made repository that will hold your code.
 [signed in](https://app.wercker.com/users).
 * [Android studio](http://developer.android.com/sdk/installing/studio.html) is
 already installed on your machine.
-* The project created in part 1 already added to wercker.
+* The project created in [part 1](http://blog.wercker.com/2013/09/19/Gettingstarted-with-android-part-1.html) already added to wercker.
 * Basic Java and android development knowledge.
 
 ### Recap of part 1 ###
