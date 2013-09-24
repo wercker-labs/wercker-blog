@@ -148,7 +148,8 @@ The default settings will do just fine for our test. Launch the emulator.
 ![android emulator booting](/images/posts/android-part2/avd-booting.jpg)
 
 Booting the emulator will take some time. When you finally see the lock screen,
-fire up the terminal and go to the root of your application.
+fire up the terminal and go to the root of your application and run our
+instrument test.
 
 ``` bash
 $ gradle connectedInstrumentTest
