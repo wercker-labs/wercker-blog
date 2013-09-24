@@ -48,7 +48,7 @@ You can copy the public key from the previous step and add this as a deploy key 
 
 ## Add key to build pipeline
 
-We can leverage the [add-ssh-key](TODO) step to write the key as an identity file.
+We can leverage the [add-ssh-key](https://app.wercker.com/#applications/523afff01aa016c8590015b1/tab/details) step to write the key as an identity file.
 
 ``` yaml
 box: wercker/golang
