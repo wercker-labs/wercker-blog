@@ -39,7 +39,7 @@ main activity and displays the text "Hello world!" on screen.
 ### Step 1: Adding tests
 
 Let's add to our project a test to see if "Hello World!" really is
-displayed. We'll do this by adding an android emulator on our wercker
+displayed. We'll do this by adding an android emulator to our wercker
 environment and run some instrument tests.
 
 We need to update our project so we can access the TextView in our
@@ -68,7 +68,7 @@ in `activity_main.xml`.
 </RelativeLayout>
 ```
 
-Now we can get the textview element in our code by calling `findViewById` on
+We can get the textview element in our code by calling `findViewById` on
 our main activity.
 
 Now that we can access our textview, it's time to create the test. Add a new
@@ -120,11 +120,11 @@ and finally verify the introText.
 
 We're going to add the emulator to our sdk, create an 'android virtual device'
 (emulated android device) and start it. This step is not required, but shows
-what happens on wercker and will explain the magic happening in the wercker.yml
-later (step 3 continous with the wercker specific explanation).
+what happens on wercker and will explain the magic happening in the [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/)
+later (step 3 continues with the wercker specific explanation).
 
 
-Let
+Lets
 Go to tools -> Android -> SDK Manager. Check the checkbox for add Android 4.3
 (API 18) with its underlying components and click install.
 
@@ -133,9 +133,9 @@ Go to tools -> Android -> SDK Manager. Check the checkbox for add Android 4.3
 Next up: create and start the emulator instance.
 
 Go to tools -> Android -> AVD Manager.
-![Andoird's virtual device manager](/images/posts/android-part2/avd-manager.jpg)
+![Android's virtual device manager](/images/posts/android-part2/avd-manager.jpg)
 
-Add a new virtual device by clicking new and create a new 'wercker' phone like so:
+Add a new virtual device by clicking new and create a new 'wercker' phone like this:
 
 ![new virtual device](/images/posts/android-part2/avd-new.jpg)
 
