@@ -40,12 +40,13 @@ main activity and displays the text "Hello world!" on screen.
 
 Let's add to our project a test to see if "Hello World!" really is
 displayed. We'll do this by adding an android emulator to our wercker
-environment and run some instrument tests.
+environment and run some tests using android's instrumentation framework on an
+emulated android environment.
 
-We need to update our project so we can access the TextView in our
-mainActivity. For this we need to open `activity_main.xml` and add an
-android:id attribute with the value: "@+id/introText" to the textview element
-in `activity_main.xml`.
+To make this possible, we need to update our project so we can access the
+TextView in our mainActivity. We need to modify the `activity_main.xml` and add
+an android:id attribute with the value: "@+id/introText" to the textview
+element in `activity_main.xml`.
 
 ``` xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -106,7 +107,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         introText = tView.getText().toString();
         assertNotNull(introText);
 
-        assertTrue("Check intro text", introText.equals("Hello world!"));
+        assertTrue("Check intro text", introText.equals("Hello universe!"));
     }
 }
 ```
@@ -151,48 +152,215 @@ Booting the emulator will take some time. When you finally see the lock screen,
 fire up the terminal and go to the root of your application and run our
 instrument test.
 
-``` bash
+``` text
 $ gradle connectedInstrumentTest
 Relying on packaging to define the extension of the main artifact has been deprecated and is scheduled to be removed in Gradle 2.0
-:GettingTested:preBuild UP-TO-DATE
-:GettingTested:preDebugBuild UP-TO-DATE
-:GettingTested:preReleaseBuild UP-TO-DATE
-:GettingTested:prepareComAndroidSupportAppcompatV71800Library UP-TO-DATE
-:GettingTested:prepareDebugDependencies
-:GettingTested:compileDebugAidl UP-TO-DATE
-:GettingTested:compileDebugRenderscript UP-TO-DATE
-:GettingTested:generateDebugBuildConfig UP-TO-DATE
-:GettingTested:mergeDebugAssets UP-TO-DATE
-:GettingTested:mergeDebugResources
-:GettingTested:processDebugManifest
-:GettingTested:processDebugResources
-:GettingTested:generateDebugSources
-:GettingTested:compileDebug
-Note: [your location]/GettingTestedProject/GettingTested/src/main/java/com/wercker/gettingstarted/tests/MainActivityTest.java uses or overrides a deprecated API.
+:gettingstarted:preBuild UP-TO-DATE
+:gettingstarted:preDebugBuild UP-TO-DATE
+:gettingstarted:preReleaseBuild UP-TO-DATE
+:gettingstarted:prepareComAndroidSupportAppcompatV71800Library UP-TO-DATE
+:gettingstarted:prepareDebugDependencies
+:gettingstarted:compileDebugAidl UP-TO-DATE
+:gettingstarted:compileDebugRenderscript UP-TO-DATE
+:gettingstarted:generateDebugBuildConfig UP-TO-DATE
+:gettingstarted:mergeDebugAssets UP-TO-DATE
+:gettingstarted:mergeDebugResources UP-TO-DATE
+:gettingstarted:processDebugManifest UP-TO-DATE
+:gettingstarted:processDebugResources UP-TO-DATE
+:gettingstarted:generateDebugSources UP-TO-DATE
+:gettingstarted:compileDebug
+Note: [your location]/gettingstartedProject/gettingstarted/src/main/java/com/wercker/gettingstarted/tests/MainActivityTest.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-:GettingTested:dexDebug
-:GettingTested:processDebugJavaRes UP-TO-DATE
-:GettingTested:validateDebugSigning
-:GettingTested:packageDebug
-:GettingTested:assembleDebug
-:GettingTested:preTestBuild UP-TO-DATE
-:GettingTested:prepareTestDependencies
-:GettingTested:compileTestAidl UP-TO-DATE
-:GettingTested:compileTestRenderscript UP-TO-DATE
-:GettingTested:processTestTestManifest
-:GettingTested:generateTestBuildConfig UP-TO-DATE
-:GettingTested:mergeTestAssets UP-TO-DATE
-:GettingTested:mergeTestResources UP-TO-DATE
-:GettingTested:processTestResources
-:GettingTested:generateTestSources
-:GettingTested:compileTest
-:GettingTested:dexTest UP-TO-DATE
-:GettingTested:processTestJavaRes UP-TO-DATE
-:GettingTested:packageTest
-:GettingTested:assembleTest
-:GettingTested:connectedInstrumentTest
+:gettingstarted:dexDebug
+:gettingstarted:processDebugJavaRes UP-TO-DATE
+:gettingstarted:validateDebugSigning
+:gettingstarted:packageDebug
+:gettingstarted:assembleDebug
+:gettingstarted:preTestBuild UP-TO-DATE
+:gettingstarted:prepareTestDependencies
+:gettingstarted:compileTestAidl UP-TO-DATE
+:gettingstarted:compileTestRenderscript UP-TO-DATE
+:gettingstarted:processTestTestManifest UP-TO-DATE
+:gettingstarted:generateTestBuildConfig UP-TO-DATE
+:gettingstarted:mergeTestAssets UP-TO-DATE
+:gettingstarted:mergeTestResources UP-TO-DATE
+:gettingstarted:processTestResources UP-TO-DATE
+:gettingstarted:generateTestSources UP-TO-DATE
+:gettingstarted:compileTest
+:gettingstarted:dexTest UP-TO-DATE
+:gettingstarted:processTestJavaRes UP-TO-DATE
+:gettingstarted:packageTest UP-TO-DATE
+:gettingstarted:assembleTest UP-TO-DATE
+:gettingstarted:connectedInstrumentTest
+
+com.wercker.gettingstarted.tests.MainActivityTest > testWelcomeText[wercker(AVD) - 4.3] FAILED
+    junit.framework.AssertionFailedError: Check intro text
+    at com.wercker.gettingstarted.tests.MainActivityTest.testWelcomeText(MainActivityTest.java:32)
+:gettingstarted:connectedInstrumentTest FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':gettingstarted:connectedInstrumentTest'.
+> There were failing tests. See the report at: file:///[your location]/gettingstartedProject/gettingstarted/build/reports/instrumentTests/connected/index.html
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 13.105 secs
 ```
 
+So now that we've tested it, we can see the provided test was broken.
+We can easily fix it by chainging the code in the MainActivityTest class from
+`introText.equals("Hello world!")` to `introText.equals("Hello universe!")`.
+
+If we run it again now:
+
+``` text
+$ gradle connectedInstrumentTest
+Relying on packaging to define the extension of the main artifact has been deprecated and is scheduled to be removed in Gradle 2.0
+:gettingstarted:preBuild UP-TO-DATE
+:gettingstarted:preDebugBuild UP-TO-DATE
+:gettingstarted:preReleaseBuild UP-TO-DATE
+:gettingstarted:prepareComAndroidSupportAppcompatV71800Library UP-TO-DATE
+:gettingstarted:prepareDebugDependencies
+:gettingstarted:compileDebugAidl UP-TO-DATE
+:gettingstarted:compileDebugRenderscript UP-TO-DATE
+:gettingstarted:generateDebugBuildConfig UP-TO-DATE
+:gettingstarted:mergeDebugAssets UP-TO-DATE
+:gettingstarted:mergeDebugResources
+:gettingstarted:processDebugManifest
+:gettingstarted:processDebugResources
+:gettingstarted:generateDebugSources
+:gettingstarted:compileDebug
+Note: [your location]/gettingstartedProject/gettingstarted/src/main/java/com/wercker/gettingstarted/tests/MainActivityTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+:gettingstarted:dexDebug
+:gettingstarted:processDebugJavaRes UP-TO-DATE
+:gettingstarted:validateDebugSigning
+:gettingstarted:packageDebug
+:gettingstarted:assembleDebug
+:gettingstarted:preTestBuild UP-TO-DATE
+:gettingstarted:prepareTestDependencies
+:gettingstarted:compileTestAidl UP-TO-DATE
+:gettingstarted:compileTestRenderscript UP-TO-DATE
+:gettingstarted:processTestTestManifest
+:gettingstarted:generateTestBuildConfig UP-TO-DATE
+:gettingstarted:mergeTestAssets UP-TO-DATE
+:gettingstarted:mergeTestResources UP-TO-DATE
+:gettingstarted:processTestResources
+:gettingstarted:generateTestSources
+:gettingstarted:compileTest
+:gettingstarted:dexTest UP-TO-DATE
+:gettingstarted:processTestJavaRes UP-TO-DATE
+:gettingstarted:packageTest
+:gettingstarted:assembleTest
+:gettingstarted:connectedInstrumentTest
+BUILD SUCCESSFUL
+
+Total time: 12.467 secs
+```
+Now our build is successful.
+_note: You can also see the test being run on the screen of the emulated android device._
+
+### Step 3: Update the wercker.yml
+
+In [part 1](https://blog.wercker.com/2013/09/19/Gettingstarted-with-android-part-1.html) we created
+the following wercker.yml:
+
+``` yaml
+box: wercker/android
+# Build definition
+build:
+    # The steps that will be executed on build
+    steps:
+      - script:
+          name: show base information
+          code: |
+            gradle -v
+            echo $ANDROID_HOME
+            echo $ANDROID_BUILD_TOOLS
+            echo $ANDROID_UPDATE_FILTER
+      # A step that executes gradle build command
+      - script:
+          name: run gradle
+          code: |
+            gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build```
+```
+
+We need to expand it so it will:
+
+1. install the emulator
+2. create an AVD
+3. fires up the AVD
+4. runs the connectedInstrumentTest task
+
+
+Adding the emulator to the sdk is easy, we can do this by adding the
+[android-sdk-update step](https://app.wercker.com/#applications/52406677f92d800d4b001f3d/tab/details):
+
+```
+    - android-sdk-update:
+        filter: sysimg-18
+```
+
+The code above will add the system image for android 4.3 to our sdk.
+Next up are numbers two and three on our list. For this there's also a step
+available called [setup-android-emulator](https://app.wercker.com/#applications/5241920d4f6b6b786f000586/tab/details).
+
+```
+    - setup-android-emulator:
+        target: android-18
+```
+
+Will create an AVD with the name wercker and launch it, wait for it to be ready.
+The final thing we need to do is run the gradle task connectedInstrumentTest (or cIT for short).
+
+```
+    - script:
+        name: run connected instrument test
+        code: |
+            gradle cIT -q
+```
+
+In summary the wercker.yml will be:
+
+```
+box: wercker/android
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    - android-sdk-update:
+        filter: sysimg-18
+    - setup-android-emulator:
+        target: android-18
+    - script:
+        name: run gradle checkConnected
+        code: |
+          gradle --project-cache-dir=$WERCKER_CACHE_DIR cIT
+    - script:
+        name: run gradle build
+        code: |
+          gradle --full-stacktrace --project-cache-dir=$WERCKER_CACHE_DIR build
+```
+
+Next, add it to the repository and watch the magic happen on wercker.
+
+```
+$ git add .
+$ git commit -am "instrument test added"
+$ git push
+```
+
+Depending on whether your MainActivityTest class wants the textview to say
+"Hello world!" or "Hello universe", you should get either a green or a red
+build.
+
+In part 3 of this post we will go into a different way of testing android apps
+on wercker. Stay tuned.
 
 ---
 
