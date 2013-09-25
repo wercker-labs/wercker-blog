@@ -49,7 +49,8 @@ In android studio **you may get a error** about an unresolvable dependency. Andr
 
 ### Git
 
-Go to the project location in the terminal and create a `.gitignore`:
+Before adding our project to get let's create (if it doesn't exist) or modify the
+`.gitignore` in the root of the GettingStartedProject:
 
 ``` text
 # built application files
@@ -70,9 +71,10 @@ gen/
 local.properties
 .idea/workspace.xml
 .gradle
+.DS_Store
 ```
 
-Now we can initialize the repository as documented on github/bitbucket when you create a new one. After that, let's add it to wercker.
+Now we can safely initialize the repository as documented on github/bitbucket. After that, let's add it to wercker.
 
 ### Add project to wercker
 
