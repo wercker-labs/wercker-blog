@@ -114,8 +114,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 Our test class is compact and - apart from the constructor which helps creating
 the MainActivity instance for our test - contains only one interesting method:
-`testWelcomeText`. In this method we retrieve the activity, get the text view
-and finally verify the introText.
+`testWelcomeText`. In this method we retrieve the activity, get the textView object
+and finally verify the text.
 
 ### Step 2: Preparing the emulator
 
@@ -379,6 +379,11 @@ however the error messages are easily spotted.
 
 That's it for now. Part 3 of this series we will go into a different way of
 testing android apps on wercker. Stay tuned.
+
+_REMEMBER: wercker is an open platform, you can write your
+[own steps](http://devcenter.wercker.com/articles/steps/) or maybe create
+your [own box](http://devcenter.wercker.com/articles/boxes/) with the sdk
+updated and emulator instance alredy created._
 
 ---
 
