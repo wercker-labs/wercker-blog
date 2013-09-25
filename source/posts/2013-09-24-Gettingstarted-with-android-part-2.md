@@ -45,7 +45,7 @@ emulated android environment.
 
 To make this possible, we need to update our project so we can access the
 TextView in our mainActivity. We need to modify the `activity_main.xml` and add
-an android:id attribute with the value: "@+id/introText" to the textview
+an android:id attribute with the value: "@+id/introText" to the TextView
 element in `activity_main.xml`.
 
 ``` xml
