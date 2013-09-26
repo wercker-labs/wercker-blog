@@ -126,19 +126,21 @@ Edit your wercker.yml file and add the following to the end of the file:
   after-steps:
     # Show the build results
     - script:
-        name: show build result
+        name: inspect build result
+        on: success
         code: |
           ls -la GettingStarted/build/apk/
+          cp GettingStarted/build/apk/*.apk $WERCKER_REPORT_ARTIFACTS_DIR
 ```
 
-Now we have a step that will show the files in the application (in my case named GettingStarted) build/apk folder after the build is completed. Let's see it in action, by pushing our code.
+Now we have a step that will show the files in the application (in my case named GettingStarted) build/apk folder and store them as build artifacts. This all happens after the build is completed and don't count for the success/failure of a build. Let's see it in action, by pushing our code.
 
 ```
 $ git commit -am "after step added"
 $ git push
 ```
 
-In the "show build result" step details we should see (amongst some other information):
+In the "inspect build result" step details we should see (amongst some other information):
 
 ```
 $ls -la GettingStarted/build/apk/
@@ -147,10 +149,12 @@ drwxrwxr-x  2 ubuntu ubuntu  4096 Sep 19 10:34 .
 drwxrwxr-x 12 ubuntu ubuntu  4096 Sep 19 10:34 ..
 -rw-rw-r--  1 ubuntu ubuntu 21843 Sep 19 10:34 GettingStarted-debug-unaligned.apk
 -rw-rw-r--  1 ubuntu ubuntu 19461 Sep 19 10:34 GettingStarted-release-unsigned.apk
-$
 ```
 
-In part 2 of this post we will go into testing of android apps on wercker.
+And the artifacts tab should contain a link to an archive with the apks.
+
+
+That's it for now. In part 2 of this post we will go into testing of android apps on wercker.
 
 ---
 

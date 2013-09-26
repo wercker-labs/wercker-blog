@@ -291,6 +291,14 @@ build:
           name: run gradle
           code: |
             gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+  after-steps:
+    # Show the build results
+    - script:
+        name: inspect build result
+        on: success
+        code: |
+          ls -la GettingStarted/build/apk/
+          cp GettingStarted/build/apk/*.apk $WERCKER_REPORT_ARTIFACTS_DIR
 ```
 
 We need to expand it so it will do the following:
