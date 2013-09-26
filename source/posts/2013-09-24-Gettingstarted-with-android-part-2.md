@@ -385,8 +385,11 @@ Now back on wercker, let us zoom in on the `run gradle connectedCheck` step.
 Running gradle on wercker is a lot more verbose compared to running it locally,
 however the error messages are easily spotted.
 
-That's it for now. Part 3 of this series we will go into a different way of
-testing android apps on wercker. Stay tuned.
+If you look into the build times of our project, we see one disadvantage:
+testing like this is a bit slow. In part 3 of this series we will go into a
+different way of testing android apps on wercker.
+
+Stay tuned.
 
 _REMEMBER: wercker is an open platform, you can write your
 [own steps](http://devcenter.wercker.com/articles/steps/) or maybe create
