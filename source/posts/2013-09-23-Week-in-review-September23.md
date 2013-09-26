@@ -12,6 +12,8 @@ It's that time again where we review the week! We had a number of updates over t
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
+READMORE
+
 This is a summary of this week's updates:
 
 * Wercker now has [Android](http://www.android.com/) support, read all about how to get up and running with continuous delivery and Android development using Android Studio, in part 1 of our blog post [here](http://blog.wercker.com/2013/09/19/Gettingstarted-with-android-part-1.html)
