@@ -124,10 +124,9 @@ Edit your wercker.yml file and add the following to the end of the file:
 
 ```
   after-steps:
-    # Show the build results
+    # Use the build results
     - script:
         name: inspect build result
-        on: success
         code: |
           ls -la GettingStarted/build/apk/
           cp GettingStarted/build/apk/*.apk $WERCKER_REPORT_ARTIFACTS_DIR
@@ -154,7 +153,7 @@ drwxrwxr-x 12 ubuntu ubuntu  4096 Sep 19 10:34 ..
 And the artifacts tab should contain a link to an archive with the apks.
 
 
-That's it for now. In part 2 of this post we will go into testing of android apps on wercker.
+That's it for now. In <a href="http://blog.wercker.com/2013/09/24/Gettingstarted-with-android-part-2.html">part 2</a> of this post we will go into testing of android apps on wercker.
 
 ---
 

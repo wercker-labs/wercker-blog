@@ -363,6 +363,13 @@ build:
         name: run gradle build
         code: |
           gradle --full-stacktrace --project-cache-dir=$WERCKER_CACHE_DIR build
+  after-steps:
+    # Use the build results
+    - script:
+        name: inspect build result
+        code: |
+          ls -la GettingStarted/build/apk/
+          cp GettingStarted/build/apk/*.apk $WERCKER_REPORT_ARTIFACTS_DIR
 ```
 
 Next, add it to the repository and watch the magic happen on wercker.
