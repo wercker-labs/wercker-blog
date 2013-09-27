@@ -21,8 +21,8 @@ This is part 3 in the series "getting started with Android", so please see also:
 READMORE
 
 ### Introduction ###
-In [second part](/2013/09/24/Gettingstarted-with-android-part-2.html) of this
-series we added a test to our getting started project. Unfortunately setting
+In the [second part](/2013/09/24/Gettingstarted-with-android-part-2.html) of this
+series we added a test to our "getting started project". Unfortunately setting
 it all up and waiting for the emulator to fully start each build takes up quite
 some time. Here's where [robolectric](http://pivotal.github.io/robolectric/)
 can help us out.
@@ -31,7 +31,7 @@ From their website:
 > Robolectric is a unit test framework that de-fangs the Android SDK so you can
 > test-drive the development of your Android app.
 
-It allows us to test android apps without using the android emulator,
+It allows us to test android apps without using the Android emulator,
 saving valuable time.
 
 ### Prerequisites
@@ -42,7 +42,7 @@ part 1). So please go through both parts before continuing.a
 
 ### Step 1: Configuring your tools
 
-If we want to use robolectric, unfortunately, we need to change configurations
+If we want to use robolectric, unfortunately we need to change configurations
 for both the editor and gradle.
 
 Starting with gradle, let's modify our current `gradle.build` file in the
@@ -135,7 +135,7 @@ The output above was shortened a bit, but note that in the **verification
 tasks** list there's now a new task available:
 `robolectric`.
 
-Now to configure Android studio, since android studio does not understand the
+Now to configure Android studio, as it does not understand the
 robolectricCompile directives in the gradle file, we need to add junit and
 robolectric by hand.
 
