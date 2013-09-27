@@ -32,16 +32,16 @@ already installed on your machine.
 * Basic Java and android development knowledge.
 
 ### Recap of part 1 ###
-In part 1 we created a getting started project, using nearly all the default
+In part 1 we created a "getting started project", using nearly all the default
 options of android studio's new project wizard. The project consists of one
 main activity and displays the text "Hello world!" on screen.
 
 ### Step 1: Adding tests
 
-Let's add to our project a test to see if "Hello World!" really is
-displayed. We'll do this by adding an android emulator to our wercker
-environment and run some tests using android's instrumentation framework on an
-emulated android environment.
+Let's add a test to our project to see if "Hello World!" really is
+displayed. We'll do this by adding an Android emulator to our wercker
+environment and run some tests using Android's instrumentation framework on an
+emulated Android environment.
 
 To make this possible, we need to update our project so we can access the
 TextView in our mainActivity. We need to modify the `activity_main.xml` and add
@@ -212,7 +212,7 @@ BUILD FAILED
 Total time: 20.109 secs
 ```
 
-So now that we've tested it, we can see the provided test was broken.
+So now that we've tested it, we can see that the provided test was broken.
 We can easily fix it by changing the code in the MainActivityTest class from
 `introText.equals("Hello universe!")` to `introText.equals("Hello world!")`.
 
@@ -318,7 +318,7 @@ Adding the emulator to the sdk is easy, we can do this by adding the
 ```
 
 The code above will add the system image for android 4.3 to our sdk.
-Next up are numbers two and three on our list. For this there's also a step
+Next up are number two and three on our list. For this, there's also a step
 available called [setup-android-emulator](https://app.wercker.com/#applications/5241920d4f6b6b786f000586/tab/details).
 
 ```
@@ -326,7 +326,7 @@ available called [setup-android-emulator](https://app.wercker.com/#applications/
         target: android-18
 ```
 
-Will create an AVD with the name wercker and launch it, wait for it to be ready.
+Will create an AVD with the name wercker and launch it, and wait for it to be ready.
 The final thing we need to do is run the gradle task connectedInstrumentTest (or cIT for short).
 
 ```
