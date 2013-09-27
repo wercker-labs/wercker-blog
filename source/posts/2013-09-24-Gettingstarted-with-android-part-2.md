@@ -11,7 +11,7 @@ published: true
 <h4 class="subheader">
 In <a href="http://blog.wercker.com/2013/09/19/Gettingstarted-with-android-part-1.html">part I</a> of this series we dove into how to get started with a simple <a href="http://www.android.com/">Android</a> application using android studio version 0.2.9. For part 2 it's time to add some tests</h4>
 
-![wercker and android](/images/posts/android/wanda.jpg)
+![wercker and android](/images/posts/android-part2/wanda_approved.jpg)
 
 You can sign up for wercker for free
 [here](https://app.wercker.com/users/new/).
@@ -28,7 +28,7 @@ with a pre-made repository that will hold your code.
 [signed in](https://app.wercker.com/users).
 * [Android studio](http://developer.android.com/sdk/installing/studio.html) is
 already installed on your machine.
-* The project created in [part 1](http://blog.wercker.com/2013/09/19/Gettingstarted-with-android-part-1.html) already added to wercker.
+* The project created in [part 1](http://blog.wercker.com/2013/09/19/Gettingstarted-with-android-part-1.html) and already added to wercker.
 * Basic Java and android development knowledge.
 
 ### Recap of part 1 ###
