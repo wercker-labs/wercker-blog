@@ -327,7 +327,7 @@ $ git push
 On wercker, the build should fail on the 'run gradle robolectric' step.
 Scrolling down through the log, we see nearly at the bottom:
 
-```
+``` text
 > Building > :GettingStarted:robolectric> Building > :GettingStarted:robolectric> Building > :GettingStarted:robolectric> Building > :GettingStarted:robolectric> Building > :GettingStarted:robolectric.wercker.gettingstarted.MainActivityTest.shouldWelcome(MainActivityTest.java:31)
 ```
 
