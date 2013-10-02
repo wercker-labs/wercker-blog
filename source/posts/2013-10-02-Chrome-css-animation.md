@@ -243,14 +243,15 @@ finished playing and don't be surprised if the cpu load spikes when the tab is
 not active!
 
 Luckily the fixes for chrome are on their way:
+
 * the current beta version of chrome doesn't have any trouble with the demo on
 this page
 * the Chrome Canary release has no problems with both demo's.
 
 ### Hope this post was usefull to you!
 
-Let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
+Remember to check out [wercker.com](http://wercker.com) and let us know about the applications you build with wercker. Don't forget to tweet out a screenshot of your first green build with **#wercker** and we'll send you some [@wercker](http://twitter.com/wercker) stickers.
 
-Thanks for tuning in, and there will be more posts next week! Follow us on [twitter](http://twitter.com/wercker) as well to stay in the loop.
+Thanks for tuning in! Follow us on [twitter](http://twitter.com/wercker) as well to stay in the loop.
 
 
