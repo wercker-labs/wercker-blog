@@ -4,7 +4,7 @@ date: 2013-10-02
 tags: chrome css animation
 author: Lindsey Bateman
 gravatarhash: e1c82876f21cdafafd2b01a1e625f587
-published: false
+published: true
 ---
 <h4 class="subheader">
 A CSS animation bug causing 100% CPU in Chrome
