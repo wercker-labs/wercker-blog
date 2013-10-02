@@ -7,7 +7,7 @@ gravatarhash: e1c82876f21cdafafd2b01a1e625f587
 published: true
 ---
 <h4 class="subheader">
-A CSS animation bug causing 100% CPU in Chrome
+Fixing 100% cpu utilization with CSS animations in Chrome
 </h4>
 
 We've had animations in wercker for a while, but recently we implemented
@@ -21,10 +21,10 @@ READMORE
 
 ![Overheating MacBook pro](/images/posts/chromecssanimations/heatmap.jpg)
 
-Having wercker open in your browser could result in 100% of CPU usage using
-Chrome. We have not investigated which version of chrome first had this
-problem. However, we see the bug with both versions 29.0.1547.76 and
-30.0.1599.66 (released today).
+Having wercker open in your browser could result in 100% CPU utilization on
+Chrome. Small disclaimer: we have not investigated which version of chrome
+first had this problem. However, we see the bug with both versions 29.0.1547.76
+and 30.0.1599.66 (released today, 2nd of October).
 
 Back to the our bug: at first we couldn't reproduce it for several reasons:
 
