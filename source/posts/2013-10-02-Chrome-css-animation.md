@@ -6,7 +6,7 @@ author: Lindsey Bateman
 gravatarhash: e1c82876f21cdafafd2b01a1e625f587
 ---
 <h4 class="subheader">
-An CSS animation bug causing 100% CPU in Chrome
+A CSS animation bug causing 100% CPU in Chrome
 </h4>
 
 We added several animations to enhance the experience of our tool.
@@ -18,7 +18,7 @@ READMORE
 
 Wercker was taking up a 100% of CPU usage in Chrome.
 We discovered this was specifically a feature of Chrome, we don't know in which version this started to be a problem.
-But probably it appeared in one of the latests versions of Chrome, my current Chrome version is 29.0.1547.76.
+But probably it appeared in one of the latests versions of Chrome, my current Chrome version is 30.0.1599.66 (released today).
 
 ![CSS animations in Chrome](/images/posts/chromecssanimations/chrometaskmanager.png)
 
@@ -37,6 +37,8 @@ Normally when the animation is done the CSS property will snap to its original s
 
 So this is great for us but not for Chrome, the CSS animations using `-webkit-animation-fill-mode: forwards;` are causing the 100% CPU bug.
 To be more specific it only occurs when the CSS animation ends and when the tab is inactive.
+
+
 
 ####Try this at home
 
@@ -57,8 +59,10 @@ To be more specific it only occurs when the CSS animation ends and when the tab 
 	}
 
 	.red__block.active {
-		-webkit-animation: rotating 3s linear ;
+		-webkit-animation: rotating 3s linear;
 		-webkit-animation-fill-mode: forwards;
+		-moz-animation: rotating 3s linear;
+		animation-fill-mode: forwards;
 	}
 
 	@-webkit-keyframes rotating {
@@ -70,11 +74,19 @@ To be more specific it only occurs when the CSS animation ends and when the tab 
 	    }
 	}
 
+	@-moz-keyframes rotating {
+	     from{
+	         -moz-transform: rotate(0deg);
+	     }
+	     to{
+	         -moz-transform: rotate(1440deg);
+	    }
+	}
+
 </style>
 <a class="js-toggle-play button">Toggle animation</a> and switch to an other or a new tab.
 
 <div class="demo">
-
 	<div class="red__block"></div>
 </div>
 
@@ -93,11 +105,15 @@ The the user will experience the 100% CPU bug.
 
 Second when logging in a user sees the sidebar animation with `-webkit-animation-fill-mode: forwards;` and later decides
 to leave wercker open while doing some reading on a blog. Now if any CSS animation would start on wercker like a new feed message appears with a fadein.
-The user will experience the 100% CPU bug.
+While reading the user will experience the 100% CPU bug.
 
-No we didn't so there is one aspect more to this. It only occurs when the CSS animation is triggered when you're not looking.
-In our case we have a feed with messges about your builds, deploys and team updates.
-When a new message appears it agets added with Javascript and nicely appears at the top of the feed with a fadein. Now the 100% CPU big appears!
+We have seen that in the first scenario the bug only appears when animating GPU rendered CSS styles.
+In the second scenario is doesn't seem to mather, the only thing that mathers is that the first animation uses `-webkit-animation-fill-mode: forwards;`.
+
+###Hope this post was usefull for you!
+Luckily the fixes are on their way. In the current beta version of Chrome the little demo on this page is fixed.
+And in the current Chrome Canary version the second scenario also seems to be fixed.
+For now we're looking into using the CSS animation Events and using CSS3 Transitions.
 
 ## Earn some stickers of your own!
 
