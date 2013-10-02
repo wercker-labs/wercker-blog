@@ -35,61 +35,69 @@ Our sidebar menu animates in after signing in to wercker to enhance the feeling 
 We use **animation keyframes** and the `-webkit-animation-fill-mode: forwards;` so that the sidebar remains in its position of the last animation keyframe.
 Normally when the animation is done the CSS property will snap to its original setting.
 
+So this is great for us but not for Chrome, the CSS animations using `-webkit-animation-fill-mode: forwards;` are causing the 100% CPU bug.
+To be more specific it only occurs when the CSS animation ends and when the tab is inactive.
+
+####Try this at home
+
+
 <style type="text/css">
-		.blue__block {
-			width: 200px;
-			height: 200px;
-			background-color: blue;
-			margin-right: auto;
-			margin-left: auto;
-		}
 
-		.blue__block.active {
-			-webkit-animation: rotating 1s linear;
-			-webkit-animation-fill-mode: forwards;
-		}
+	.demo {
+		margin: 40px;
+	}
 
-		.red__block {
-			width: 100px;
-			height: 100px;
-			background-color: red;
-			-webkit-animation: rotating 4s linear;
-			-webkit-animation-fill-mode: forwards;
-		}
+	.red__block {
+		width: 50px;
+		height: 50px;
+		border: 5px solid red;
+		border-color: red red transparent transparent;
+		border-radius: 25px;
+		background-color: transparent;
+	}
 
-		@-webkit-keyframes rotating {
-		     from{
-		         -webkit-transform: rotate(0deg);
-		     }
-		     to{
-		         -webkit-transform: rotate(45deg);
-		    }
-		}
+	.red__block.active {
+		-webkit-animation: rotating 3s linear ;
+		-webkit-animation-fill-mode: forwards;
+	}
 
-	</style>
+	@-webkit-keyframes rotating {
+	     from{
+	         -webkit-transform: rotate(0deg);
+	     }
+	     to{
+	         -webkit-transform: rotate(1440deg);
+	    }
+	}
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</style>
+<a class="js-toggle-play button">Toggle animation</a> and switch to an other or a new tab.
+
+<div class="demo">
+
+	<div class="red__block"></div>
+</div>
 
 <script type="text/javascript">
 	var toggleBlueBox = function(){
-		$(".blue__block").toggleClass("active");
+		$('.red__block').toggleClass("active");
 	};
-	window.setInterval(toggleBlueBox, 5000);
+	$(".js-toggle-play").on("click", toggleBlueBox);
 </script>
 
-<div>
-	<div class="blue__block">
-		<div class="red__block"></div>
-	</div>
-</div>
+**Multiple scenarios:**
 
-So this is great for us but not for Chrome, the CSS animations using the forwards fill-mode are causing the 100% CPU bug.
-To be more specific it only occurs when the CSS animation ends and when the tab is inactive. We got it!
+First we have several CSS animations that use `-webkit-animation-fill-mode: forwards;`.
+And there is always a chance that an user decides to switch between tabs while something is animating.
+The the user will experience the 100% CPU bug.
+
+Second when logging in a user sees the sidebar animation with `-webkit-animation-fill-mode: forwards;` and later decides
+to leave wercker open while doing some reading on a blog. Now if any CSS animation would start on wercker like a new feed message appears with a fadein.
+The user will experience the 100% CPU bug.
 
 No we didn't so there is one aspect more to this. It only occurs when the CSS animation is triggered when you're not looking.
-In our case we have a feed with messages about your builds, deploys and team updates.
-When a new message appears it gets added with Javascript and nicely appears at the top of the feed with a fadein. Now the 100% CPU big appears!
-
+In our case we have a feed with messges about your builds, deploys and team updates.
+When a new message appears it agets added with Javascript and nicely appears at the top of the feed with a fadein. Now the 100% CPU big appears!
 
 ## Earn some stickers of your own!
 
