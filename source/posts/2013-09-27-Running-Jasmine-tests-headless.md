@@ -6,6 +6,7 @@ author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 ---
 
+
 [Jasmine](http://pivotal.github.io/jasmine/) is a populair [behavior-driven development](http://dannorth.net/introducing-bdd/) framework for testing JavaScript code. In this post I want to share how to run these test in a headless fashion on wercker.
 
 READMORE
