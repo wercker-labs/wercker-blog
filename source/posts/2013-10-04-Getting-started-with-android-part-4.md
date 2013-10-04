@@ -4,7 +4,6 @@ date: 2013-10-04
 tags: android
 author: Jacco Flenter
 gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
-published: false
 ---
 
 
@@ -25,21 +24,21 @@ READMORE
 
 ### Prerequisites
 
-This guide expands on code from
+This guide expands on the code from
 [part 3](/2013/09/27/Gettingstarted-with-android-part-3.html), we will not
-dive too much into too much specific code. So just going through part 1 will
+dive too much into specific code. Going through of part 1 of the series will
 also suffice.
 
 ### Introduction ###
 
-We now have a working application we want to deploy to services such as
+We now have a working application that we want to deploy to services such as
 <a href="https://testflightapp.com">testflight</a> or
-<a href="http://hockeyapp.net/features/">hockeyapp</a> it so our QA can test it.
+<a href="http://hockeyapp.net/features/">hockeyapp</a> so our QA team could potentially test it.
 
 With such services you have an overview of the devices and software your test
-users use, you can distribute our builds to specific groups of people
-and they can get notifications when there's a new version. Both services also
-have an SDK you can use and more easily get crash reports, do remote logging,
+users use, you can distribute wercker's builds to specific groups of people
+and they can get notifications when a new version is available. Both services also
+have an SDK you can use, and more easily retrieve crash reports, do remote logging,
 etc. In this guide we will use testflight as the primary example.
 
 
@@ -57,7 +56,7 @@ to, so everybody can easily re-use them (see also [boxes and steps in the
 wercker directory](/2013/07/26/Boxes-and-steps-in-the-wercker-directory.html)).
 * custom deploy.
 
-We need a custom deploy target. Let's call it `testflight` and save it.
+We need a **custom** deploy target. Let's call it `testflight` and save it.
 ![target `wercker`](/images/posts/android-part4/wercker-s2.jpg)
 
 ### Step 2: testflight api keys
@@ -79,29 +78,28 @@ Click on the 'Upload API' button.
 
 ![Upload API](/images/posts/android-part4/tesflight-s4.jpg)
 
-Click on `get your API token` and copy the api token. Go back to wercker and edit
+Click on `get your API token` and copy the API token. Go back to wercker and edit
 the custom deploy target named `testflight`. We will add the API token as an
-environment variable to our deploy target. This way we can specify how to deploy
-in the wercker.yml and use that for different deploy targets (for instance
+environment variable to our deploy target. This way, we can specify how to deploy
+inside the [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) and use that for different deploy targets (for instance
 staging and production).
 
 So click on `+ add new variable` in the `Deploy pipeline` section and create
-an environment variable. Call it `API_KEY` and we can make it protected. This way
+an environment variable. Call it `API_KEY` and make it protected. This way
 it will by default not be visible for instance in the setup environment
 variables step and will not be send again to the frontend.
 
 ![target `wercker`](/images/posts/android-part4/wercker-s3.jpg)
 
-On testflightapp website, let's go back to the `Upload API` page and `Get your
+On the testflightapp website, let's go back to the `Upload API` page and `Get your
 team token`. Now add another environment variable named `TEAM_TOKEN`
 
 `Save` it and we're ready for the next step.
 
-
 ### Updating the wercker.yml
 
 In the previous parts we've always added steps to the build pipeline in the
-wercker.yml. This time we want add steps to the deploy pipeline. So let's add
+wercker.yml. This time we want add steps to the deploy pipeline. So let's add the following snippet
 at the bottom of the `wercker.yml`:
 
 ``` yaml
@@ -122,7 +120,7 @@ What are the parameters for the api call:
 - api_token
 - team_token
 - notes. These are the release notes.
-- notify. Wheter users should be notified or not.
+- notify. Whether users should be notified or not.
 - distribution_list. A list of groups that can access the application
 
 Time to test our deploy:
@@ -139,17 +137,19 @@ dropdown and selecting `testflight` from the list.
 The browser will be redirected to the deploy page, showing the progress of the
 deploy.
 
-Wait until deploy is completed and expand the `upload to testflight` if
+Wait until the deploy is completed and expand the `upload to testflight` if
 all went right you should see a json response object.
 
-Switching back to testflight, we should see in the apps list our GettingStarted
+Switching back to testflight, we should see in the **apps list** our GettingStarted
 app. Click on applications and go to 'wercker' via the breadcrumbs. Let's
 enable notifications when a new build is deployed. For this, click on 'wercker'
 and add a distribution list, named 'wercker' and add at least one user.
 
 We also need to update `wercker.yml` to set the `notify` option to True and
 set the distribution_lists to 'wercker'. Commit/push the changes and deploy the
-build. The user should receive an email.
+build. The user should receive an email!
+
+You now have continuous delivery set up for your Android applications!
 
 
 ---
