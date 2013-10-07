@@ -1,6 +1,6 @@
 ---
-title: Week in Review for September 30th
-date: 2013-09-30
+title: Week in Review for October 7th
+date: 2013-10-07
 tags: weekinreview
 author: Micha Hernandez van Leuffen
 gravatarhash: d4b19718f9748779d7cf18c6303dc17f
