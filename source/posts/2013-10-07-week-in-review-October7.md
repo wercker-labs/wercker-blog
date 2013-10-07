@@ -22,9 +22,9 @@ with an issue in Chrome that lead to 100% CPU utilization due to CSS animations.
 * In our series of [doing continuous delivery with wercker for Android](http://wercker.com/android/), we've released [part 4](http://blog.wercker.com/2013/10/04/Getting-started-with-android-part-4.html) 
 in which we deploy to [TestFlight](https://testflightapp.com/)
 
-* Wercker was selected as one of Europe's Hottest Startups according to [WIRED](www.wired.co.uk/magazine/archive/2013/11/european-startups/amsterdam)
+* Wercker was selected as one of Europe's Hottest Startups according to [WIRED](http://www.wired.co.uk/magazine/archive/2013/11/european-startups/amsterdam)
 
-* Our friend [Werner Vogels](https://twitter.com/werner) wrote a [post](www.allthingsdistributed.com/2013/09/dutch-enterprise-and-the-cloud.html) on Dutch startups and the Cloud, and of course mentions us!
+* Our friend [Werner Vogels](https://twitter.com/werner) wrote a [post](http://www.allthingsdistributed.com/2013/09/dutch-enterprise-and-the-cloud.html) on Dutch startups and the Cloud, and of course mentions us!
 
 ## Earn some stickers of your own!
 
