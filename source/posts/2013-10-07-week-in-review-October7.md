@@ -16,7 +16,7 @@ READMORE
 
 This is a summary of this week's updates:
 
-* Our frond-end developer [Lindsey Bateman](twitter.com/lindseybateman) wrote an [article](http://blog.wercker.com/2013/10/02/Chrome-css-animation.html) on how we've dealt 
+* Our frond-end developer [Lindsey Bateman](http://twitter.com/lindseybateman) wrote an [article](http://blog.wercker.com/2013/10/02/Chrome-css-animation.html) on how we've dealt 
 with an issue in Chrome that lead to 100% CPU utilization due to CSS animations.
 
 * In our series of [doing continuous delivery with wercker for Android](http://wercker.com/android/), we've released [part 4](http://blog.wercker.com/2013/10/04/Getting-started-with-android-part-4.html) 
