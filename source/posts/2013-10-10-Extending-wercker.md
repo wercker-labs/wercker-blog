@@ -76,4 +76,25 @@ build flow and are meant for steps that need to be run, no matter the outcome
 of the build or deploy (or specifically when a build/deploy is failed).
 This is particularly useful for sending notifications.
 
-We can use
+### A steps' lifecycle
+
+When wercker runs a step a couple of environment variables. Let's take a look
+at them:
+
+<table border="0">
+<tr>
+    <td>WERCKER_STEP_ROOT</td>
+    <td>/wercker/steps/wercker/bundle-install/0.9.1</td>
+    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="http://app.wercker.com/#explore">wercker directory</a>
+</tr>
+<tr>
+    <td>WERCKER_STEP_ID</td>
+    <td>9c182f44-e12d-4daf-91eb-a48d0540cc10</td>
+    <td>The unique - within the context of the pipeline execution - idenfier for the step. The pattern is _{STEPNAME}{ORDINAL}. The value could be different on the next run of the pipeline
+</tr>
+<tr>
+    <td>WERCKER_STEP_NAME</td>
+    <td>S3SYNC</td>
+    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong>
+</tr>
+</table>
