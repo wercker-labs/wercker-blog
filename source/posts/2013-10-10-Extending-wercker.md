@@ -13,7 +13,8 @@ gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
 </h4>
 
 You can find them in the <a href="https://app.wercker.com/#explore">wercker directory</a>.
-What if you can't find what you are looking for? Create your own. So let's see how to create a step.
+What if you can't find what you are looking for? Create your own. So let's see
+how to create a step in this in-depth article.
 
 READMORE
 
@@ -24,9 +25,12 @@ While creating [the](/2013/09/19/Gettingstarted-with-android-part-1.html)
 [on](/2013/09/27/Gettingstarted-with-android-part-3.html)
 [android](/2013/10/04/Getting-started-with-android-part-4.html) development I
 found that I wanted wercker to set the version numbering for me. Each release
-should out increment some counter. The solution we will explore here will use
-an external website (running on a free heroku instance) which can supply us
-with a build number.
+should out increment some counter. In this in-depth article, we will explore
+a solution using an external website (running on a free heroku instance) which
+can supply us with a build number. A working version of the step on wercker can
+be found
+[here](https://app.wercker.com/#applications/524d763ba5db0adc70010666/tab/details)
+
 
 #### The basics
 
@@ -47,8 +51,8 @@ step
 * run tests, validate code or run some kind of lint. Like the
 [validate-wercker-step](https://app.wercker.com/#applications/51cd593c7578aa5b5300026b/tab/details)
 * generate an environment variable or store some data in a certain location.
-The [add-ssh-key](https://app.wercker.com/#applications/523afff01aa016c8590015b1/tab/details) step
-does this
+The [add-ssh-key](https://app.wercker.com/#applications/523afff01aa016c8590015b1/tab/details)
+step does this
 
 Our step will create an environment variable that we can use later during the
 build and update whichever file we need to for our specific language.
@@ -62,12 +66,15 @@ are set in stone in the wercker pipeline:
 is retrieved.
 * setup environment. During this step the boxes are started. Based on the
 wercker.yml
+* environment variables. This step defines the default wercker environment
+variables as well as any defined in the deploy target or in settings / pipeline.
 * saving build output (builds only)
 
 In our wercker.yml, there are two opportunities in the pipeline to insert our
 own logic, which are defined in the wercker yaml as:
-* 'steps'. This is run right after setup environment
-* 'after-steps'. They are run after a build/deploy is finished (succesfully or
+
+* `steps`. This is run right after `environment variables`
+* `after-steps`. They are run after a build/deploy is finished (succesfully or
 not).
 
 The steps are executed in order and if one fails, the next ones after are not
@@ -76,25 +83,175 @@ build flow and are meant for steps that need to be run, no matter the outcome
 of the build or deploy (or specifically when a build/deploy is failed).
 This is particularly useful for sending notifications.
 
-### A steps' lifecycle
+### Helpers and definitions
 
-When wercker runs a step a couple of environment variables. Let's take a look
-at them:
+As defined in the introduction of this article, we want to increment some
+counter and optionaly want to do this per branch. Wercker provides a lot of
+information by default that we can use in our steps. So let's look at a couple
+of them.
 
 <table border="0">
 <tr>
+    <th>VARIABLE NAME</th>
+    <th>EXAMPLE VALUE</th>
+    <th>PURPOSE</th>
+</tr>
+<tr>
+    <td>WERCKER_GIT_OWNER</td>
+    <td>wercker</td>
+    <td>The owner of the repository</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_REPOSITORY</td>
+    <td>step-bundle-install</td>
+    <td>The name of the repository</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_BRANCH</td>
+    <td>master</td>
+    <td>The branch name</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_COMMIT</td>
+    <td>ef306b2479a7ecd433
+        7875b4d954a4c8fc18
+        e237</td>
+    <td>The commit hash</td>
+</tr>
+<tr>
+    <td>WERCKER_SOURCE_DIR</td>
+    <td>$WERCKER_ROOT/src</td>
+    <td>The path to the directory of the source code</td>
+</tr>
+<tr>
+    <td>WERCKER_CACHE_DIR</td>
+    <td>/cache</td>
+    <td>The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again</td>
+</tr>
+<tr>
     <td>WERCKER_STEP_ROOT</td>
-    <td>/wercker/steps/wercker/bundle-install/0.9.1</td>
-    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="http://app.wercker.com/#explore">wercker directory</a>
+    <td>/wercker/steps/wercker
+        /bundle-install/0.9.1</td>
+    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="https://app.wercker.com/#explore">wercker directory</a></td>
 </tr>
 <tr>
     <td>WERCKER_STEP_ID</td>
     <td>9c182f44-e12d-4daf-91eb-a48d0540cc10</td>
-    <td>The unique - within the context of the pipeline execution - idenfier for the step. The pattern is _{STEPNAME}{ORDINAL}. The value could be different on the next run of the pipeline
+    <td>The unique idenfier for the step, unique for each build/deploy.</td>
 </tr>
 <tr>
     <td>WERCKER_STEP_NAME</td>
-    <td>S3SYNC</td>
-    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong>
+    <td>bundle-install</td>
+    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong></td>
+</tr>
+<tr>
+    <td>WERCKER_REPORT_MESSAGE_FILE</td>
+    <td>$WERCKER_REPORT_DIR/
+        $WERCKER_STEP_ID/
+        message.txt</td>
+    <td>The location of a file you can use to output additonal information about the step.</td>
 </tr>
 </table>
+
+We have all of the variables we need to determine our build number: the
+branch, the commit hash and the application name. Do we need an external server
+for getting this build number? Can we not create a database or simple text file
+and store it in the wercker cache? The answer to that, yes. It would however
+not behave exactly as we want. The biggest problem is, that the cache of a build
+is only stored on a succesful build. Treating the cache as persistant storage
+that we can access each build might also not be the best idea. Fortunately
+there's a simple django application called
+[versioning_service](https://github.com/flenter/versioning_service) which can
+help us get the correct build numbers.
+
+### Communicating with the service
+
+The django application provides a RESTful interface which allows a user to
+query for a
+build number based on the application, branch name and commit hash. An example
+version is running on: [buildnr.herokuapp.com](http://buildnr.herokuapp.com)
+
+Back to our rest call, what does a user of the step need to do? The django app
+requires a user to register, so random people can't increment your build
+numbers artificially. It also requires a user to create an application.
+
+In detail we need to know a number of things in order to get our build number:
+
+* app id.
+* the branch name
+* commit hash
+* user credentials: the django application allows for a username and api_key to
+be specified
+
+### The definition of a step
+
+Defining a step is done in the `wercker-step.yml` file. There we can specify
+the name, version and parameters of the step:
+
+``` yaml
+name: generate-version
+version: 0.0.1
+description: Generate build number
+keywords:
+  - version
+  - build number
+properties:
+  api_key:
+    type: string
+    required: true
+  username:
+    type: string
+    required: true
+  for_app:
+    type: number
+  ignore_branches:
+    type: boolean
+    default: false
+  base_url:
+    type: string
+    default: http://buildnr.herokuapp.com
+```
+
+Since commit hash and branch name are already environment variables defined
+earlier in the pipeline, the steps' user doesn't need to specify them. There
+are however two optional properties defined which make the step a bit more
+flexible: ignore_branches and base_url. Ignore branches basically will set the
+branch name to a fixed string, so the build count goes up no matter which
+branch the user is working on. Base_url is to allow a user to specify his/her
+own instance.
+
+The properties specified in our wercker-step.yml will be available in our step
+as `$WERCKER_[step name]_[property name]`. In our case this means our step can
+expect $WERCKER_GENERATE_VERSION_API_KEY to be a string. As you can see a
+couple of things happen:
+
+* dashes are convirted to underscores.
+* all characters are transformed to uppercase.
+
+All right, now that we know the name of the step and our properties we can
+start writing logic. The core of a step is `run.sh`. At wercker we prefer to
+implement as much Our `run.sh` will call a small python script to parse the
+json result:
+
+``` bash
+#!/usr/bin/env bash
+
+if [ "$WERCKER_GENERATE_VERSION_IGNORE_BRANCHES" = "false" ]
+then
+    GENERATED_BUILD_NR=$($WERCKER_STEP_ROOT/fetch.py -U $WERCKER_GENERATE_VERSION_BASE_URL -u $WERCKER_GENERATE_VERSION_USERNAME -k $WERCKER_GENERATE_VERSION_API_KEY -a $WERCKER_GENERATE_VERSION_FOR_APP -b $WERCKER_GIT_BRANCH -c $WERCKER_GIT_COMMIT)
+else
+    GENERATED_BUILD_NR=$($WERCKER_STEP_ROOT/fetch.py -U $WERCKER_GENERATE_VERSION_BASE_URL -u $WERCKER_GENERATE_VERSION_USERNAME -k $WERCKER_GENERATE_VERSION_API_KEY -a $WERCKER_GENERATE_VERSION_FOR_APP -b master -c $WERCKER_GIT_COMMIT)
+fi
+
+if [[ "$GENERATED_BUILD_NR" = "" ]]; then
+    echo ""
+    echo "Failed to get build number" 1>&2
+
+    return 1 2>/dev/null || exit 1
+else
+    echo "\$GENERATED_BUILD_NR: $GENERATED_BUILD_NR"
+fi
+```
+
+The step
+
