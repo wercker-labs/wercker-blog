@@ -1,7 +1,7 @@
 ---
 title: Extending wercker with an external service
 date: 2013-10-10
-tags: wercker steps heroku wercker
+tags: wercker, steps, heroku, wercker
 author: Jacco Flenter
 gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
 ---
