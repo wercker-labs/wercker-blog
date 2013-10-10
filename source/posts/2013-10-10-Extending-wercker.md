@@ -177,7 +177,7 @@ numbers artificially. It also requires a user to create an application.
 
 In detail we need to know a number of things in order to get our build number:
 
-* app id.
+* app id
 * the branch name
 * commit hash
 * user credentials: the django application allows for a username and api_key to
