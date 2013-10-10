@@ -1,7 +1,7 @@
 ---
 title: Deploying your PHP application to fortrabbit
 date: 2013-08-27
-tags: deployment, golang, AppEngine
+tags: deployment, golang, fortrabbit
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 ---
