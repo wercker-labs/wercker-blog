@@ -56,7 +56,7 @@ build and update whichever file we need to for our specific language.
 ### The pipeline
 
 Whenever you start a build or a deploy there are a couple of basic steps that
-are fixed in the wercker pipeline:
+are set in stone in the wercker pipeline:
 
 * get code. During builds this is a git clone, during deploy the build output
 is retrieved.
@@ -64,8 +64,16 @@ is retrieved.
 wercker.yml
 * saving build output (builds only)
 
-In our wercker.yml, there are two places where we can defined steps for both
-builds en deploys:
-* in steps: those are run right after setup environmen
-* after-steps. They are run after a build/deploy is finished (succesfully or
-not)
+In our wercker.yml, there are two opportunities in the pipeline to insert our
+own logic, which are defined in the wercker yaml as:
+* 'steps'. This is run right after setup environment
+* 'after-steps'. They are run after a build/deploy is finished (succesfully or
+not).
+
+The steps are executed in order and if one fails, the next ones after are not
+executed. The after-steps are different, they are basically run outside of the
+build flow and are meant for steps that need to be run, no matter the outcome
+of the build or deploy (or specifically when a build/deploy is failed).
+This is particularly useful for sending notifications.
+
+We can use
