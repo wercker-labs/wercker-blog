@@ -16,6 +16,9 @@ You can find them in the <a href="https://app.wercker.com/#explore">wercker dire
 What if you can't find what you are looking for? Create your own. So let's see
 how to create a step in this in-depth article.
 
+![wercker steps](/images/posts/extending-wercker/wercker_pipeline.jpg)
+
+
 READMORE
 
 #### Introduction
