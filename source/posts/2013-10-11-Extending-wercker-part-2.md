@@ -8,7 +8,7 @@ gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
 
 
 <h4 class="subheader">
-    wercker is an open platform and can be extended and enhanced by utilizing
+    Wercker is an open platform and can be extended and enhanced by utilizing
     easily reusable steps and boxes.
 </h4>
 
@@ -74,7 +74,7 @@ be located.
 Now we need to create the right files so envdir can setup the environment
 variables for us.
 
-The environment we want to have is:
+The environment we want to have is as follows:
 
 ``` sh
 WERCKER_GENERATE_VERSION_API_KEY=e075a65470a66f40be1983d00a73876a9ba9dd45
@@ -87,7 +87,7 @@ WERCKER_GIT_COMMIT=228b4257cbb797460563ba8806503f8512676df6
 WERCKER_STEP_ROOT=..
 ```
 
-This means we need to create for each variable a file with the same name with
+This means that for each variable we need to create a file with the same name with
 the text after the equal sign as the content (i.e. file
 `env/case1/WERCKER_STEP_ROOT` contains nothing but two dots)
 
