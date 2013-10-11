@@ -1,6 +1,6 @@
 ---
 title: "Advanced: extending wercker - part 1"
-date: 2013-10-10
+date: 2013-10-11
 tags: wercker, steps, heroku, wercker
 author: Jacco Flenter
 gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
