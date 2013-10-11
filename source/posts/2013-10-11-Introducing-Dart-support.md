@@ -50,7 +50,7 @@ build:
           dart --checked tool/hop_runner.dart test
 ```
 
-This pipeline consists of two script steps that are executed chronologically. It first step installs all dependencies with the `pub install` command. These dependencies are cached to speed up future builds. The seconds step executes the tests by executing the `hop_runner.dart` file.
+This pipeline consists of two script steps that are executed chronologically. The first step installs all dependencies with the `pub install` command. The seconds step executes the tests by executing the `hop_runner.dart` file.
 
 ## Resources
 
