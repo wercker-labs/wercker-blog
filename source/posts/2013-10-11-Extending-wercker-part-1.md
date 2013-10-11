@@ -83,6 +83,23 @@ build flow and are meant for steps that need to be run, no matter the outcome
 of the build or deploy (or specifically when a build/deploy is failed).
 This is particularly useful for sending notifications.
 
+### The wercker directory
+
+There are a couple of things that are good to know about the wercker directory.
+First of all, applications that will be deployed as steps or boxes have to be
+public.
+Deploys of steps and boxes to the wercker directory can not be removed at the
+moment. The reason for this is that users of wercker should be able to rely on
+both boxes and steps to be there and not suddenly disappear. You can always
+[contact us](mailto:pleasemailus@wercker.com) if you feel a step or box should
+be deleted by us. And last: versioning is based around
+[semantic versioning](http://semver.org) and it is a good idea to follow those
+specifications.
+
+__note: you can lock versions or specify versions of steps and boxes by adding
+@ for a specific version (i.e. bundle-install@0.9.1) or specify ranges (i.e.
+bundle-install>=0.9.2)__
+
 ### Helpers and definitions
 
 As defined in the introduction of this article, we want to increment some
