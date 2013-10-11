@@ -8,22 +8,23 @@ gravatarhash: 7d9ef3d3f6911e6e4f9c51f6d99c48f8
 
 
 <h4 class="subheader">
-What if you want each release of your build to automatically set a new version
-code and name?
+What if you could automatically set version
+code and version name of your app? Incementing each build no matter which
+branch, or keep seperate version numbers for each branch.
 </h4>
 
 READMORE
 
 There's a
 [generate-version step](https://app.wercker.com/#applications/524d763ba5db0adc70010666/tab/details)
-on wercker, which can help us with versioning. It uses a
+in the wercker directory, which can help us with versioning. It uses a
 [small app](https://app.wercker.com/#applications/524ae392a5db0adc700012d2/tab)
-deployed on a free instance of heroku:
+deployed on a free dyno on Heroku:
 [buildnr.herokuapp.com](http://buildnr.herokuapp.com) which you can use (or of
 course deploy your own).
 
 _note: the app and step are not official wercker services, but meant as example
-tools. That's why they are hosted external from wercker and completely open
+tools. That's why they are hosted externally from wercker and completely open
 source and free._
 
 ### What does the step do?
@@ -43,7 +44,7 @@ The output of the step is an environment variable named `$GENERATED_BUILD_NR`.
 
 What do we need to do to make this useful for us? In order use this environment
 variable we will modify the build.gradle file so we can set both the
-versionCode and versionName. After that we add the step to the `wercker.yaml`
+versionCode and versionName. After that we add the step to the [wercker.yaml](http://devcenter.wercker.com/articles/werckeryml/)
 and add the parameters to the gradle build command.
 
 ### Updating our build.gradle file
@@ -77,7 +78,7 @@ def setVersionName = { ->
 
 ### Updating the wercker.yml
 
-There's a example code in the readme of the step:
+There's an example code in the readme of the step:
 
 ``` yaml
 build:
@@ -88,11 +89,11 @@ build:
         for_app: 1
 ```
 
-However, it is nicer to use environment variables instead of username and api
+However, it is nicer to use environment variables instead of a username and an api
 key in our `wercker.yml`. This specifically applies to open source projects.
 
 You can use environment variables in your wercker.yml by just writing
-`$ENVIRONEMT_VARIALBE`. We'll call our environment variable `VERSIONING_API_KEY`.
+`$ENVIRONMENT_VARIABLE`. We'll call our environment variable `VERSIONING_API_KEY`.
 So combining the step with the additional parameters for the build, your wercker file will end up looking like this:
 
 ``` yaml
@@ -123,8 +124,8 @@ To use this step you need to register and add an app on
 ![Login page](/images/posts/android-versioning/login.jpg)
 
 On the details page of the app you can find the parameters for the step. We can
-now update the `wercker.yaml` file with your user information. Keep the
-the value `VERSIONING_API_KEY` for property api_key.
+now update the `wercker.yml` file with your user information. Keep the
+the value `VERSIONING_API_KEY` for the property api_key.
 
 We can set this value in the settings of your application on wercker: Go to
 pipeline and click `+ add new variable`. Create a protected environment
@@ -136,7 +137,7 @@ found on your apps' details page on buildnr.herokuapp.com.
 
 ### Finish
 
-Commit all all changes and enjoy the result!
+Commit all changes and enjoy the result!
 
 If you are interested in how the step works: the construction and workings are
 also described in two articles on this blog:
