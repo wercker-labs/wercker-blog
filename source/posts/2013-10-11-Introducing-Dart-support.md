@@ -1,17 +1,22 @@
 ---
 title: Introducing Dart support
-date: 2013-09-30
+date: 2013-10-11
 tags: dart, dartlang
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
 published: false
 ---
-
+<h4 class="subheader">
 I am very pleased to announce Dart support at wercker! In this post I quickly want to share the details of our environment. You can expect some tutorial posts shortly.
+</4>
+
+![Overheating MacBook pro](/images/posts/dart/wercker+dart.jpg)
+
+READMORE
 
 ## Dart environment
 
-Support for Dart is released in the form of a [wercker box](http://devcenter.wercker.com/articles/boxes/) called [wercker/dart](https://app.wercker.com/#applications/5255489a367392913001326b/tab/details). This box has has everything in place to build and release your Dart projects. It inherits from the [wercker/ubuntu12.04-webessentials](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) box, that means that it has all the packages, tools and dependencies available for build and testing web applications. 
+Support for Dart is released in the form of a [wercker box](http://devcenter.wercker.com/articles/boxes/) called [wercker/dart](https://app.wercker.com/#applications/5255489a367392913001326b/tab/details). This box has has everything in place to build and release your Dart projects. It inherits from the [wercker/ubuntu12.04-webessentials](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) box, that means that it has all the packages, tools and dependencies available for build and testing web applications.
 
 The box runs Dart version 0.8.1.2_r28355 which installed in `$HOME/DART_SDK`. This path is available via `DART_SDK` and included in the `PATH`:
 
