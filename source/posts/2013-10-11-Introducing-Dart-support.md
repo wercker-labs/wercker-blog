@@ -4,7 +4,6 @@ date: 2013-10-11
 tags: dart, dartlang
 author: Pieter Joost van de Sande
 gravatarhash: 5864d682bb0da7bedf31601e4e3172e7
-published: false
 ---
 <h4 class="subheader">
 I am very pleased to announce Dart support at wercker! In this post I quickly want to share the details of our environment. You can expect some tutorial posts shortly.
