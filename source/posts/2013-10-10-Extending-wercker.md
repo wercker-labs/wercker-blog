@@ -1,5 +1,5 @@
 ---
-title: Extending wercker with an external service
+title: "Advanced: extending wercker - part 1"
 date: 2013-10-10
 tags: wercker, steps, heroku, wercker
 author: Jacco Flenter
@@ -74,8 +74,8 @@ In our wercker.yml, there are two opportunities in the pipeline to insert our
 own logic, which are defined in the wercker yaml as:
 
 * `steps`. This is run right after `environment variables`
-* `after-steps`. They are run after a build/deploy is finished (succesfully or
-not).
+* `after-steps`. They are run after a build/deploy is finished. Even when a
+build is not succesful.
 
 The steps are executed in order and if one fails, the next ones after are not
 executed. The after-steps are different, they are basically run outside of the
@@ -180,8 +180,8 @@ In detail we need to know a number of things in order to get our build number:
 * app id
 * the branch name
 * commit hash
-* user credentials: the django application allows for a username and api_key to
-be specified
+* user credentials: `versioning_service` application allows for a username and
+api_key to be specified for api calls.
 
 ### The definition of a step
 
@@ -351,10 +351,12 @@ After this you can use your step by adding following code to an apps' steps:
             for_app: app_id
 ```
 
-Have fun!
+It may be a good idea to make this step the first step in the build pipeline,
+so failing steps won't prevent the build number from being incremented.
 
 ---
 
+Have fun!
 
 ### Earn some stickers!
 
