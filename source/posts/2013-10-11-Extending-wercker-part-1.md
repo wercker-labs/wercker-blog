@@ -28,8 +28,8 @@ While creating [the](/2013/09/19/Gettingstarted-with-android-part-1.html)
 [on](/2013/09/27/Gettingstarted-with-android-part-3.html)
 [android](/2013/10/04/Getting-started-with-android-part-4.html) development I
 found that I wanted wercker to set the version numbering for me. Each release
-should out increment some counter. In this in-depth article, we will explore
-a solution using an external website (running on a free heroku instance) which
+should increment some counter. In this in-depth article, we will explore
+a solution using an external website (running on a free Heroku dyno) which
 can supply us with a build number. A working version of the step on wercker can
 be found
 [here](https://app.wercker.com/#applications/524d763ba5db0adc70010666/tab/details)
@@ -38,7 +38,9 @@ be found
 #### The basics
 
 What is a step? We envision steps as basic blocks of functionality which are
-contained and might be reused for different applications. So instead of using
+contained and might be reused for different applications. Steps are executed in either the build
+or deploy pipeline, as explained on our [devcenter](http://devcenter.wercker.com/articles/introduction/pipeline.html). 
+So instead of using
 the script step for everything, you can create a step for actions that are
 a bit more complex or that may use certain options/switches you otherwise have
 to copy/paste from that other project. Typically steps do one of the following:
@@ -55,7 +57,9 @@ step
 [validate-wercker-step](https://app.wercker.com/#applications/51cd593c7578aa5b5300026b/tab/details)
 * generate an environment variable or store some data in a certain location.
 The [add-ssh-key](https://app.wercker.com/#applications/523afff01aa016c8590015b1/tab/details)
-step does this
+step does this.
+
+Steps and how to create them are explained as well on our [devcenter](http://devcenter.wercker.com/articles/steps/).
 
 Our step will create an environment variable that we can use later during the
 build and update whichever file we need to for our specific language.
@@ -80,8 +84,8 @@ own logic, which are defined in the wercker yaml as:
 * `after-steps`. They are run after a build/deploy is finished. Even when a
 build is not succesful.
 
-The steps are executed in order and if one fails, the next ones after are not
-executed. The after-steps are different, they are basically run outside of the
+The steps are executed in order and if one fails, subsequent steps are not
+executed. The after-steps are different, they basically run outside of the
 build flow and are meant for steps that need to be run, no matter the outcome
 of the build or deploy (or specifically when a build/deploy is failed).
 This is particularly useful for sending notifications.
@@ -89,13 +93,14 @@ This is particularly useful for sending notifications.
 ### The wercker directory
 
 There are a couple of things that are good to know about the wercker directory.
+
 First of all, applications that will be deployed as steps or boxes have to be
 public.
 Deploys of steps and boxes to the wercker directory can not be removed at the
 moment. The reason for this is that users of wercker should be able to rely on
-both boxes and steps to be there and not suddenly disappear. You can always
+both boxes and steps to be there and not have suddenly disappeared. You can always
 [contact us](mailto:pleasemailus@wercker.com) if you feel a step or box should
-be deleted by us. And last: versioning is based around
+be deleted by us. Finally: versioning is based around
 [semantic versioning](http://semver.org) and it is a good idea to follow those
 specifications.
 
