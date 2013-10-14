@@ -18,8 +18,7 @@ READMORE
 
 * Wercker now has support for [Dart](https://www.dartlang.org/). Check out our announcement [here](http://blog.wercker.com/2013/10/11/Introducing-Dart-support.html)
 
-* We launched our series on extending wercker. View [part 1](http://blog.wercker.com/2013/10/11/Extending-wercker-part-1.html) that introduces steps and [part 2](http://blog.wercker.com/2013/10/11/Extending-wercker-part-2.html)
-where we actually create a step.
+* We launched our series on extending wercker. View [part 1](http://blog.wercker.com/2013/10/11/Extending-wercker-part-1.html) that introduces steps and [part 2](http://blog.wercker.com/2013/10/11/Extending-wercker-part-2.html) where we add tests for a step.
 
 * [bgilb](https://app.wercker.com/#bgilb) created a [Haskell box](https://app.wercker.com/#applications/52564a65a8e0cd6c62005f4f/tab/details) for wercker that comes with GHC
 
