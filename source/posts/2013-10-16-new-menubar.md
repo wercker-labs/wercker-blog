@@ -1,36 +1,35 @@
 ---
 title: Supercallifragilisticexpialidocious menu
 date: 2013-10-16
-tags: ux, menubar, css3, css-animation, product design
+tags: ux, menu bar, css3, css-animation, product design
 author: Lindsey Bateman
 gravatarhash: e1c82876f21cdafafd2b01a1e625f587
 published: false
 ---
 
 <h4 class="subheader">
-Not the worlds biggest change but we are happy
-with the improvements we made on our menubar.
+A mostly subtle change, but we are happy
+with the improvements we made on our menu bar.
 </h4>
 
-![New menubar](/images/posts/new-menubar/new-menubar.jpg)
+![New menu bar](/images/posts/new-menubar/new-menubar.jpg)
 
 READMORE
 
-The menubar now hides itself after loggin in on wercker, showing only the icons that represent
-the same menu and on rollover animates to show the full menu.
+The menu bar now minimizes itself after loggin in on wercker, showing only the
+icons. On touch/rollover, it animates to show the full menu.
 
-We wanted to create more focus on the content, so we ditched the topbar menu and combined it with our
-sidebar. It brings all options together and makes a more clearer difference between navigation and
-the tests / deploys you are running. And the nice thing is it animates really snappy and doesn't slow you down.
+We wanted to create more focus on the content. It brings all options together and makes a clearer difference between navigation and
+the builds / deploys you are running. The nice thing is, it animates really snappy and doesn't slow you down.
 
 When frequently using wercker you get a quick sense of the menu and you don't need to think anymore
 how to get from page **A** to **B**. We now can use the space for better showing data that mathers more
 to the users.
 
-![New menubar](/images/posts/new-menubar/new-menubar-ipad.jpg)
+![New menu bar](/images/posts/new-menubar/new-menubar-ipad.jpg)
 
-The extra pixels we gain is best used experienced tablets, the menubar open and closes on touch and now more
-then ever this kind of menus are widely accepted in apps.
+The extra pixels we gain is best used experienced tablets, the menu bar open and closes on touch and now more
+than ever this kind of menus are widely accepted in apps.
 
 We are constantly looking for this kind of improvements that make wercker a more mature application
 and shows to our userbase that we are constantly improving wercker.
@@ -38,7 +37,7 @@ and shows to our userbase that we are constantly improving wercker.
 Luckely we have really awesome users who help us by giving us great feedback and have great new feature requests.
 
 <h4 class="subheader">
-We hope you like the new menubar so far and as always feedback is more then welcome.
+We hope you like the new menu bar so far and as always feedback is more then welcome.
 </h4>
 
 ## Earn some stickers!
