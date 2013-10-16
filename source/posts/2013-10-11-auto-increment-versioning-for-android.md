@@ -32,11 +32,11 @@ source and free._
 According to the documentation:
 
 > Sets an environment variable to contain a build nr. This step depends on a
-running instance of (buildnr.herokuapp.com)[http://buildnr.herokuapp.com] or your own instance of the python/django app: (github.com/flenter/versioning_service)[https://github.com/flenter/versioning_service]
+running instance of [http://buildnr.herokuapp.com](buildnr.herokuapp.com) or your own instance of the python/django app: [https://github.com/flenter/versioning_service](github.com/flenter/versioning_service)
 
 > For this step you need to:
 
-> login/register on (buildnr.herokuapp.com)[http://buildnr.herokuapp.com]
+> login/register on [http://buildnr.herokuapp.com](buildnr.herokuapp.com)
 add an application (which is not much more than a name)
 go to the details of the application and you will find the values for the parameters of this step.
 
