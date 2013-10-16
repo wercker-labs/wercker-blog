@@ -67,34 +67,32 @@ mixpanel.init("d1764ebb8adc0f5e1d3ee56c54e0df7a");</script>
 
       <!-- NAVIGATION -->
       <div class="navigation">
-        <div class="sticky">
-          <nav class="top-bar">
-            <ul class="title-area row hide-for-medium-up">
-              <li class="small-6 columns logo name">
-                  <a href="/#"><img src="/images/logo-x2.png" width="100px" alt="wercker"/></a>
-              </li>
-              <li class="small-6 columns toggle-topbar menu-icon"><a href="#" class="right">
-                <span></span></a>
-              </li>
+        <nav class="top-bar">
+          <ul class="title-area row hide-for-medium-up">
+            <li class="small-6 columns logo name">
+                <a href="/#"><img src="/images/logo-x2.png" width="100px" alt="wercker"/></a>
+            </li>
+            <li class="small-6 columns toggle-topbar menu-icon"><a href="#" class="right">
+              <span></span></a>
+            </li>
+          </ul>
+          <section class="top-bar-section">
+            <div class="show-for-medium-up logo left">
+              <a href="/#"><img src="/images/logo_black.png" width="100px" alt="wercker"/></a>
+            </div>
+            <ul class="right">
+              <li><a href="https://app.wercker.com/#explore" target="_blank">Explore wercker</a></li>
+              <li class="divider hide-for-medium-up"></li>
+              <li><a href="http://blog.wercker.com" target="_blank">Blog</a></li>
+              <li class="divider hide-for-medium-up"></li>
+              <li><a href="http://devcenter.wercker.com" target="_blank">Dev Center</a></li>
+              <li class="divider hide-for-medium-up"></li>
+              <li><a href="https://app.wercker.com/users/new" target="_blank">Register</a></li>
+              <li class="divider hide-for-medium-up"></li>
+              <li><a href="https://app.wercker.com/sessions/new" class="signin" target="_blank"><i class="icon-sign-out"></i> Sign in</a></li>
             </ul>
-            <section class="top-bar-section">
-              <div class="show-for-medium-up logo left">
-                <a href="/#"><img src="/images/logo_black.png" width="100px" alt="wercker"/></a>
-              </div>
-              <ul class="right">
-                <li><a href="https://app.wercker.com/#explore" target="_blank">Explore wercker</a></li>
-                <li class="divider hide-for-medium-up"></li>
-                <li><a href="http://blog.wercker.com" target="_blank">Blog</a></li>
-                <li class="divider hide-for-medium-up"></li>
-                <li><a href="http://devcenter.wercker.com" target="_blank">Dev Center</a></li>
-                <li class="divider hide-for-medium-up"></li>
-                <li><a href="https://app.wercker.com/users/new" target="_blank">Register</a></li>
-                <li class="divider hide-for-medium-up"></li>
-                <li><a href="https://app.wercker.com/sessions/new" class="signin" target="_blank"><i class="icon-sign-out"></i> Sign in</a></li>
-              </ul>
-            </section>
-          </nav>
-        </div>
+          </section>
+        </nav>
       </div>
 
 
@@ -102,14 +100,18 @@ mixpanel.init("d1764ebb8adc0f5e1d3ee56c54e0df7a");</script>
         <div class="small-12 large-12 columns">
         <!-- <h1>wercker blog</h1> -->
           <div class="row">
-            <div class="small-12 large-7 columns">
+            <div class="small-12 large-8 columns">
               <div id="main" role="main" class="articles">
                 <%= yield %>
               </div>
             </div>
 
-            <div class="small-12 large-4 columns">
+            <div class="small-12 large-3 columns">
               <aside class="recent__articles">
+                <hr/>
+                  <h5><a href="/archive.html">Archive &raquo;</a></h5>
+                <hr/>
+                <br/>
                 <hr/>
                 <h5>Recent Articles</h5>
                 <hr/>
@@ -140,9 +142,6 @@ mixpanel.init("d1764ebb8adc0f5e1d3ee56c54e0df7a");</script>
                     <li><%= link_to year, blog_year_path(year) %> (<%= articles.size %>)</a></li>
                   <% end %>
                 </ol>
-                <hr/>
-                  <h5><a href="/archive.html">Archive</a></h5>
-                <hr/>
               </aside>
             </div>
           </div>
