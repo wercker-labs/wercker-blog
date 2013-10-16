@@ -1037,7 +1037,7 @@ $side-nav-divider-color: darken(#fff, 10%);
 //
 
 // Background color for the top bar
-$topbar-bg: $profileBarLogoBgColor;
+$topbar-bg: #1c2027;
 
 // Height and margin
 $topbar-height: 55px;
@@ -1056,8 +1056,8 @@ $topbar-link-weight: 600;
 $topbar-link-font-size: $navigationMobileFontSize;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-bg: #1c2027;
+$topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;

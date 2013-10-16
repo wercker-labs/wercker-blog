@@ -1,13 +1,11 @@
 @import "mixins/imageEffects";
 
 .name {
-	background-color: #1F1E1E;
+	background-color: #1c2027;
 	height: 80px;
 	padding-top: 26px;
 	padding-bottom: 26px;
 	text-align: center;
-
-
 }
 
 .page-content {
@@ -22,13 +20,40 @@
 	}
 
 	.articles {
-		padding: $column-gutter;
+		padding: $column-gutter 0;
 		margin-bottom: 3*$column-gutter;
 
 		h1 {
-			margin-bottom: .2*$column-gutter;
-			line-height: 1.3em;
-			color: $successColor;
+			margin-top: 0;
+			margin-bottom: .15*$column-gutter;
+			font-size: 2.4em;
+			line-height: 1em;
+			color: $secondaryColor;
+
+			a {
+				color: $secondaryColor;
+			}
+
+			.header__arrow {
+				color: rgba(#1c2027, 0.3);
+				font-size: .8em;
+				font-weight: 200;
+			}
+		}
+
+		.article__date {
+			display: block;
+			margin-bottom: 1.5*$column-gutter;
+			text-transform: uppercase;
+			color: mix($white, $txtColor, 30%);
+			font-size: 0.8em;
+			font-weight: 200;
+
+			i {
+				margin: 0 5px;
+				display: inline-block;
+				@include rotate(275deg);
+			}
 		}
 
 		.subheader {
@@ -36,6 +61,13 @@
 			font-size: 1.3em;
 			line-height: 1.7em;
 			margin-bottom: 1.7em;
+		}
+
+		p {
+			line-height: 1.9em;
+			font-weight: 200;
+			font-size: 1.1em;
+			color: rgba(#1c2027, 0.7);
 		}
 
 		hr { margin-bottom: 2*$column-gutter;}
@@ -63,13 +95,13 @@
 	}
 
 	.recent__articles {
-		margin-top: .75*$column-gutter;
-		padding: $column-gutter;
+		padding: $column-gutter 0;
 
 		ol {
 			list-style: none;
-			line-height: 1.3em;
+			line-height: 1.6em;
 			font-size: 0.9em;
+			font-weight: 200;
 			li {
 				padding-bottom: 4px;
 			}
@@ -80,13 +112,13 @@
 		color: darken($body-font-color, 10%);
 		text-transform: uppercase;
 		font-weight: 400;
-		font-size: $baseFontSize;
+		font-size: .9em;
 		margin: 0;
 	}
 
 	hr {
-		margin-top: .25*$column-gutter;
-		margin-bottom: .25*$column-gutter;
+		margin-top: .15*$column-gutter;
+		margin-bottom: .15*$column-gutter;
 	}
 
 	.authorCredits {
@@ -96,18 +128,12 @@
 
 
 		h5 {
-			margin-left: 60px;
-		    padding-top: .4*$column-gutter;
-		}
-
-		em {
-			margin-left: 60px;
-			color: mix($white, $txtColor, 35%);
-			font-size: 0.9em;
+			margin-left: 50px;
+		    padding-top: .6*$column-gutter;
 		}
 
 		.profile-picture {
-			@include makeImageHolderRound(50px, 3px, true);
+			@include makeImageHolderRound(40px, 2px, true);
 			position: absolute;
 		}
 

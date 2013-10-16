@@ -1,7 +1,7 @@
 ---
 title: CSS animations in Chrome
 date: 2013-10-02
-tags: chrome css animation
+tags: chrome, css, animation
 author: Lindsey Bateman
 gravatarhash: e1c82876f21cdafafd2b01a1e625f587
 published: true

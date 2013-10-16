@@ -1,12 +1,12 @@
 <% wrap_layout :layout do %>
   <article>
   <h1><%= current_page.data.title %></h1>
+  <em class="article__date"><i class="icon icon-pencil"> </i> <%= current_page.data.date.strftime('%A, %b %d %Y') %></em>
     <div class="authorCredits">
 	    <span class="profile-picture">
-	        <img src="https://secure.gravatar.com/avatar/<%= current_page.data.gravatarhash %>?d=identicon&amp;s=192" alt="<%= current_page.data.author %>"/>
+	        <img src="https://secure.gravatar.com/avatar/<%= current_page.data.gravatarhash %>?d=identicon&amp;s=100" alt="<%= current_page.data.author %>"/>
 	    </span>
 	    <h5>By <%= current_page.data.author %></h5>
-	    <em><%= current_page.data.date.strftime('%A, %b %d %Y') %></em>
 	</div>
     </br>
     <%= yield %>
