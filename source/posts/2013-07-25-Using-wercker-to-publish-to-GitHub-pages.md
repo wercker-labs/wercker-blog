@@ -96,6 +96,8 @@ the GitHub remote url:
 
 ![image](http://f.cl.ly/items/2z353n3K0C2W3C1V2Y3d/add-to-deploy-target.png)
 
+The git remote url pattern is: `https://{TOKEN}@github.com/{ACCOUNT}/{REPOSITORY}.git`
+
 ## Updating our wercker.yml
 
 Now we are ready to update our
