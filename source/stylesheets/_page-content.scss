@@ -42,18 +42,15 @@
 		}
 
 		.article__date {
-			display: block;
+			display: inline-block;
+			background: rgba(0,0,0,0.03);
+			padding: 5px;
 			margin-bottom: 1.5*$column-gutter;
 			text-transform: uppercase;
 			color: mix($white, $txtColor, 30%);
 			font-size: 0.8em;
 			font-weight: 200;
-
-			i {
-				margin: 0 5px;
-				display: inline-block;
-				@include rotate(275deg);
-			}
+			@include box-shadow(rgba(0,0,0,0.05) 0px 1px 0px 0px inset, rgba($white,0.5) 0px -1px 0px 0px inset);
 		}
 
 		.subheader {

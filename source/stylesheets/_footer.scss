@@ -22,6 +22,12 @@
 	background: white;
 	text-align: center;
 
+	.row {
+		max-width: 1280px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	@media #{$small} {
 		text-align: left;
 		width: 100%;
