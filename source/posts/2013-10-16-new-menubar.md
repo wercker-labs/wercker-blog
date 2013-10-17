@@ -24,7 +24,7 @@ On touch/rollover, it animates to show the full menu. The nice thing is, it anim
 and doesn't slow you down.
 
 When frequently using wercker you get a quick sense of the menu, it's there when you need it but now
-in a more subtle way. The benefit is we can utilize the extra space for the more important stuff like
+in a more subtle way. The benefit is we can utilize the extra space for more important stuff like
 your apps and running builds / deploys.
 
 ![New menu bar](/images/posts/new-menubar/new-menubar-ipad.jpg)
@@ -36,7 +36,7 @@ We are constantly working on these kind of improvements that make wercker better
 Luckely we have really awesome users who help us by giving great feedback.
 
 <h4 class="subheader highlight">
-We hope you like the new menu bar so far and as always your feedback is more then welcome.
+We hope you like the new menu bar so far and as always your feedback is more than welcome.
 </h4>
 
 ## Earn some stickers!
