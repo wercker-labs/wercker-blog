@@ -64,6 +64,7 @@ The directory structure from part 1 should look like:
 ```
 
 We need to add some directories:
+
 * `env/case1`. Here we will store the files for envdir
 * `test`. Here we will store our fixture and test cases. We will also use it as
 the location to run our tests from. This is similar to a step running
@@ -226,5 +227,5 @@ Let us know about the applications you build with wercker. Don't forget to tweet
 
 Signing up for wercker is [free and easy](https://app.wercker.com/users/new/).
 
-_note: The step generate-version on [github.com](https://github.com/flenter/step-generate-version) contains
+_note: The step [generate-version on github.com](https://github.com/flenter/step-generate-version) contains
 more tests_
