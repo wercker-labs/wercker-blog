@@ -4,7 +4,7 @@ date: 2013-10-16
 tags: ux, menu bar, css3, css-animation, product design
 author: Lindsey Bateman
 gravatarhash: e1c82876f21cdafafd2b01a1e625f587
-published: false
+published: true
 ---
 
 <h4 class="subheader">
@@ -16,28 +16,27 @@ with the improvements we made on our menu bar.
 
 READMORE
 
-The menu bar now minimizes itself after loggin in on wercker, showing only the
-icons. On touch/rollover, it animates to show the full menu.
+Our goal was to create more focus on the content and a less obstrusive navigation.
 
-We wanted to create more focus on the content. It brings all options together and makes a clearer difference between navigation and
-the builds / deploys you are running. The nice thing is, it animates really snappy and doesn't slow you down.
+What we did is, combine the top bar with the side bar and designed a minimized version of the side bar.
+The new menu now minimizes itself after loggin in on wercker, showing only the icons.
+On touch/rollover, it animates to show the full menu. The nice thing is, it animates really snappy
+and doesn't slow you down.
 
-When frequently using wercker you get a quick sense of the menu and you don't need to think anymore
-how to get from page **A** to **B**. We now can use the space for better showing data that mathers more
-to the users.
+When frequently using wercker you get a quick sense of the menu, it's there when you need it but now
+in a more subtle way. The benefit is we can utilize the extra space for the more important stuff like
+your apps and running builds / deploys.
 
 ![New menu bar](/images/posts/new-menubar/new-menubar-ipad.jpg)
 
-The extra pixels we gain is best used experienced tablets, the menu bar open and closes on touch and now more
-than ever this kind of menus are widely accepted in apps.
+The extra space we gained is best experienced on tablets, the menu bar open and closes on touch and
+now more than ever this kind of menus are widely accepted in apps.
 
-We are constantly looking for this kind of improvements that make wercker a more mature application
-and shows to our userbase that we are constantly improving wercker.
+We are constantly working on these kind of improvements that make wercker better and a more mature application.
+Luckely we have really awesome users who help us by giving great feedback.
 
-Luckely we have really awesome users who help us by giving us great feedback and have great new feature requests.
-
-<h4 class="subheader">
-We hope you like the new menu bar so far and as always feedback is more then welcome.
+<h4 class="subheader highlight">
+We hope you like the new menu bar so far and as always your feedback is more then welcome.
 </h4>
 
 ## Earn some stickers!

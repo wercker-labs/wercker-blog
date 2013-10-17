@@ -62,7 +62,7 @@
 
 		p {
 			line-height: 1.9em;
-			font-weight: 200;
+			font-weight: 400;
 			font-size: 1.1em;
 			color: rgba(#1c2027, 0.7);
 		}
@@ -88,6 +88,11 @@
 				margin-left:0.5*$column-gutter;
 				margin-bottom: 5px;
 			}
+		}
+
+		.subheader.highlight {
+			background: rgba($secondaryColor, 0.1);
+			padding: $column-gutter;
 		}
 	}
 
