@@ -19,7 +19,7 @@ READMORE
 Our goal was to create more focus on the content and a less obstrusive navigation.
 
 What we did is, combine the top bar with the side bar and designed a minimized version of the side bar.
-The new menu now minimizes itself after loggin in on wercker, showing only the icons.
+The new menu now minimizes itself after logging in on wercker, showing only the icons.
 On touch/rollover, it animates to show the full menu. The nice thing is, it animates really snappy
 and doesn't slow you down.
 
