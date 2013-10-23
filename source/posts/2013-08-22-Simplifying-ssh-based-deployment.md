@@ -137,6 +137,7 @@ deploy:
       filename: $PRIVATEKEY_PATH
       content: $FOO_PRIVATE
       overwrite: true
+      hide-from-log: true
    - script:
       name: stop application
       code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no YOURSERVER.COM stop gocities
